@@ -1,0 +1,631 @@
+{
+    "josh_jpeg": {
+        "username": "josh_jpeg",
+        "password": "notapassword",
+        "firstname": "Josh",
+        "lastname": "Pensky",
+        "picture": "http://i.imgur.com/mdZFU8j.jpg",
+        "bio": "\"There's always money in the BANANA STAND!\"",
+        "rank": {
+            "name": "Grandwatchr",
+            "shows": {
+                "years": 2,
+                "months": 9,
+                "days": 4,
+                "hours": 17
+            },
+            "movies": {
+                "years": 0,
+                "months": 3,
+                "days": 2,
+                "hours": 16
+            }
+        },
+        "friends": {
+            "1": "mike.hom",
+            "2": "djtannertanner",
+            "3": "jesscooney",
+            "4": "raymondjustus",
+            "5": "maryann_reds",
+            "6": "dfdf_afaff",
+            "7": "joshjehling"
+        },
+        "shows": {
+            "Fargo": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": false,
+                    "4": true,
+                    "5": false,
+                    "6": false,
+                    "7": false,
+                    "8": true,
+                    "9": true,
+                    "10": false,
+                    "11": false,
+                    "12": true,
+                    "13": false,
+                    "14": false,
+                    "15": false,
+                    "16": true,
+                    "17": true,
+                    "18": false,
+                    "19": true,
+                    "20": true
+                }
+            },
+            "Westworld": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": false,
+                    "4": true,
+                    "5": false,
+                    "6": false,
+                    "7": false,
+                    "8": true,
+                    "9": true,
+                    "10": false
+                }
+            },
+            "Legion": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": true,
+                    "5": true,
+                    "6": true,
+                    "7": true,
+                    "8": false
+                }
+            },
+            "The Good Place": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": false,
+                    "4": false,
+                    "5": false,
+                    "6": false,
+                    "7": false,
+                    "8": false,
+                    "9": false,
+                    "10": false,
+                    "11": false,
+                    "12": false,
+                    "13": false
+                }
+            }
+        },
+        "movies":{},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "mike.hom": {
+        "username": "mike.hom",
+        "password": "urmomlawl",
+        "firstname": "Mike",
+        "lastname": "Hom",
+        "picture": "http://i.imgur.com/G8CcdKt.png",
+        "bio": "My name is Mike... that's about it",
+        "rank": {
+            "name": "Young Padawan",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {
+            "Arrested Development": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": true,
+                    "5": true,
+                    "6": true,
+                    "7": true,
+                    "8": true,
+                    "9": true,
+                    "10": true,
+                    "11": true,
+                    "12": true,
+                    "13": true,
+                    "14": true,
+                    "15": true,
+                    "16": true,
+                    "17": true,
+                    "18": true,
+                    "19": true,
+                    "20": true,
+                    "21": true,
+                    "22": true,
+                    "23": true,
+                    "24": true,
+                    "25": true,
+                    "26": true,
+                    "27": true,
+                    "28": true,
+                    "29": true,
+                    "30": true,
+                    "31": true,
+                    "32": true,
+                    "33": true,
+                    "34": true,
+                    "35": true,
+                    "36": true,
+                    "37": true,
+                    "38": true,
+                    "39": true,
+                    "40": true,
+                    "41": true,
+                    "42": true,
+                    "43": true,
+                    "44": true,
+                    "45": true,
+                    "46": true,
+                    "47": true,
+                    "48": true,
+                    "49": true,
+                    "50": true,
+                    "51": true,
+                    "52": true,
+                    "53": true,
+                    "54": true,
+                    "55": true,
+                    "56": true,
+                    "57": true,
+                    "58": true,
+                    "59": true,
+                    "60": true,
+                    "61": true,
+                    "62": true,
+                    "63": true,
+                    "64": true,
+                    "65": true,
+                    "66": true,
+                    "67": true,
+                    "68": true
+                }
+            },
+            "The Good Place": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": true,
+                    "5": true,
+                    "6": true,
+                    "7": true,
+                    "8": true,
+                    "9": true,
+                    "10": true,
+                    "11": true,
+                    "12": true,
+                    "13": true
+                }
+            },
+            "Fargo": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": true,
+                    "5": true,
+                    "6": true,
+                    "7": true,
+                    "8": true,
+                    "9": true,
+                    "10": true,
+                    "11": true,
+                    "12": true,
+                    "13": true,
+                    "14": false,
+                    "15": false,
+                    "16": false,
+                    "17": false,
+                    "18": false,
+                    "19": false,
+                    "20": false
+                }
+            },
+            "Dirk Gently's Holistic Detective Agency": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": false,
+                    "5": false,
+                    "6": false,
+                    "7": false,
+                    "8": false
+                }
+            },
+            "Legion": {
+                "progress": {
+                    "1": true,
+                    "2": true,
+                    "3": true,
+                    "4": true,
+                    "5": true,
+                    "6": true,
+                    "7": true,
+                    "8": true
+                }
+            }
+        },
+        "movies": {},
+        "favorites": {
+            "shows": {
+                "1": "Dirk Gently's Holistic Detective Agency",
+                "2": "The Good Place",
+                "3": "Fargo",
+                "4": "Legion"
+            },
+            "movies": {}
+        }
+    },
+    "liliakang": {
+        "username": "liliakang",
+        "password": "hashtagteammichael4evah",
+        "firstname": "Lilia",
+        "lastname": "Kang",
+        "picture": "http://i.imgur.com/MGvwRSA.jpg",
+        "bio": "Idk why but I look like I'm from Westworld",
+        "rank": {
+            "name": "Binge Master",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "jesscooney": {
+        "username": "jesscooney",
+        "password": "mellamojejica",
+        "firstname": "Jess",
+        "lastname": "Cooney",
+        "picture": "http://i.imgur.com/JeLtKJo.png",
+        "bio": "\"'You miss 100% of the shots you don't take' - Wayne Gretzky\" - Michael Scott",
+        "rank": {
+            "name": "Entertainment Guru",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "cocoduffs98": {
+        "username": "cocoduffs98",
+        "password": "hehehehehehe",
+        "firstname": "Connor",
+        "lastname": "Duffy",
+        "picture": "http://i.imgur.com/TyjAw4A.jpg",
+        "bio": "I am one with the Force, and the Force is with me.",
+        "rank": {
+            "name": "Dabbler",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "djtannertanner": {
+        "username": "djtannertanner",
+        "password": "wheresthatlavendhairtho",
+        "firstname": "Tanner",
+        "lastname": "Richardett",
+        "picture": "http://i.imgur.com/sD3LGzX.png",
+        "bio": "you've seen lana banana but have u ever seen tanner bananer? didn't think so",
+        "rank": {
+            "name": "Binge-oholic",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "behlert.jpg": {
+        "username": "behlert.jpg",
+        "password": "memeslmao",
+        "firstname": "Bryan",
+        "lastname": "Elhert",
+        "picture": "http://i.imgur.com/lYzr7yK.jpg",
+        "bio": "Gotta find that aesthetic...",
+        "rank": {
+            "name": "Novice",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "dfdf_afaff": {
+        "username": "dfdf_afaff",
+        "password": "connorismylover",
+        "firstname": "Eric",
+        "lastname": "Harris",
+        "picture": "http://i.imgur.com/NcNh98X.jpg",
+        "bio": "A life of churning is hard. But hey, it gets butter.",
+        "rank": {
+            "name": "Couch Potato",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "raymondjustus": {
+        "username": "raymondjustus",
+        "password": "fantasycostco",
+        "firstname": "Ray",
+        "lastname": "Namar",
+        "picture": "http://i.imgur.com/t4jgLGg.jpg",
+        "bio": "Fantasy Costco: Where All Your Dreams Come True!",
+        "rank": {
+            "name": "Drama Queen",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "maryann_reds": {
+        "username": "maryann_reds",
+        "password": "startrekfannumbahuno",
+        "firstname": "Maryann",
+        "lastname": "Rojas",
+        "picture": "http://i.imgur.com/vagKMaU.png",
+        "bio": "I still haven't watched that Thor trailer",
+        "rank": {
+            "name": "Netflix Addict",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    },
+    "joshjehling": {
+        "username": "joshjehling",
+        "password": "microsoftjob",
+        "firstname": "Josh",
+        "lastname": "Ehling",
+        "picture": "http://i.imgur.com/0PxqWRd.png",
+        "bio": "I work at Microsoft",
+        "rank": {
+            "name": "Dabbler",
+            "shows": {
+                "years": 0,
+                "months": 1,
+                "days": 3,
+                "hours": 15
+            },
+            "movies": {
+                "years": 0,
+                "months": 2,
+                "days": 12,
+                "hours": 3
+            }
+        },
+        "friends": {
+            "1": "josh_jpeg",
+            "2": "liliakang",
+            "3": "jesscooney",
+            "4": "cocoduffs98",
+            "5": "djtannertanner",
+            "6": "behlert.jpg",
+            "7": "dfdf_afaff"
+        },
+        "shows": {},
+        "movies": {},
+        "favorites": {
+            "shows": {},
+            "movies": {}
+        }
+    }
+}

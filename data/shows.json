@@ -1,0 +1,448 @@
+{
+    "Westworld": {
+        "link": "",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music71/v4/c6/67/41/c667414a-75ea-1f53-08b7-9304671d96b4/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "The Original",
+                "E02": "Chestnut",
+                "E03": "The Stray",
+                "E04": "Dissonance Theory",
+                "E05": "Contrapasso",
+                "E06": "The Adversary",
+                "E07": "Trompe L'Oeil",
+                "E08": "Trace Decay",
+                "E09": "The Well-Tempered Clavier",
+                "E10": "The Bicameral Mind"
+            }
+        }
+    },
+    "Legion": {
+        "link": "/shows/legion.php",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music111/v4/25/76/58/257658f7-0cb5-8d2f-aad3-2ab2aff356d4/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Chapter 1",
+                "E02": "Chapter 2",
+                "E03": "Chapter 3",
+                "E04": "Chapter 4",
+                "E05": "Chapter 5",
+                "E06": "Chapter 6",
+                "E07": "Chapter 7",
+                "E08": "Chapter 8"
+            }
+        }
+    },
+    "Crazy Ex-Girlfriend": {
+        "link": "",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music62/v4/fa/79/e8/fa79e8a1-1c2c-4a34-f311-d4e4161191c6/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Josh Just Happens to Live Here!",
+                "E02": "Josh's Girlfriend Is Really Cool!",
+                "E03": "I Hope Josh Comes to My Party",
+                "E04": "I'm Going on a Date with Josh's Friend!",
+                "E05": "Josh and I Are Good People!",
+                "E06": "My First Thanksgiving with Josh!",
+                "E07": "I'm So Happy That Josh Is So Happy",
+                "E08": "My Mom, Greg's Mom and Josh's Sweet Dance Moves!",
+                "E09": "I'm Going to the Beach with Josh and His Friends!",
+                "E10": "I'm Back at Camp with Josh!",
+                "E11": "That Text Was Not Meant for Josh!",
+                "E12": "Josh and I Work on a Case!",
+                "E13": "Josh and I Go to Los Angeles!",
+                "E14": "Josh Is Going to Hawaii!",
+                "E15": "Josh Has No Idea Where I Am!",
+                "E16": "Josh's Sister Is Getting Married!",
+                "E17": "Why Is Josh in a Bad Mood?",
+                "E18": "Paula Needs to Get Over Josh!"
+            },
+            "S02": {
+                "E01": "Where Is Josh's Friend?",
+                "E02": "When Will Josh See How Cool I Am?",
+                "E03": "All Signs Point to Josh... Or Is It Josh's Friend?",
+                "E04": "When Will Josh and His Friend Leave Me Alone?",
+                "E05": "Why Is Josh's Ex-Girlfriend Eating Carbs?",
+                "E06": "Who Needs Josh When You Have a Girl Group?",
+                "E07": "Who's the Cool Girl Josh is Dating?",
+                "E08": "Who Is Josh's Soup Fairy?",
+                "E09": "When Do I Get to Spend Time with Josh?",
+                "E10": "Will Scarsdale Like Josh's Shayna Punim?",
+                "E11": "Josh Is the Man of My Dreams, Right?",
+                "E12": "Is Josh Free in Two Weeks?",
+                "E13": "Can Josh Take a Leap of Faith?"
+            }
+        }
+    },
+    "Fargo": {
+        "link": "/shows/fargo.php",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music122/v4/b2/d0/ce/b2d0ce19-7fc2-8003-a897-b5cdfad1a9e0/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "The Crocodile's Dilemma",
+                "E02": "The Rooster Prince",
+                "E03": "A Muddy Road",
+                "E04": "Eating the Blame",
+                "E05": "The Six Ungraspables",
+                "E06": "Buridan's Ass",
+                "E07": "Who Shaves the Barber?",
+                "E08": "The Heap",
+                "E09": "A Fox, a Rabbit, and a Cabbage",
+                "E10": "Morton's Fork"
+            },
+            "S02": {
+                "E01": "Waiting for Dutch",
+                "E02": "Before the Law",
+                "E03": "The Myth of Sisyphus",
+                "E04": "Fear and Trembling",
+                "E05": "The Gift of the Magi",
+                "E06": "Rhinoceros",
+                "E07": "Did You Do This? No, You Did It!",
+                "E08": "Loplop",
+                "E09": "The Castle",
+                "E10": "Palindrome"
+            }
+        }
+    },
+    "Dirk Gently's Holistic Detective Agency": {
+        "link": "",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music71/v4/9f/d7/70/9fd770cf-78b6-5e63-ad39-23e56c8d2110/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Horizon",
+                "E02": "Lost & Found",
+                "E03": "Rogue Wall Enthusiasts",
+                "E04": "Watkin",
+                "E05": "Very Erectus",
+                "E06": "Fix Everything",
+                "E07": "Weaponized Soul",
+                "E08": "Two Sane Guys Doing Normal Things"
+            }
+        }
+    },
+    "Silicon Valley": {
+        "link": "",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music60/v4/3c/86/d1/3c86d17a-28d6-f7ec-2f52-b7e40111252c/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Minimum Viable Product",
+                "E02": "The Cap Table",
+                "E03": "Articles of Incorporation",
+                "E04": "Fiduciary Duties",
+                "E05": "Signaling Risk",
+                "E06": "Third Party Insourcing",
+                "E07": "Proof of Concept",
+                "E08": "Optimal Tip-To-Tip Efficiency"
+            },
+            "S02": {
+                "E01": "Sand Hill Shuffle",
+                "E02": "Runaway Devaluation",
+                "E03": "Bad Money",
+                "E04": "The Lady",
+                "E05": "Server Space",
+                "E06": "Homicide",
+                "E07": "Adult Content",
+                "E08": "White Hat/Black Hat",
+                "E09": "Binding Arbitration",
+                "E10": "Two Days of the Condor"
+            },
+            "S03": {
+                "E01": "Founder Friendly",
+                "E02": "Two in the Box",
+                "E03": "Meinertzhagen's Haversack",
+                "E04": "Maleant Data Systems Solutions",
+                "E05": "The Empty Chair",
+                "E06": "Bachmanity Insanity",
+                "E07": "To Build a Better Beta",
+                "E08": "Bachman's Earning's Over-Ride",
+                "E09": "Daily Active Users",
+                "E10": "The Uptick"
+            }
+        }
+    },
+    "The Good Place": {
+        "link": "",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music71/v4/3a/63/9f/3a639fc4-181e-4a87-16c1-aa9537e86ed1/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Pilot",
+                "E02": "Flying",
+                "E03": "Tahani Al-Jamil",
+                "E04": "Jason Mendoza",
+                "E05": "Category 55 Emergency Doomsday Crisis",
+                "E06": "What We Owe to Each Other",
+                "E07": "The Eaternal Shriek",
+                "E08": "Most Improved Player",
+                "E09": "...Someone Like Me as a Member",
+                "E10": "Chidi's Choice",
+                "E11": "What's My Motivation",
+                "E12": "Mindy St. Claire",
+                "E13": "Michael's Gambit"
+            }
+        }
+    },
+    "Review": {
+        "link": "",
+        "cover": "http://is3.mzstatic.com/image/thumb/Video/v4/5a/07/87/5a0787a4-60e8-b361-c091-5e174c830999/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Stealing; Addiction; Prom",
+                "E02": "Making a Sex Tape; Being a Racist; Hunting",
+                "E03": "Pancakes; Divorce; Pancakes",
+                "E04": "Celebrity; Batman",
+                "E05": "Best Friend; Space",
+                "E06": "Road Rage; Orgy",
+                "E07": "Revenge; Getting Rich; Aching",
+                "E08": "Marry; Run; Party",
+                "E09": "Quitting; Last Day; Irish"
+            },
+            "S02": {
+                "E01": "Brawl, Blackmail, Gloryhole",
+                "E02": "Curing Homosexuality, Mile High Club",
+                "E03": "Falsely Accused, Sleep with Your Teacher, Little Person",
+                "E04": "Cult, Perfect Body",
+                "E05": "Catfish, Haunted House",
+                "E06": "William Tell, Grant a Wish, Rowboat",
+                "E07": "Buried Alive, 6 Star Review, Public Speaking",
+                "E08": "Murder, Magic 8 Ball, Procrastination",
+                "E09": "Happiness, Pillow Fight, Imaginary Friend",
+                "E10": "Conspiracy Theory"
+            },
+            "S03": {
+                "E01": "Locorito, Pet Euthanasia, Dream",
+                "E02": "Co-Host, Ass-Slap, Helen Keller, Forgiveness",
+                "E03": "Cryogenics, Lightning, Last Review"
+            }
+        }
+    },
+    "Curb Your Enthusiasm": {
+        "link": "",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music6/v4/9f/b8/53/9fb853a6-3277-df09-367b-af813650b4f2/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "The Pants Tent",
+                "E02": "Ted and Mary",
+                "E03": "Porno Gil",
+                "E04": "The Bracelet",
+                "E05": "Interior Decorator",
+                "E06": "The Wire",
+                "E07": "AAMCO",
+                "E08": "Beloved Aunt",
+                "E09": "Affirmative Action",
+                "E10": "The Group"
+            },
+            "S02": {
+                "E01": "The Car Salesman",
+                "E02": "Thor",
+                "E03": "Trick or Treat",
+                "E04": "The Shrimp Incident",
+                "E05": "The Thong",
+                "E06": "The Acupuncturist",
+                "E07": "The Doll",
+                "E08": "Shaq",
+                "E09": "The Baptism",
+                "E10": "The Massage"
+            },
+            "S03": {
+                "E01": "Chet's Shirt",
+                "E02": "The Benadryl Brownie",
+                "E03": "Club Soda and Salt",
+                "E04": "The Nanny from Hell",
+                "E05": "The Terrorist Attack",
+                "E06": "The Special Section",
+                "E07": "The Corpse-Sniffing Dog",
+                "E08": "Krazee-Eyez Killa",
+                "E09": "Mary, Joseph and Larry",
+                "E10": "The Grand Opening"
+            },
+            "S04": {
+                "E01": "Mel's Offer",
+                "E02": "Ben's Birthday Part",
+                "E03": "The Blind Date",
+                "E04": "The Weatherman",
+                "E05": "The 5 Wood",
+                "E06": "The Car Pool Lane",
+                "E07": "The Surrogate",
+                "E08": "Wandering Bear",
+                "E09": "The Survivor",
+                "E10": "Opening Night"
+            },
+            "S05": {
+                "E01": "The Larry David Sandwich",
+                "E02": "The Bowtie",
+                "E03": "The Christ Nail",
+                "E04": "Kamikaze Bingo",
+                "E05": "Lewis Needs a Kidney",
+                "E06": "The Smoking Jacket",
+                "E07": "The Seder",
+                "E08": "The Ski Lift",
+                "E09": "The Korean Bookie",
+                "E10": "The End"
+            },
+            "S06": {
+                "E01": "Meet the Blacks",
+                "E02": "The Anonymous Donor",
+                "E03": "The Ida Funkhouser Roadside Memorial",
+                "E04": "The Lefty Call",
+                "E05": "The Freak Book",
+                "E06": "The Rat Dog",
+                "E07": "The TiVo Guy",
+                "E08": "The N Word",
+                "E09": "The Therapists",
+                "E10": "The Bat Mitzvah"
+            },
+            "S07": {
+                "E01": "Funkhoser's Crazy Sister",
+                "E02": "Vehicular Fellatio",
+                "E03": "The Reunion",
+                "E04": "The Hot Towek",
+                "E05": "Denise Handicapped",
+                "E06": "The Bare Midriff",
+                "E07": "The Black Swan",
+                "E08": "Officer Krupke",
+                "E09": "The Table Read",
+                "E10": "Seinfeld"
+            },
+            "S08": {
+                "E01": "The Divorce",
+                "E02": "The Safe House",
+                "E03": "Palestinian Chicken",
+                "E04": "The Smiley Face",
+                "E05": "Vow of Silence",
+                "E06": "The Hero",
+                "E07": "The Bi-Sexual",
+                "E08": "Car Periscope",
+                "E09": "Mister Softee",
+                "E10": "Larry vs. Michael J. Fox"
+            }
+        }
+    },
+    "Community": {
+        "link": "",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music49/v4/43/b2/70/43b270ad-cc79-e530-9cbc-6ed0ebbe36f5/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Pilot",
+                "E02": "Spanish 101",
+                "E03": "Introduction to Film",
+                "E04": "Social Psychology",
+                "E05": "Advanced Criminal Law",
+                "E06": "Football, Feminism and You",
+                "E07": "Introduction to Statistics",
+                "E08": "Home Economics",
+                "E09": "Debate 109",
+                "E10": "Environmental Science",
+                "E11": "Politics of Human Sexuality",
+                "E12": "Comparative Religion",
+                "E13": "Investigative Journalism",
+                "E14": "Interpretive Dance",
+                "E15": "Romantic Expressionalism",
+                "E16": "Communication Studies",
+                "E17": "Physical Education",
+                "E18": "Basic Genealogy",
+                "E19": "Beginner Pottery",
+                "E20": "The Science of Illusion",
+                "E21": "Contempory American Poultry",
+                "E22": "The Art of Discourse",
+                "E23": "Modern Warfare",
+                "E24": "English as a Second Language",
+                "E25": "Pascal's Triangle Revisited"
+            },
+            "S02": {
+                "E01": "Anthropology 101",
+                "E02": "Accounting for Lawyers",
+                "E03": "The Psychology of Letting Go",
+                "E04": "Basic Rocket Science",
+                "E05": "Messianic Myths and Ancient Peoples",
+                "E06": "Epidemiology",
+                "E07": "Aerodynamics of Gender",
+                "E08": "Cooperative Calligraphy",
+                "E09": "Conspiracy Theories and Interior Design",
+                "E10": "Mixology Certification",
+                "E11": "Abed's Uncrontrollable Christmas",
+                "E12": "Asian Popilation Studies",
+                "E13": "Celebrity Pharmacology 212",
+                "E14": "Advanced Dungeons & Dragons",
+                "E15": "Early 21st Century Romanticism",
+                "E16": "Intermediate Documentary Filmmaking",
+                "E17": "Intro to Political Science",
+                "E18": "Custody Law and Eastern European Diplomacy",
+                "E19": "Critical Film Studies",
+                "E20": "Competitive Wine Tasting",
+                "E21": "Paradigms of Human Memory",
+                "E22": "Applied Anthropology and Culinary Arts",
+                "E23": "A Fistful of Paintballs",
+                "E24": "For a Few Paintballs More"
+            },
+            "S03": {
+                "E01": "Biology 101",
+                "E02": "Geography of Global Conflict",
+                "E03": "Compeititive Ecology",
+                "E04": "Remedial Chaos Theory",
+                "E05": "Horror Fiction in Seven Sppoky Steps",
+                "E06": "Advanced Gy",
+                "E07": "Studies in Modern Movement",
+                "E08": "Documentary Filmmaking: Redux",
+                "E09": "Foosball and Noctural Vigilantism",
+                "E10": "Regional Holiday Music",
+                "E11": "Urban Matrimony and the Sandwich Arts",
+                "E12": "Contemporary Impressionists",
+                "E13": "Digital Exporation of Interior Design",
+                "E14": "Pillows and Blankets",
+                "E15": "Origins of Vampire Mythology",
+                "E16": "Virtual Systems Analysis",
+                "E17": "Basic Lupine Urology",
+                "E18": "Course Listing Unavailable",
+                "E19": "Curriculum Unavailable",
+                "E20": "Digital Estate Planning",
+                "E21": "The First Chang Dynasty",
+                "E22": "Introduction to Finality"
+            },
+            "S04": {
+                "E01": "History 101",
+                "E02": "Paranormal Parentage",
+                "E03": "Convention of Space and Time",
+                "E04": "Alternative History of the German Invasion",
+                "E05": "Cooperative Escapism in Familial Relations",
+                "E06": "Advanced Documentary Filmmaking",
+                "E07": "Economics of Marine Biology",
+                "E08": "Herstory of Daqnce",
+                "E09": "Intro to Felt Surrogacy",
+                "E10": "Intro to Knots",
+                "E11": "Basic Human Anatomy",
+                "E12": "Heroic Origins",
+                "E13": "Advanced Introduction to Finality"
+            },
+            "S05": {
+                "E01": "Repilot",
+                "E02": "Introduction to Teaching",
+                "E03": "Basic Intergluteal Numismatics",
+                "E04": "Cooperative Polygraphy",
+                "E05": "Geothermal Escapism",
+                "E06": "Analysis of Cork-Based Networking",
+                "E07": "Bondage and Beta Male Sexuality",
+                "E08": "App Development and Condiments",
+                "E09": "VCR Maintenance and Educational Publishing",
+                "E10": "Advanced Advanced Dungeons & Dragons",
+                "E11": "G.I. Jeff",
+                "E12": "Basic Story",
+                "E13": "Basic Sandwich"
+            },
+            "S06": {
+                "E01": "Ladders",
+                "E02": "Lawnmower Maintenance & Postnatal Care",
+                "E03": "Basic Crisis Room Decorum",
+                "E04": "Queer Studies & Advanced Waxing",
+                "E05": "Laws of Robotics & Party Rights",
+                "E06": "Basic Email Security",
+                "E07": "Adcanced Safety Features",
+                "E08": "Intro to Recycled Cinema",
+                "E09": "Grifting 101",
+                "E10": "Basic RV Repair and Palmistry",
+                "E11": "Modern Espionage",
+                "E12": "Wedding Videography",
+                "E13": "Emotional Consequences of Broadcast Television"
+            }
+        }
+    }
+}
