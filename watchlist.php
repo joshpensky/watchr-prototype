@@ -52,11 +52,11 @@
                     <li class="friends-item">
                         <div class="friends-item-img">
                             <div class="friends-item-img--show" id="always-sunny"></div>
-                            <a href="/profiles/mike.php" class="friends-item-img--profile" id="mike"></a>
+                            <a href="/users/mike_hom.php" class="friends-item-img--profile" id="mike"></a>
                         </div>
                         <div class="friends-item-info">
                             <div class="friends-item-info--desc">
-                                <a href="/profiles/mike.php">Mike</a> binged 2 seasons of <span>It's Always Sunny in Philadelphia</span>.</div>
+                                <a href="/users/mike_hom.php">Mike</a> binged 2 seasons of <span>It's Always Sunny in Philadelphia</span>.</div>
                             <div class="friends-item-info--quantity">S02 - S04</div>
                             <div class="friends-item-info--time">3 hours ago</div>
                         </div>

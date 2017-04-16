@@ -1,36 +1,4 @@
-$red: #ff2c2c;
-$red-dark: #bf2030;
-$yellow: #ffdd6b;
-$green: #00d880;
-$blue: #0075ea;
-$purple: #7946fb;
-$white: #fff;
-$body: #9fa4ae;
-$caption: #384b60;
-$top-level: #334256;
-$mid-level: #222c3a;
-$bot-level: #1a2431;
-$background: #0f1923;
-
-$nunito: "Nunito", sans-serif;
-$montserrat: "Montserrat", sans-serif;
-$roboto: "Roboto", sans-serif;
-
-@mixin transition-ease($timing) {
-    -webkit-transition: $timing ease;
-    -moz-transition: $timing ease;
-    -ms-transition: $timing ease;
-    -o-transition: $timing ease;
-    transition: $timing ease;
-}
-
-@mixin no-select() {
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
+@import "var";
 
 body {
     background: $background;
@@ -38,6 +6,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     min-height: 100vh;
     flex-direction: column;

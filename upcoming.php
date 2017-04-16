@@ -14,9 +14,9 @@
             <h1>Watchlist</h1>
             <div class="media-sel">
                 <ul class="media-sel-cont">
-                    <li class="media-sel-item" onclick="changeSection(this);">
+                    <!--<li class="media-sel-item" onclick="changeSection(this);">
                         <div class="media-sel-item-title">Last Week</div>
-                    </li>
+                    </li>-->
                     <li class="media-sel-item" onclick="changeSection(this);">
                         <div class="media-sel-item-title">Yesterday</div>
                     </li>
@@ -34,9 +34,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="last-week profile-section profile-section--hidden profile-section--invis">
+            <!--<div class="last-week profile-section profile-section--hidden profile-section--invis">
                 <h1>Last Week</h1>
-            </div>
+            </div>-->
             <div class="yesterday profile-section profile-section--hidden profile-section--invis">
                 <h1>Yesterday</h1>
             </div>

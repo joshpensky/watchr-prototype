@@ -4,6 +4,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -20,7 +21,7 @@ body {
 }
 
 h1 {
-  color: #ff2c2c;
+  color: #ff4040;
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
 }

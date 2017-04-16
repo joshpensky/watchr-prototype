@@ -15,58 +15,6 @@
   transition: 0.4s ease;
 }
 
-#nav-watchlist::before {
-  height: 5px;
-}
-
-#nav-watchlist .nav-title {
-  color: #fff;
-}
-
-#nav-watchlist .svgIcon {
-  stroke: #fff;
-}
-
-#nav-watchlist .svgFill {
-  fill: #fff;
-}
-
-body {
-  background: #0f1923;
-  position: relative;
-  width: 100vw;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.content {
-  width: 100%;
-  max-width: 1500px;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 65px;
-  z-index: 1;
-  flex: 1;
-}
-
-h1 {
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  padding-left: 50px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  -webkit-transition: 0.25s ease;
-  -moz-transition: 0.25s ease;
-  -ms-transition: 0.25s ease;
-  -o-transition: 0.25s ease;
-  transition: 0.25s ease;
-}
-
 .media-sel {
   margin-top: 10px;
   width: 100%;
@@ -160,6 +108,119 @@ h1 {
   width: 100%;
   height: 5px;
   background: #ff4040;
+}
+
+@media (max-width: 1280px) {
+  .media-sel {
+    height: 43px;
+  }
+  .media-sel-item {
+    height: 43px;
+    margin-right: 20px;
+  }
+  .media-sel-item-title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 525px) {
+  .media-sel-item {
+    margin-right: 15px;
+  }
+  .media-sel-item:first-child {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .media-sel {
+    height: 40px;
+  }
+  .media-sel-item {
+    height: 40px;
+  }
+  .media-sel-item-title {
+    font-size: 25px;
+  }
+  .media-sel-item--selected::after {
+    bottom: 0px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  .media-sel {
+    height: 33px;
+  }
+  .media-sel-cont {
+    margin-top: 0px;
+  }
+  .media-sel-item {
+    height: 33px;
+  }
+  .media-sel-item--selected::after {
+    height: 4px;
+  }
+  .media-sel-item--selected .media-sel-item-title {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .media-sel-item-title {
+    font-size: 20px;
+  }
+}
+
+#nav-watchlist::before {
+  height: 5px;
+}
+
+#nav-watchlist .nav-title {
+  color: #fff;
+}
+
+#nav-watchlist .svgIcon {
+  stroke: #fff;
+}
+
+#nav-watchlist .svgFill {
+  fill: #fff;
+}
+
+body {
+  background: #0f1923;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 65px;
+  z-index: 1;
+  flex: 1;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  padding-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .friends-watching {
@@ -505,7 +566,7 @@ h1 {
 .watchlist .show-button--mark {
   height: 30px;
   width: 30px;
-  background: url("/img/check.png");
+  background: url("/img/btn/check.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -523,7 +584,7 @@ h1 {
 }
 
 .watchlist .show-button--mark-cont:hover .show-button--mark, .watchlist .show-button--mark-cont:focus .show-button--mark, .watchlist .show-button--mark-cont:active .show-button--mark {
-  background-image: url("/img/check-hover.png");
+  background-image: url("/img/btn/check-hover.png");
 }
 
 .watchlist .show-button--mark-cont:hover p, .watchlist .show-button--mark-cont:focus p, .watchlist .show-button--mark-cont:active p {
@@ -533,7 +594,7 @@ h1 {
 .watchlist .show-button--watch {
   height: 30px;
   width: 30px;
-  background: url("/img/watch.png");
+  background: url("/img/btn/watch.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -556,7 +617,7 @@ h1 {
 }
 
 .watchlist .show-button--watch-cont:hover .show-button--watch, .watchlist .show-button--watch-cont:focus .show-button--watch, .watchlist .show-button--watch-cont:active .show-button--watch {
-  background-image: url("/img/watch-hover.png");
+  background-image: url("/img/btn/watch-hover.png");
 }
 
 .watchlist .show-button--watch-cont:hover p, .watchlist .show-button--watch-cont:focus p, .watchlist .show-button--watch-cont:active p {
@@ -708,7 +769,7 @@ h1 {
 .watchlist .movie-button--mark {
   height: 20px;
   width: 20px;
-  background: url("/img/check.png");
+  background: url("/img/btn/check.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -726,7 +787,7 @@ h1 {
 }
 
 .watchlist .movie-button--mark-cont:hover .movie-button--mark, .watchlist .movie-button--mark-cont:focus .movie-button--mark, .watchlist .movie-button--mark-cont:active .movie-button--mark {
-  background-image: url("/img/check-hover.png");
+  background-image: url("/img/btn/check-hover.png");
 }
 
 .watchlist .movie-button--mark-cont:hover p, .watchlist .movie-button--mark-cont:focus p, .watchlist .movie-button--mark-cont:active p {
@@ -759,7 +820,7 @@ h1 {
 }
 
 .watchlist .movie-button--watch-cont:hover .movie-button--watch, .watchlist .movie-button--watch-cont:focus .movie-button--watch, .watchlist .movie-button--watch-cont:active .movie-button--watch {
-  background-image: url("/img/eye-hover.png");
+  background-image: url("/img/btn/eye-hover.png");
 }
 
 .watchlist .movie-button--watch-cont:hover p, .watchlist .movie-button--watch-cont:focus p, .watchlist .movie-button--watch-cont:active p {
@@ -963,16 +1024,6 @@ h1 {
   .content {
     margin-top: 125px;
   }
-  .media-sel {
-    height: 43px;
-  }
-  .media-sel-item {
-    height: 43px;
-    margin-right: 20px;
-  }
-  .media-sel-item-title {
-    font-size: 25px;
-  }
 }
 
 @media (max-width: 820px) {
@@ -1119,12 +1170,6 @@ h1 {
     font-size: 45px;
     padding-left: 30px;
   }
-  .media-sel-item {
-    margin-right: 15px;
-  }
-  .media-sel-item:first-child {
-    margin-left: 30px;
-  }
   .friends-watching {
     width: 100%;
     padding-left: 15px;
@@ -1245,19 +1290,6 @@ h1 {
     margin-top: 15px;
     font-size: 40px;
   }
-  .media-sel {
-    height: 40px;
-  }
-  .media-sel-item {
-    height: 40px;
-  }
-  .media-sel-item-title {
-    font-size: 25px;
-  }
-  .media-sel-item--selected::after {
-    bottom: 0px;
-    height: 4px;
-  }
   .friends-watching {
     padding-left: 0px;
   }
@@ -1301,24 +1333,5 @@ h1 {
     margin-top: 15px;
     font-size: 35px;
     margin-bottom: 7px;
-  }
-  .media-sel {
-    height: 33px;
-  }
-  .media-sel-cont {
-    margin-top: 0px;
-  }
-  .media-sel-item {
-    height: 33px;
-  }
-  .media-sel-item--selected::after {
-    height: 4px;
-  }
-  .media-sel-item--selected .media-sel-item-title {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-  .media-sel-item-title {
-    font-size: 20px;
   }
 }

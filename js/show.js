@@ -5,12 +5,12 @@
 
 var users;
 
-window.onload = function() {
+window.addEventListener("load", function() {
     loadJSON("/data/userdata.json", function(response) {
         users = JSON.parse(response);
         loadShow();
     });
-}
+}, false);
 
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
@@ -141,7 +141,7 @@ function totalProgress() {
     }
 }
 
-function remModal(toggle) {
+function remModal(toggle, which) {
     var body = document.getElementsByTagName('body')[0],
         remModal = document.getElementsByClassName('modal-remove')[0],
         darkCover = document.getElementsByClassName('dark-cover')[0],

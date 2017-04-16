@@ -444,5 +444,87 @@
                 "E13": "Emotional Consequences of Broadcast Television"
             }
         }
+    },
+    "Arrested Development": {
+        "link": "",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music6/v4/09/aa/33/09aa3319-c1ce-2d91-a90b-1f706559e2ca/source/600x600bb.jpg",
+        "seasons": {
+            "S01": {
+                "E01": "Pilot",
+                "E02": "Top Banana",
+                "E03": "Bringing Up Buster",
+                "E04": "Key Decisions",
+                "E05": "Charity Drive",
+                "E06": "Visiting Ours",
+                "E07": "In God We Trust",
+                "E08": "My Mother the Car",
+                "E09": "Storming the Castle",
+                "E10": "Pier Pressure",
+                "E11": "Public Relations",
+                "E12": "Marta Complex",
+                "E13": "Beef Consomme",
+                "E14": "Shock and Aww",
+                "E15": "Staff Infection",
+                "E16": "Altar Egos",
+                "E17": "Justice is Blind",
+                "E18": "Missing Kitty",
+                "E19": "Best Man for the Gob",
+                "E20": "Whistler's Mother",
+                "E21": "Not Without My Daughter",
+                "E22": "Let 'Em Eat Cake"
+            },
+            "S02": {
+                "E01": "The One Where Michael Leaves",
+                "E02": "The One Where They Build a House",
+                "E03": "Amigos",
+                "E04": "Good Grief!",
+                "E05": "Sad Sack",
+                "E06": "Afternoon Delight",
+                "E07": "Switch Hitter",
+                "E08": "Queen for a Day",
+                "E09": "Burning Love",
+                "E10": "Ready, Aim, Marry Me",
+                "E11": "Out on a Limb",
+                "E12": "Hand to God",
+                "E13": "Motherboy XXX",
+                "E14": "The Immaculate Election",
+                "E15": "Sword of Destiny",
+                "E16": "Meat the Veals",
+                "E17": "Spring Breakout",
+                "E18": "Righteous Brothers"
+            },
+            "S03": {
+                "E01": "The Cabin Show",
+                "E02": "For British Eyes Only",
+                "E03": "Forget Me Now",
+                "E04": "Notapussy",
+                "E05": "Mr. F",
+                "E06": "The Ocean Walker",
+                "E07": "Prison Break-In",
+                "E08": "Making a Stand",
+                "E09": "S.O.B.s",
+                "E10": "Fakin' It",
+                "E11": "Family Ties",
+                "E12": "Exit Strategy",
+                "E13": "Development Arrested"
+            },
+            "S04": {
+                "E01": "Flight of the Phoenix",
+                "E02": "Borderline Personalities",
+                "E03": "Indian Takers",
+                "E04": "The B. Team",
+                "E05": "A New Start",
+                "E06": "Double Crossers",
+                "E07": "Colony Collapse",
+                "E08": "Red Hairing",
+                "E09": "Smashed",
+                "E10": "Queen B.",
+                "E11": "A New Attitude",
+                "E12": "Señoritis",
+                "E13": "It Gets Better",
+                "E14": "Off The Hook",
+                "E15": "Blockheads"
+            }
+        }
     }
 }

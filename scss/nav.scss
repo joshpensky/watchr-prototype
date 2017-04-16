@@ -1,35 +1,4 @@
-$watchr-red: #ff2c2c;
-$watchr-darkred: #bf2030;
-$red: #ff4040;
-$yellow: #ffdd6b;
-$green: #00d880;
-$blue: #0075ea;
-$purple: #7946fb;
-$white: #fff;
-$body: #9fa4ae;
-$caption: #384b60;
-$top-level: #334256;
-$mid-level: #222c3a;
-$bot-level: #1a2431;
-$background: #0f1923;
-
-$nunito: "Nunito", sans-serif;
-
-@mixin transition-ease($timing) {
-    -webkit-transition: $timing ease;
-    -moz-transition: $timing ease;
-    -ms-transition: $timing ease;
-    -o-transition: $timing ease;
-    transition: $timing ease;
-}
-
-@mixin no-select() {
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
+@import "var";
 
 ::selection {
     //background: $red;
@@ -40,6 +9,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -550,6 +520,15 @@ input {
     border: none;
 }
 
+.active-search {
+    #searchbar {
+        border-bottom-left-radius: 0px;
+    }
+    #search-submit {
+        border-bottom-right-radius: 0px;
+    }
+}
+
 #searchbar {
     -webkit-appearance: none;
     width: 90%;
@@ -580,7 +559,7 @@ input {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-image: url("/img/search-cancel.png");
+    background-image: url("/img/btn/search-cancel.png");
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -620,6 +599,7 @@ input {
     background: $blue;
     color: $blue;
     cursor: pointer;
+    @include transition-ease(0.2s);
 }
 .submit-button:hover #search-submit, #search-submit:focus {
     outline: none;
@@ -640,6 +620,90 @@ input {
     display: inline-block;
     cursor: pointer;
     @include transition-ease(.1s);
+}
+
+.search-bottom {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: $mid-level;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-left: 0px;
+    margin-top: 0px;
+    &--no-search {
+        .search-item {
+            border-top-width: 0px !important;
+            height: 0px !important;
+        }
+    }
+    .search-item {
+        position: relative;
+        width: 100%;
+        display: block;
+        height: 50px;
+        border-top: 2px solid $bot-level;
+        font-family: $nunito;
+        color: $caption-top;
+        font-size: 15px;
+        line-height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include transition-ease(0.1s);
+        &--searchall {
+            height: 36px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $caption;
+            span {
+                font-weight: 700;
+                color: $caption-top;
+            }
+        }
+        &--show, &--movie, &--user {
+            .search-item--img {
+                position: relative;
+                top: 7px;
+                display: inline-block;
+                height: 36px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 5px;
+            }
+            .search-item--title {
+                margin-left: 8px;
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        &--show {
+            .search-item--img {
+                width: 36px;
+                background-image: url("/img/defaults/show.png");
+            }
+        }
+        &--user {
+            .search-item--img {
+                width: 36px;
+                background-image: url("/img/defaults/profile.png");
+                border-radius: 50%;
+            }
+        }
+        &--movie {
+            height: 59px;
+            line-height: 59px;
+            .search-item--img {
+                background-image: url("/img/defaults/movie.png");
+                width: 30px;
+                height: 45px;
+                top: 7px;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+        }
+    }
 }
 
 @media(max-width: 1280px) {

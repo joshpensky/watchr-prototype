@@ -1,0 +1,110 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% + 50px)) scale(1);
+    width: 95vw;
+    max-width: 800px;
+    background: $mid-level;
+    z-index: 50;
+    border-radius: 20px;
+    text-align: center;
+    @include transition-ease(0.25s);
+    &--hidden {
+        transform: translate(-50%, calc(-50% + 50px)) scale(0);
+    }
+    &-remove--show {
+        .modal-img {
+            background-image: url("/img/illus/remove-show.png");
+        }
+    }
+    &-remove--friend {
+        .modal-img {
+            background-image: url("/img/illus/remove-friend.png");
+        }
+    }
+    &-close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: url("/img/btn/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+    &-img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+    }
+    &-header {
+        color: $body-lt;
+        position: relative;
+        margin-top: 115px;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 34px;
+    }
+    &-body {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $caption-top;
+        font-family: $nunito;
+        margin-top: 8px;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    &-btns {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        .modal-btn {
+            border-radius: 5px;
+            width: 130px;
+            height: 50px;
+            display: inline-block;
+            font-family: $montserrat;
+            font-size: 18px;
+            line-height: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            @include transition-ease(0.25s);
+            &-primary {
+                color: $white;
+                border: 3px solid $blue;
+                background: $blue;
+            }
+            &-secondary {
+                color: $body;
+                border: 3px solid $body;
+                margin-right: 10px;
+                &:hover {
+                    background: $body;
+                    color: $mid-level;
+                }
+            }
+        }
+    }
+}
+
+.dark-cover {
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    opacity: 0.5;
+    &--hidden {
+        display: none;
+    }
+}

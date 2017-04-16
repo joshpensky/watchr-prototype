@@ -15,19 +15,6 @@
   transition: 0.4s ease;
 }
 
-body {
-  background: #0f1923;
-  position: relative;
-  width: 100vw;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-overflow-scrolling: touch;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 .modal {
   position: fixed;
   left: 50%;
@@ -54,7 +41,7 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  background: url("/img/close.png");
+  background: url("/img/btn/close.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -147,6 +134,19 @@ body {
 
 .dark-cover--hidden {
   display: none;
+}
+
+body {
+  background: #0f1923;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .content {
@@ -391,7 +391,7 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-header-rmv-btn .show-header-info-btn-img {
-  background-image: url("/img/remove.png");
+  background-image: url("/img/btn/remove.png");
 }
 
 .hero .show-header-info-btn.show-header-rmv-btn .show-header-info-btn-type {
@@ -403,7 +403,7 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-header-rmv-btn:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-img {
-  background-image: url("/img/remove-hover.png");
+  background-image: url("/img/btn/remove-hover.png");
 }
 
 .hero .show-header-info-btn.show-header-rmv-btn:hover .show-header-info-btn-type, .hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-type {
@@ -415,7 +415,7 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-added .show-header-info-btn-img {
-  background-image: url("/img/check.png");
+  background-image: url("/img/btn/check.png");
 }
 
 .hero .show-header-info-btn.show-added .show-header-info-btn-type {
@@ -428,7 +428,7 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-added:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-added:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-added:active .show-header-info-btn-img {
-  background-image: url("/img/check-hover.png");
+  background-image: url("/img/btn/check-hover.png");
 }
 
 .hero .show-header-info-btn.show-finished {
@@ -436,7 +436,7 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-finished .show-header-info-btn-img {
-  background-image: url("/img/check-green.png");
+  background-image: url("/img/btn/check-green.png");
 }
 
 .hero .show-header-info-btn.show-finished .show-header-info-btn-type {
@@ -449,14 +449,14 @@ h4 {
 }
 
 .hero .show-header-info-btn.show-finished:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-finished:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-finished:active .show-header-info-btn-img {
-  background-image: url("/img/check-hover.png");
+  background-image: url("/img/btn/check-hover.png");
 }
 
 .hero .show-header-info-btn-img {
   vertical-align: top;
   width: 30px;
   height: 30px;
-  background-image: url("/img/add.png");
+  background-image: url("/img/btn/add.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -489,7 +489,7 @@ h4 {
 }
 
 .hero .show-header-info-btn:hover .show-header-info-btn-img, .hero .show-header-info-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn:active .show-header-info-btn-img {
-  background-image: url("/img/add-hover.png");
+  background-image: url("/img/btn/add-hover.png");
 }
 
 .hero .show-header-info-btn:hover .show-header-info-btn-type, .hero .show-header-info-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn:active .show-header-info-btn-type {
@@ -1016,7 +1016,7 @@ ul.see-all {
 .episodes-container .episode-list .episode-item-button--mark {
   height: 30px;
   width: 30px;
-  background: url("/img/check.png");
+  background: url("/img/btn/check.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -1034,7 +1034,7 @@ ul.see-all {
 }
 
 .episodes-container .episode-list .episode-item-button--mark-cont:hover .episode-item-button--mark, .episodes-container .episode-list .episode-item-button--mark-cont:focus .episode-item-button--mark, .episodes-container .episode-list .episode-item-button--mark-cont:active .episode-item-button--mark {
-  background-image: url("/img/check-hover.png");
+  background-image: url("/img/btn/check-hover.png");
 }
 
 .episodes-container .episode-list .episode-item-button--mark-cont:hover p, .episodes-container .episode-list .episode-item-button--mark-cont:focus p, .episodes-container .episode-list .episode-item-button--mark-cont:active p {
@@ -1044,7 +1044,7 @@ ul.see-all {
 .episodes-container .episode-list .episode-item-button--watch {
   height: 30px;
   width: 30px;
-  background: url("/img/watch.png");
+  background: url("/img/btn/watch.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -1067,7 +1067,7 @@ ul.see-all {
 }
 
 .episodes-container .episode-list .episode-item-button--watch-cont:hover .episode-item-button--watch, .episodes-container .episode-list .episode-item-button--watch-cont:focus .episode-item-button--watch, .episodes-container .episode-list .episode-item-button--watch-cont:active .episode-item-button--watch {
-  background-image: url("/img/watch-hover.png");
+  background-image: url("/img/btn/watch-hover.png");
 }
 
 .episodes-container .episode-list .episode-item-button--watch-cont:hover p, .episodes-container .episode-list .episode-item-button--watch-cont:focus p, .episodes-container .episode-list .episode-item-button--watch-cont:active p {
@@ -1077,7 +1077,7 @@ ul.see-all {
 .episodes-container .episode-list .episode-item-button--unmark {
   height: 30px;
   width: 30px;
-  background: url("/img/unwatch.png");
+  background: url("/img/btn/unwatch.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -1102,7 +1102,7 @@ ul.see-all {
 }
 
 .episodes-container .episode-list .episode-item-button--unmark-cont:hover .episode-item-button--unmark, .episodes-container .episode-list .episode-item-button--unmark-cont:focus .episode-item-button--unmark, .episodes-container .episode-list .episode-item-button--unmark-cont:active .episode-item-button--unmark {
-  background-image: url("/img/unwatch-hover.png");
+  background-image: url("/img/btn/unwatch-hover.png");
 }
 
 .episodes-container .episode-list .episode-item-button--unmark-cont:hover p, .episodes-container .episode-list .episode-item-button--unmark-cont:focus p, .episodes-container .episode-list .episode-item-button--unmark-cont:active p {

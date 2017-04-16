@@ -3,7 +3,7 @@ var shows;
 var thisUser;
 var you;
 
-window.onload = function() {
+window.addEventListener("load", function() {
     loadJSON("/data/userdata.json", function(response) {
         loadJSON("/data/shows.json", function(response2) {
             users = JSON.parse(response);
@@ -11,7 +11,7 @@ window.onload = function() {
             initProfile();
         });
     });
-}
+}, false);
 
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
@@ -37,16 +37,20 @@ function getUser(username) {
 }
 
 function initProfile() {
-    var profName = document.getElementsByClassName('header-info-name')[0].innerHTML;
+    var username = window.location.href.split("/users/")[1].split(".php")[0];
     for (user in users) {
-        var userFullname = users[user].firstname + " " + users[user].lastname;
-        if (userFullname == profName) {
+        if (users[user].username == username) {
             thisUser = users[user];
-        } else if (userFullname == "Josh Pensky") {
+        }
+        if (users[user].username == "josh_jpeg") {
             you = users[user];
         }
     }
-    var bio = document.getElementsByClassName('header-desc')[0],
+    document.title = thisUser.firstname + " " + thisUser.lastname + " - watchr";
+    var hero = document.getElementsByClassName('hero')[0],
+        name = document.getElementsByClassName('header-info-name')[0],
+        profPic = document.getElementsByClassName('profile-header-img')[0],
+        bio = document.getElementsByClassName('header-desc')[0],
         rank = document.getElementsByClassName('header-info-rank-type')[0],
         expShowY = document.getElementsByClassName('experience-show--years')[0],
         expShowM = document.getElementsByClassName('experience-show--months')[0],
@@ -55,7 +59,20 @@ function initProfile() {
         expMovieY = document.getElementsByClassName('experience-movie--years')[0],
         expMovieM = document.getElementsByClassName('experience-movie--months')[0],
         expMovieD = document.getElementsByClassName('experience-movie--days')[0],
-        expMovieH = document.getElementsByClassName('experience-movie--hours')[0];
+        expMovieH = document.getElementsByClassName('experience-movie--hours')[0],
+        genreList = document.getElementsByClassName('genre-list')[0];
+    //hero
+    if (thisUser.hero != "") {
+        hero.style.backgroundImage = "url(" + thisUser.hero + ")";
+    }
+    //name
+    name.innerHTML = thisUser.firstname + " " + thisUser.lastname;
+    //profile pic
+    if (thisUser.picture != "") {
+        profPic.style.backgroundImage = "url(" + thisUser.picture + ")";
+    }
+    // friend actions
+    buildActions();
     // bio
     bio.innerHTML = thisUser.bio;
     // ranks
@@ -95,92 +112,305 @@ function initProfile() {
         expMovieH.classList.add('experience-movie--hidden');
     }
 
+    var genres = thisUser.genres;
+    for (genre in genres) {
+        var url = genres[genre].toLowerCase().split(" ")
+            finalUrl = "";
+        for (var i = 0; i < url.length; i++) {
+            finalUrl += url[i];
+        }
+        url = finalUrl.split("-");
+        finalUrl = "";
+        for (var i = 0; i < url.length; i++) {
+            finalUrl += url[i];
+        }
+        var genreItem = document.createElement("li"),
+            genreItemImg = document.createElement("div"),
+            genreItemType = document.createElement("div");
+        genreItem.classList.add("genre-item");
+        genreItemImg.classList.add("genre-item-img");
+        genreItemImg.style.backgroundImage = "url('/img/genres/" + finalUrl + "-big.png')";
+        genreItemType.classList.add("genre-item-type");
+        genreItemType.innerHTML = genres[genre];
+        genreItem.appendChild(genreItemImg);
+        genreItem.appendChild(genreItemType);
+        genreList.appendChild(genreItem);
+
+        /*
+        <li class="genre-item">
+            <div class="genre-item-img" style="background-image: url('/img/genres/fantasy-big.png');"></div>
+            <div class="genre-item-type">Fantasy</div>
+        </li>
+        */
+    }
+
     buildFriends();
 
-    buildShows();
+    var showCont = document.getElementsByClassName('shows profile-section')[0],
+        favShows = showCont.getElementsByClassName('section favorites')[0],
+        favShowsCont = favShows.getElementsByClassName('show-list')[0],
+        allShows = showCont.getElementsByClassName('section all')[0],
+        allShowsCont = allShows.getElementsByClassName('show-list')[0],
+        showFavs = getFavShows(),
+        showAll = getAllShows(showFavs);
+
+    if (showAll.length == 0 && showFavs.length == 0) {
+        var empty;
+        if (thisUser == you) {
+            empty = buildEmpty("You haven't added any shows to your Watchlist.", "We've picked out some you might like");
+        } else {
+            empty = buildEmpty(thisUser.firstname + " hasn't added any shows yet.", "Recommend some they might like");
+        }
+        allShows.appendChild(empty);
+    } else {
+        var empty = allShows.getElementsByClassName('empty')[0];
+        if (empty != undefined) {
+            empty.remove();
+        }
+        buildShows(allShowsCont, showAll);
+        var showCt = allShows.getElementsByClassName('section-header-type--sub')[0];
+        showCt.innerHTML = "(<span>" + showAll.length + "</span>)";
+        if (showFavs.length == 0) {
+            if (thisUser == you) {
+                empty = buildEmpty("You haven't saved any favorite shows yet.", "Let your friends know what you love");
+            } else {
+                empty = buildEmpty(thisUser.firstname + " hasn't saved any favorite shows yet.", "");
+            }
+            favShows.appendChild(empty);
+        } else {
+            empty = favShows.getElementsByClassName('empty')[0];
+            if (empty != undefined) {
+                empty.remove();
+            }
+            buildShows(favShowsCont, showFavs);
+        }
+    }
+
+    var movieCont = document.getElementsByClassName('movies profile-section')[0],
+        favMovies = movieCont.getElementsByClassName('section favorites')[0],
+        favMoviesCont = favMovies.getElementsByClassName('movie-list')[0],
+        allMovies = movieCont.getElementsByClassName('section all')[0],
+        allMoviesCont = allMovies.getElementsByClassName('movie-list')[0];
+    if (thisUser == you) {
+        allMovies.appendChild(buildEmpty("You haven't added any movies to your Watchlist.", "We've picked out some you might like"));
+    } else {
+        allMovies.appendChild(buildEmpty(thisUser.firstname + " hasn't add any movies yet.", "Recommend some they might like"));
+    }
+}
+
+function buildActions() {
+    var profileActionsList = document.getElementsByClassName('profile-actions-list')[0];
+    if (thisUser == you) {
+        var settingsAction = document.createElement("li"),
+            editProfileAction = document.createElement("li");
+        settingsAction.classList.add("profile-actions-item");
+        settingsAction.classList.add("profile-actions-item--settings");
+        settingsAction.classList.add("profile-actions-item--icononly");
+        settingsAction.innerHTML = "Settings";
+        editProfileAction.classList.add("profile-actions-item");
+        editProfileAction.classList.add("profile-actions-item--settings");
+        editProfileAction.classList.add("profile-actions-item--textonly");
+        editProfileAction.innerHTML = "Edit Profile";
+        profileActionsList.appendChild(settingsAction);
+        profileActionsList.appendChild(editProfileAction);
+    } else {
+        var isFriend = false;
+        for (friend in you.friends) {
+            if (!isFriend && thisUser.username == you.friends[friend]) {
+                isFriend = true;
+            }
+        }
+        if (isFriend) {
+            var challengeAction = document.createElement("li"),
+                recommendAction = document.createElement("li"),
+                friendsAction = document.createElement("li");
+            challengeAction.classList.add("profile-actions-item");
+            challengeAction.classList.add("profile-actions-item--challenge");
+            challengeAction.classList.add("profile-actions-item--icononly");
+            challengeAction.innerHTML = "Challenge";
+            recommendAction.classList.add("profile-actions-item");
+            recommendAction.classList.add("profile-actions-item--recommend");
+            recommendAction.classList.add("profile-actions-item--icononly");
+            recommendAction.innerHTML = "Recommend";
+            friendsAction.classList.add("profile-actions-item");
+            friendsAction.classList.add("profile-actions-item--friends");
+            friendsAction.innerHTML = "Friends";
+            friendsAction.addEventListener("click", function(){remModal(true, 'modal-remove--friend', thisUser.firstname);}, false);
+            profileActionsList.appendChild(challengeAction);
+            profileActionsList.appendChild(recommendAction);
+            profileActionsList.appendChild(friendsAction);
+        } else {
+            var addFriendAction = document.createElement("li");
+            addFriendAction.classList.add("profile-actions-item");
+            addFriendAction.classList.add("profile-actions-item--addfriend");
+            addFriendAction.innerHTML = "Add Friend";
+            profileActionsList.appendChild(addFriendAction);
+        }
+    }
+    /*
+    <li class="profile-actions-item profile-actions-item--challenge profile-actions-item--icononly">Challenge</li>
+    <li class="profile-actions-item profile-actions-item--recommend profile-actions-item--icononly">Recommend</li>
+    <li class="profile-actions-item profile-actions-item--friends" onclick="remModal(true, 'modal-remove--friend', 'Mike');">Friends</li>
+    <li class="profile-actions-item profile-actions-item--addfriend">Add Friend</li>
+    <li class="profile-actions-item profile-actions-item--settings profile-actions-item--icononly">Settings</li>
+    <li class="profile-actions-item profile-actions-item--settings profile-actions-item--textonly">Edit Profile</li>
+    */
+}
+
+function buildEmpty(caption, action) {
+    var empty = document.createElement("div"),
+        emptyImage = document.createElement("div"),
+        emptyCaption = document.createElement("div"),
+        emptyAction = document.createElement("div"),
+        emptyActionCaption = document.createElement("div"),
+        emptyActionArrow = document.createElement("div");
+    empty.classList.add("empty");
+    emptyImage.classList.add("empty--image");
+    emptyCaption.classList.add("empty--caption");
+    emptyCaption.innerHTML = caption;
+    emptyAction.classList.add("empty--action");
+    emptyActionCaption.classList.add("empty--action--caption");
+    emptyActionCaption.innerHTML = action;
+    emptyActionArrow.classList.add("empty--action--arrow");
+
+    emptyAction.appendChild(emptyActionCaption);
+    emptyAction.appendChild(emptyActionArrow);
+    empty.appendChild(emptyImage);
+    empty.appendChild(emptyCaption);
+    if (action != "") {
+        empty.appendChild(emptyAction);
+    }
+
+    return empty;
+    /*
+    <div class="empty">
+        <div class="empty--image"></div>
+        <div class="empty--caption">You haven't added any movies to your Watchlist.</div>
+        <div class="empty--action">
+            <div class="empty--action--caption">We've picked out some you might like</div>
+            <div class="empty--action--arrow"></div>
+        </div>
+    </div>
+    */
 }
 
 // buildFriends : Array[Element] x Element --> void
 // builds the friends section in about
 function buildFriends() {
-    var theirFriends = thisUser.friends,
-        theirFriendsArr = [],
-        yourFriends = you.friends,
-        commonFriends = [],
-        friends = false;
-    for (friend in theirFriends) {
-        theirFriendsArr.push(theirFriends[friend]);
-    }
-    for (friend in yourFriends) {
-        if (arrContains(theirFriendsArr, yourFriends[friend])) {
-            commonFriends.push(yourFriends[friend]);
+    var friendsList,
+        commonFriends = [];
+    if (thisUser == you) {
+        var friends = [];
+        for (friend in you.friends) {
+            friends.push(you.friends[friend]);
         }
+        friendsList = createFriendList(friends, friends);
+        commonFriends = friendsList;
+    } else {
+        var theirFriends = thisUser.friends,
+            theirFriendsArr = [],
+            yourFriends = you.friends,
+            friends = false;
+        for (friend in theirFriends) {
+            theirFriendsArr.push(theirFriends[friend]);
+        }
+        for (friend in yourFriends) {
+            if (arrContains(theirFriendsArr, yourFriends[friend])) {
+                commonFriends.push(yourFriends[friend]);
+            }
+        }
+        if (arrContains(theirFriendsArr, you.username)) {
+            friends = true;
+        }
+        friendsList = createFriendList(theirFriendsArr, commonFriends);
     }
-    if (arrContains(theirFriendsArr, you.username)) {
-        friends = true;
-    }
-    var friendsList = createFriendList(theirFriendsArr, commonFriends);
 
     var friends = document.getElementsByClassName('section friends')[0],
         friendCt = friends.getElementsByClassName('section-header-type--sub')[0],
-        friendContainer = friends.getElementsByClassName('friend-list')[0];
+        friendContainer = friends.getElementsByClassName('friend-list')[0]
+        empty = buildEmpty("You haven't added any friends yet.", "Find people you may know here");
 
-    friendCt.innerHTML = "(<span>" + friendsList.length + "</span>)";
-
-    for (friend in friendsList) {
-        var friendItem = document.createElement("li");
-        friendItem.classList.add("friend-item");
-
-        var friendItemImg = document.createElement("div");
-        friendItemImg.classList.add('friend-item-img');
-        friendItemImg.style.backgroundImage = "url(" + friendsList[friend].picture + ")";
-
-        var friendItemInfo = document.createElement("div"),
-            friendItemInfoName = document.createElement("p"),
-            friendItemInfoRank = document.createElement("p");
-        friendItemInfo.classList.add('friend-item-info');
-        friendItemInfoName.classList.add('friend-item-info-name');
-        friendItemInfoRank.classList.add('friend-item-info-rank');
-        friendItemInfoName.innerHTML = friendsList[friend].firstname + "</br>" + friendsList[friend].lastname;
-        friendItemInfoRank.innerHTML = friendsList[friend].rank.name;
-        friendItemInfo.appendChild(friendItemInfoName);
-        friendItemInfo.appendChild(friendItemInfoRank);
-
-        var friendItemBtn = document.createElement("div"),
-            friendItemBtnCont = document.createElement("div"),
-            friendItemBtnImg = document.createElement("div"),
-            friendItemBtnText = document.createElement("div");
-        friendItemBtn.classList.add("friend-item-btn");
-        friendItemBtnImg.classList.add("friend-item-btn--img");
-        friendItemBtnText.classList.add("friend-item-btn--text");
-        if (friendsList[friend] === you) {
-            friendItemBtn.classList.add("friend-item-btn--you");
-            friendItemBtnCont.classList.add("friend-item-btn--you-cont");
-            friendItemBtnText.innerHTML = "You";
-        } else if (arrContains(commonFriends, friendsList[friend].username)) {
-            friendItemBtn.classList.add("friend-item-btn--friends");
-            friendItemBtnCont.classList.add("friend-item-btn--friends-cont");
-            friendItemBtnText.innerHTML = "Friends";
-        } else {
-            friendItemBtn.classList.add("friend-item-btn--addfriend");
-            friendItemBtnCont.classList.add("friend-item-btn--addfriend-cont");
-            friendItemBtnText.innerHTML = "Add Friend";
+    if (friendsList.length == 0) {
+        friends.appendChild(empty);
+    } else {
+        var emptyElem = friends.getElementsByClassName('empty')[0];
+        if (emptyElem != undefined) {
+            emptyElem.remove();
         }
-        friendItemBtnCont.appendChild(friendItemBtnImg);
-        friendItemBtnCont.appendChild(friendItemBtnText);
-        friendItemBtn.appendChild(friendItemBtnCont);
+        friendCt.innerHTML = "(<span>" + friendsList.length + "</span>)";
+        for (friend in friendsList) {
+            var friendItem = document.createElement("li");
+            friendItem.classList.add("friend-item");
 
-        friendItem.appendChild(friendItemImg);
-        friendItem.appendChild(friendItemInfo);
-        friendItem.appendChild(friendItemBtn);
-        friendContainer.appendChild(friendItem);
+            var friendItemImg = document.createElement("a");
+            friendItemImg.classList.add('friend-item-img');
+            friendItemImg.style.backgroundImage = "url(" + friendsList[friend].picture + ")";
+            // ADDS LINK
+            friendItemImg.href = "/users/" + friendsList[friend].username + ".php";
+
+            var friendItemInfo = document.createElement("div"),
+                friendItemInfoName = document.createElement("a"),
+                friendItemInfoRank = document.createElement("p");
+            friendItemInfo.classList.add('friend-item-info');
+            friendItemInfoName.classList.add('friend-item-info-name');
+            friendItemInfoRank.classList.add('friend-item-info-rank');
+            friendItemInfoName.innerHTML = friendsList[friend].firstname + "</br>" + friendsList[friend].lastname;
+            // ADDS LINK
+            friendItemInfoName.href = "/users/" + friendsList[friend].username + ".php";
+            friendItemInfoRank.innerHTML = friendsList[friend].rank.name;
+            friendItemInfo.appendChild(friendItemInfoName);
+            friendItemInfo.appendChild(friendItemInfoRank);
+
+            var friendItemBtn = document.createElement("div"),
+                friendItemBtnCont = document.createElement("div"),
+                friendItemBtnImg = document.createElement("div"),
+                friendItemBtnText = document.createElement("div");
+            friendItemBtn.classList.add("friend-item-btn");
+            friendItemBtnImg.classList.add("friend-item-btn--img");
+            friendItemBtnText.classList.add("friend-item-btn--text");
+            if (friendsList[friend] === you) {
+                friendItemBtn.classList.add("friend-item-btn--you");
+                friendItemBtnCont.classList.add("friend-item-btn--you-cont");
+                friendItemBtnText.innerHTML = "You";
+            } else if (arrContains(commonFriends, friendsList[friend].username) || thisUser == you) {
+                friendItemBtn.classList.add("friend-item-btn--friends");
+                friendItemBtnCont.classList.add("friend-item-btn--friends-cont");
+                friendItemBtnText.innerHTML = "Friends";
+            } else {
+                friendItemBtn.classList.add("friend-item-btn--addfriend");
+                friendItemBtnCont.classList.add("friend-item-btn--addfriend-cont");
+                friendItemBtnText.innerHTML = "Add Friend";
+            }
+            friendItemBtnCont.appendChild(friendItemBtnImg);
+            friendItemBtnCont.appendChild(friendItemBtnText);
+            friendItemBtn.appendChild(friendItemBtnCont);
+
+            friendItem.appendChild(friendItemImg);
+            friendItem.appendChild(friendItemInfo);
+            friendItem.appendChild(friendItemBtn);
+            friendContainer.appendChild(friendItem);
+        }
+
+        for (var i = 0; i < friendsList.length; i++) {
+            var item = friendContainer.getElementsByClassName('friend-item')[i];
+            buildFriendsHelp(item);
+        }
     }
 }
 
-function buildShows() {
-    var showListContainer = document.getElementsByClassName('show-list')[0];
-        yourShows = you.shows,
-        favorites = thisUser.favorites.shows,
+function buildFriendsHelp(item) {
+    var friendsCont = item.getElementsByClassName('friend-item-btn--friends-cont')[0],
+        name = item.getElementsByClassName('friend-item-info-name')[0].innerHTML.split("<br>"),
+        firstname = name[0];
+    if (friendsCont != undefined) {
+        friendsCont.addEventListener("click", function(){remModal(true, 'modal-remove--friend', firstname);}, false);
+    }
+}
+
+// getFavShows: --> Array[Show]
+// returns the user's favorite shows
+function getFavShows() {
+    var favorites = thisUser.favorites.shows,
         favoritesArray = [],
         theirShows = thisUser.shows,
         final = [];
@@ -194,6 +424,37 @@ function buildShows() {
             final.push(newShow);
         }
     }
+    return final;
+}
+
+// getAllShows: Array[Show] --> Array[Show]
+// returns all of this user's shows, minus the favorites
+function getAllShows(favorites) {
+    var theirShows = thisUser.shows,
+        all = [],
+        final = [];
+
+    for (show in theirShows) {
+        all.push(show);
+    }
+
+    var favShows = [];
+    for (var i = 0; i < favorites.length; i++) {
+        favShows.push(Object.keys(favorites[i])[0]);
+    }
+
+    for (var i = 0; i < all.length; i++) {
+        //if (!arrContains(favShows, all[i])) {
+            var newShow = {};
+            newShow[all[i]] = theirShows[all[i]];
+            final.push(newShow);
+        //}
+    }
+    return final;
+}
+
+function buildShows(showListContainer, final) {
+    var yourShows = you.shows;
     for (show in final) {
         var showName = Object.keys(final[show])[0],
             size = 0,
@@ -217,6 +478,9 @@ function buildShows() {
 
         var showItem = document.createElement("li");
         showItem.classList.add("show-item");
+        if (thisUser == you) {
+            showItem.classList.add("show-item-yours");
+        }
 
         var showItemCover = document.createElement("a");
         showItemCover.classList.add("show-item-cover");
@@ -266,12 +530,10 @@ function buildShows() {
         showItemBtnAddCont.appendChild(showItemBtnAddType);
         showItemBtnAddedCont.classList.add("show-item-btn");
         showItemBtnAddedCont.classList.add("show-item-btn--added-cont");
-        showItemBtnAddedCont.addEventListener("click", function(){addShow(this);}, false);
         showItemBtnAdded.classList.add("show-item-btn--added");
         showItemBtnAddedType.innerHTML = "In Watchlist";
         showItemBtnAddedCont.appendChild(showItemBtnAdded);
         showItemBtnAddedCont.appendChild(showItemBtnAddedType);
-
         showItem.appendChild(showItemCover);
         showItem.appendChild(showItemProgressThem);
         showItem.appendChild(showItemProgressYou);
@@ -300,18 +562,34 @@ function buildShows() {
             </div>
         </li>
         */
+        }
+        for (var i = 0; i < final.length; i++) {
+            var item = showListContainer.getElementsByClassName('show-item')[i];
+            buildShowsHelp(item);
     }
+}
+
+// buildShowsHelp: HTMLElement --> void
+// binds an event to a given show-item
+function buildShowsHelp(item) {
+    var showItemBtnAddedCont = item.getElementsByClassName('show-item-btn--added-cont')[0],
+        name = item.getElementsByClassName('show-item-title')[0].innerHTML;
+    showItemBtnAddedCont.addEventListener("click", function(){remModal(true, 'modal-remove--show', name);}, false);
 }
 
 // arrContains : Array[Element] x Element --> Boolean
 // returns true if the given array contains the given element
 function arrContains(arr, t) {
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] === t) {
-            return true;
+    if (arr == undefined) {
+        return false;
+    } else {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === t) {
+                return true;
+            }
         }
+        return false;
     }
-    return false;
 }
 
 // createFriendList : Array[User] x Array[User] --> Array[User]
@@ -319,7 +597,9 @@ function arrContains(arr, t) {
 function createFriendList(all, common) {
     var friends = [],
         friendsTemp = [];
-    friends.push(you);
+    if (thisUser != you) {
+        friends.push(you);
+    }
     for (friend in common) {
         if (!arrContains(friends, getUser(common[friend]))) {
             friendsTemp.push(getUser(common[friend]));

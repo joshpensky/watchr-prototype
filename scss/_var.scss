@@ -1,0 +1,58 @@
+$watchr-red: #ff2c2c;
+$watchr-darkred: #bf2030;
+$red: #ff4040;
+$yellow: #ffdd6b;
+$green: #00bf71;
+$blue: #138fdf;
+$purple: #7946fb;
+$white: #fff;
+$body-lt: rgb(199, 204, 214);
+$body: #9fa4ae;
+$caption: #384b60;
+$caption-top: #576777;
+$top-level: #334256;
+$mid-level: #222c3a;
+$mid-level-tr: rgba(34, 44, 58, 0);
+$bot-level: #1a2431;
+$bot-level-tr: rgba(26, 36, 49, 0);
+$background: #0f1923;
+$grad-blgr: linear-gradient(to right, $blue, mix($blue, $green));
+$grad-oryl: linear-gradient(to right, mix($red, $yellow), $yellow);
+$grad-gryw: linear-gradient(to right, $green, mix($green, $yellow));
+$title-fade: linear-gradient(to left, $mid-level, $mid-level-tr);
+
+$nunito: "Nunito", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+@mixin transition-ease($timing) {
+    -webkit-transition: $timing ease;
+    -moz-transition: $timing ease;
+    -ms-transition: $timing ease;
+    -o-transition: $timing ease;
+    transition: $timing ease;
+}
+
+@mixin transition-jelly($timing) {
+    -webkit-transition: all $timing cubic-bezier(0,.63,.5,2), background $timing ease;
+    -moz-transition: all $timing cubic-bezier(0,.63,.5,2), background $timing ease;
+    -ms-transition: all $timing cubic-bezier(0,.63,.5,2), background $timing ease;
+    -o-transition: all $timing cubic-bezier(0,.63,.5,2), background $timing ease;
+    transition: all $timing cubic-bezier(0,.63,.5,2), background $timing ease;
+}
+
+@mixin no-select() {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+@mixin no-scrollbar() {
+    &::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        height: 0px;
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+}

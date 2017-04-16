@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/css/nav.css">
         <script type="text/javascript" src="/js/nav.js"></script>
+        <script type="text/javascript" src="/js/search.js"></script>
     </head>
     <body>
         <nav id="primary">
@@ -44,7 +45,7 @@
                             <p class="nav-title">Upcoming</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="trending.html">
+                    <a class="nav-link">
                         <div id="nav-trending" class="nav-button">
                             <svg class="svgIcon" width="25" height="25" viewBox="0 0 100 100">
                                 <polyline points="2.87 82.13 29.25 52.67 51.79 71.37 97.13 17.87"/>
@@ -64,7 +65,7 @@
                             <p class="nav-title fullwidth-svg">Watchlist</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="recommend.html">
+                    <a class="nav-link">
                         <div id="nav-recommend" class="nav-button">
                             <svg class="svgIcon" width="25" height="25" viewBox="0 0 100 100">
                                 <path d="M8,45.53V92.05a4.34,4.34,0,0,0,4.34,4.34H87.76a4.34,4.34,0,
@@ -241,14 +242,18 @@
                 <!-- SEARCH ACTIONS BAR - START -->
                 <div id="actions-bar--search" class="action--hidden nav-container">
                     <form id="searchform">
-                        <input id="searchbar" type="search" name="watchrsearch" placeholder="Search...">
-                        <div class="submit-button">
-                            <svg class="submitIcon" width="25" height="25" viewBox="0 0 100 100">
-                                <circle cx="45" cy="45" r="34.43"/>
-                                <line x1="69.35" y1="69.35" x2="89.4" y2="89.4"/>
-                            </svg>
-                            <input id="search-submit" type="submit" value="Submit">
+                        <div class="search-top">
+                            <input id="searchbar" type="search" name="watchrsearch" placeholder="Search..." autocomplete="off" oninput="searchBar();">
+                            <div class="submit-button">
+                                <svg class="submitIcon" width="25" height="25" viewBox="0 0 100 100">
+                                    <circle cx="45" cy="45" r="34.43"/>
+                                    <line x1="69.35" y1="69.35" x2="89.4" y2="89.4"/>
+                                </svg>
+                                <input id="search-submit" type="submit" value="Submit">
+                            </div>
                         </div>
+                        <ul class="search-bottom search-bottom--no-search">
+                        </ul>
                     </form>
                 </div>
                 <!-- SEARCH ACTIONS BAR - END -->
@@ -268,7 +273,7 @@
                             <p class="nav-title">Upcoming</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="trending.html">
+                    <a class="nav-link">
                         <div id="nav-trending" class="nav-button">
                             <svg class="svgIcon" width="25" height="25" viewBox="0 0 100 100">
                                 <polyline points="2.87 82.13 29.25 52.67 51.79 71.37 97.13 17.87"/>
@@ -288,7 +293,7 @@
                             <p class="nav-title fullwidth-svg">Watchlist</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="recommend.html">
+                    <a class="nav-link">
                         <div id="nav-recommend" class="nav-button">
                             <svg class="svgIcon" width="25" height="25" viewBox="0 0 100 100">
                                 <path d="M8,45.53V92.05a4.34,4.34,0,0,0,4.34,4.34H87.76a4.34,4.34,0,

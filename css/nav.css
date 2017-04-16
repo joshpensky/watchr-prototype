@@ -2,6 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -513,7 +514,7 @@ nav > div {
 }
 
 .notif--friend::before {
-  background-color: #0075ea;
+  background-color: #138fdf;
 }
 
 .notif--friend .notif__actions__btn--pri {
@@ -552,7 +553,7 @@ nav > div {
 }
 
 .notif--recommend::before {
-  background-color: #00d880;
+  background-color: #00bf71;
 }
 
 .notif--recommend .notif__actions__btn--pri {
@@ -577,6 +578,14 @@ nav > div {
 input {
   display: inline-block;
   border: none;
+}
+
+.active-search #searchbar {
+  border-bottom-left-radius: 0px;
+}
+
+.active-search #search-submit {
+  border-bottom-right-radius: 0px;
 }
 
 #searchbar {
@@ -612,7 +621,7 @@ input {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  background-image: url("/img/search-cancel.png");
+  background-image: url("/img/btn/search-cancel.png");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -652,9 +661,14 @@ input {
   height: inherit;
   padding: 0px;
   position: relative;
-  background: #0075ea;
-  color: #0075ea;
+  background: #138fdf;
+  color: #138fdf;
   cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .submit-button:hover #search-submit, #search-submit:focus {
@@ -680,6 +694,96 @@ input {
   -ms-transition: 0.1s ease;
   -o-transition: 0.1s ease;
   transition: 0.1s ease;
+}
+
+.search-bottom {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #222c3a;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
+.search-bottom--no-search .search-item {
+  border-top-width: 0px !important;
+  height: 0px !important;
+}
+
+.search-bottom .search-item {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 50px;
+  border-top: 2px solid #1a2431;
+  font-family: "Nunito", sans-serif;
+  color: #576777;
+  font-size: 15px;
+  line-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.search-bottom .search-item--searchall {
+  height: 36px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #384b60;
+}
+
+.search-bottom .search-item--searchall span {
+  font-weight: 700;
+  color: #576777;
+}
+
+.search-bottom .search-item--show .search-item--img, .search-bottom .search-item--movie .search-item--img, .search-bottom .search-item--user .search-item--img {
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.search-bottom .search-item--show .search-item--title, .search-bottom .search-item--movie .search-item--title, .search-bottom .search-item--user .search-item--title {
+  margin-left: 8px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.search-bottom .search-item--show .search-item--img {
+  width: 36px;
+  background-image: url("/img/defaults/show.png");
+}
+
+.search-bottom .search-item--user .search-item--img {
+  width: 36px;
+  background-image: url("/img/defaults/profile.png");
+  border-radius: 50%;
+}
+
+.search-bottom .search-item--movie {
+  height: 59px;
+  line-height: 59px;
+}
+
+.search-bottom .search-item--movie .search-item--img {
+  background-image: url("/img/defaults/movie.png");
+  width: 30px;
+  height: 45px;
+  top: 7px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 @media (max-width: 1280px) {

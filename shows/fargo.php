@@ -92,7 +92,7 @@
                         <p class="friends-watching-item--ep">Finished</p>
                     </li>
                     <li class="friends-watching-item">
-                        <a href="../profiles/mike.php">
+                        <a href="/users/mike_hom.php">
                             <div class="friend-progress">
                                 <svg class="friend-progress--circle" width="80" height="80" viewBox="0 0 80 80">
                                     <circle cx="40" cy="40" r="36.5"/>

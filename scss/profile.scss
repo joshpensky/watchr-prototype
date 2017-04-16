@@ -1,75 +1,6 @@
-$watchr-red: #ff2c2c;
-$watchr-darkred: #bf2030;
-$red: #ff4040;
-$yellow: #ffdd6b;
-$green: #00bf71;
-$blue: #138fdf;
-$purple: #7946fb;
-$grad-blgr: linear-gradient(to right, $blue, mix($blue, $green));
-$grad-prbl: linear-gradient(to right, mix($blue, $purple), $blue);
-$grad-oryl: linear-gradient(to right, mix($red, $yellow), $yellow);
-$grad-gryw: linear-gradient(to right, $green, mix($green, $yellow));
-$white: #fff;
-$body-lt: rgb(199, 204, 214);
-$body: #9fa4ae;
-$caption: #384b60;
-$caption-top: #576777;
-$top-level: #334256;
-$mid-level: #222c3a;
-$mid-level-tr: rgba(34, 44, 58, 0);
-$bot-level: #1a2431;
-$bot-level-tr: rgba(26, 36, 49, 0);
-$background: #0f1923;
-$title-fade: linear-gradient(to left, $mid-level, $mid-level-tr);
-
-$nunito: "Nunito", sans-serif;
-$montserrat: "Montserrat", sans-serif;
-$roboto: "Roboto", sans-serif;
-
-@mixin transition-ease($timing) {
-    -webkit-transition: $timing ease;
-    -moz-transition: $timing ease;
-    -ms-transition: $timing ease;
-    -o-transition: $timing ease;
-    transition: $timing ease;
-}
-
-@mixin transition-jelly($timing) {
-    -webkit-transition: $timing cubic-bezier(0,.63,.5,2);
-    -moz-transition: $timing cubic-bezier(0,.63,.5,2);
-    -ms-transition: $timing cubic-bezier(0,.63,.5,2);
-    -o-transition: $timing cubic-bezier(0,.63,.5,2);
-    transition: $timing cubic-bezier(0,.63,.5,2);
-}
-
-@mixin no-select() {
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
-
-@mixin no-scrollbar() {
-    &::-webkit-scrollbar {
-        width: 0px;  /* remove scrollbar space */
-        height: 0px;
-        background: transparent;  /* optional: just make scrollbar invisible */
-    }
-}
-
-.profile-section--hidden {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.profile-section--invis {
-    display: none;
-}
-
-.profile-section {
-    @include transition-ease(0.4s);
-}
+@import "var";
+@import "sections";
+@import "modals";
 
 body {
     background: $background;
@@ -148,12 +79,62 @@ ul.see-all {
     overflow: visible;
 }
 
+.empty {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    &--image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: url("/img/defaults/empty.png");
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-bottom: 3px solid $bot-level;
+    }
+    &--caption {
+        color: $mid-level;
+        text-align: center;
+        font-family: $nunito;
+        margin-top: 25px;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    &--action {
+        margin-top: 3px;
+        margin-bottom: 10px;
+        text-align: center;
+        cursor: pointer;
+        &--caption {
+            display: inline-block;
+            color: $top-level;
+            text-align: center;
+            font-family: $nunito;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            margin-right: 3px;
+        }
+        &--arrow {
+            display: inline-block;
+            height: 12px;
+            width: 20px;
+            background-image: url("/img/arrow-left.png");
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
 .hero {
     position: relative;
     width: 100vw;
     left: calc(750px - 50vw);
     height: 400px;
-    background: url("/img/heroes/avatar.jpg");
+    background: url("/img/defaults/hero.png");
     background-position: center;
     background-size: cover;
     &::before {
@@ -174,85 +155,13 @@ ul.see-all {
             left: -10px;
             width: 150px;
             height: 150px;
-            background-image: url("/img/defaults/show.png");
+            background-image: url("/img/defaults/profile.png");
             background-position: center;
             background-size: cover;
             border-radius: 50%;
             display: inline-block;
             vertical-align: bottom;
             border: 10px solid $background;
-        }
-    }
-}
-
-.media-sel {
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid $bot-level;
-    position: relative;
-    @include transition-ease(.25s);
-    &::before {
-        content: "";
-        position: absolute;
-        border-bottom: 2px solid $bot-level;
-        width: calc(50vw - 750px);
-        height: 10px;
-        left: 0px;
-        bottom: -2px;
-        transform: translateX(-100%);
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        border-bottom: 2px solid $bot-level;
-        width: calc(50vw - 750px);
-        height: 10px;
-        right: 0px;
-        bottom: -2px;
-        transform: translateX(100%);
-    }
-    &-cont {
-        width: 100%;
-        white-space: nowrap;
-        overflow-x: scroll;
-        @include no-scrollbar;
-    }
-    &-item {
-        margin-right: 30px;
-        height: 50px;
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        &-title {
-            color: $top-level;
-            font-family: $montserrat;
-            font-size: 30px;
-            margin: 0px;
-            text-align: center;
-            @include transition-ease(.25s);
-            position: relative;
-        }
-        &:active .media-sel-item-title, &:hover .media-sel-item-title, &:focus .media-sel-item-title {
-            color: $body-lt;
-        }
-        &:first-child {
-            margin-left: 50px;
-        }
-        &--selected {
-            .media-sel-item-title {
-                color: $body-lt;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                height: 5px;
-                background: $red;
-            }
         }
     }
 }
@@ -451,13 +360,13 @@ ul.see-all {
             color: $yellow;
             border-color: $yellow;
             &::before {
-                background-image: url("/img/challenge.png");
+                background-image: url("/img/btn/challenge.png");
             }
             &:hover, &:focus, &:active {
                 color: $background;
                 background: $yellow;
                 &::before {
-                    background-image: url("/img/challenge-hover.png");
+                    background-image: url("/img/btn/challenge-hover.png");
                 }
             }
         }
@@ -465,13 +374,13 @@ ul.see-all {
             color: $green;
             border-color: $green;
             &::before {
-                background-image: url("/img/recommend.png");
+                background-image: url("/img/btn/recommend.png");
             }
             &:hover, &:focus, &:active {
                 color: $background;
                 background: $green;
                 &::before {
-                    background-image: url("/img/recommend-hover.png");
+                    background-image: url("/img/btn/recommend-hover.png");
                 }
             }
         }
@@ -479,13 +388,13 @@ ul.see-all {
             color: $blue;
             border-color: $blue;
             &::before {
-                background-image: url("/img/friends.png");
+                background-image: url("/img/btn/friends.png");
             }
             &:hover, &:focus, &:active {
                 color: $white;
                 background: $blue;
                 &::before {
-                    background-image: url("/img/friends-hover.png");
+                    background-image: url("/img/btn/friends-hover.png");
                 }
             }
         }
@@ -493,25 +402,25 @@ ul.see-all {
             color: $red;
             border-color: $red;
             &::before {
-                background-image: url("/img/addfriend.png");
+                background-image: url("/img/btn/addfriend.png");
             }
             &:hover, &:focus, &:active {
                 color: $white;
                 background: $red;
                 &::before {
-                    background-image: url("/img/addfriend-hover.png");
+                    background-image: url("/img/btn/addfriend-hover.png");
                 }
             }
         }
         &--settings {
             &::before {
-                background-image: url("/img/settings.png");
+                background-image: url("/img/btn/settings.png");
             }
             &:hover, &:focus, &:active {
                 color: $white;
                 background: $body;
                 &::before {
-                    background-image: url("/img/settings-hover.png");
+                    background-image: url("/img/btn/settings-hover.png");
                 }
             }
         }
@@ -566,14 +475,12 @@ ul.see-all {
         margin-top: 15px;
         width: 125px;
         height: 125px;
-        background: $top-level;
+        background: $bot-level;
         border-radius: 50%;
         display: inline-block;
         margin-right: 20px;
         position: relative;
-        &:hover {
-            background: $red;
-        }
+        cursor: pointer;
         &-img {
             position: absolute;
             left: 0px;
@@ -590,7 +497,7 @@ ul.see-all {
             bottom: 18px;
             left: 50%;
             transform: translateX(-50%);
-            color: $white;
+            color: $caption-top;
             text-align: center;
             font-family: $nunito;
             font-size: 12px;
@@ -695,26 +602,26 @@ ul.see-all {
             &--friends {
                 color: $green;
                 .friend-item-btn--img {
-                    background-image: url("/img/check-green.png");
+                    background-image: url("/img/btn/check-green.png");
                 }
                 &:hover {
                     background-color: $green;
                     color: $white;
                     .friend-item-btn--img {
-                        background-image: url("/img/check-hover.png");
+                        background-image: url("/img/btn/check-hover.png");
                     }
                 }
             }
             &--addfriend {
                 color: $red;
                 .friend-item-btn--img {
-                    background-image: url("/img/addfriend.png");
+                    background-image: url("/img/btn/addfriend.png");
                 }
                 &:hover {
                     background-color: $red;
                     color: $white;
                     .friend-item-btn--img {
-                        background-image: url("/img/addfriend-hover.png");
+                        background-image: url("/img/btn/addfriend-hover.png");
                     }
                 }
             }
@@ -734,6 +641,18 @@ ul.see-all {
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
+        &-yours {
+            .show-item-progress--them {
+                display: none;
+            }
+            .show-item-progress--you {
+                display: block;
+                top: 165px;
+            }
+            .show-item-title {
+                margin-top: 15px !important;
+            }
+        }
         &::before {
             content: "";
             position: absolute;
@@ -866,7 +785,7 @@ ul.see-all {
             &--add {
                 height: 30px;
                 width: 30px;
-                background: url("/img/add.png");
+                background: url("/img/btn/add.png");
                 background-repeat: no-repeat;
                 background-size: contain;
                 position: relative;
@@ -880,7 +799,7 @@ ul.see-all {
             &--add-cont:hover,&--add-cont:focus, &--add-cont:active {
                 background: $red;
                 .show-item-btn--add {
-                    background-image: url("/img/add-hover.png");
+                    background-image: url("/img/btn/add-hover.png");
                 }
                 p {
                     color: $white;
@@ -889,7 +808,7 @@ ul.see-all {
             &--added {
                 height: 30px;
                 width: 30px;
-                background: url("/img/check.png");
+                background: url("/img/btn/check.png");
                 background-repeat: no-repeat;
                 background-size: contain;
                 position: relative;
@@ -907,7 +826,7 @@ ul.see-all {
             &--added-cont:hover,&--added-cont:focus, &--added-cont:active {
                 background: $blue;
                 .show-item-btn--added {
-                    background-image: url("/img/check-hover.png");
+                    background-image: url("/img/btn/check-hover.png");
                 }
                 p {
                     color: $white;
@@ -974,6 +893,9 @@ ul.see-all {
             left: 50px;
         }
     }
+    .empty {
+        width: calc(100% - 50px);
+    }
 }
 
 @media (max-width: 1280px) {
@@ -982,20 +904,6 @@ ul.see-all {
     }
     .hero {
         height: 300px;
-    }
-    .media-sel {
-        height: 45px;
-        &-item {
-            margin-right: 20px;
-            &-title {
-                font-size: 25px;
-            }
-            &--selected {
-                &::after {
-                    bottom: 3px;
-                }
-            }
-        }
     }
 }
 
@@ -1024,6 +932,11 @@ ul.see-all {
                     line-height: 18px;
                 }
             }
+        }
+    }
+    .empty {
+        &--image {
+            height: 200px;
         }
     }
 }
@@ -1062,12 +975,10 @@ ul.see-all {
     .section {
         padding-left: 30px;
     }
-    .media-sel {
-        &-item {
-            margin-right: 15px;
-            &:first-child {
-                margin-left: 30px;
-            }
+    .empty {
+        width: calc(100% - 30px);
+        &--image {
+            height: 150px;
         }
     }
 }
@@ -1122,22 +1033,8 @@ ul.see-all {
             }
         }
     }
-    .media-sel {
-        height: 40px;
-        &-item {
-            &:first-child {
-                margin-left: 20px;
-            }
-            &-title {
-                font-size: 25px;
-            }
-            &--selected {
-                &::after {
-                    bottom: 8px;
-                    height: 5px;
-                }
-            }
-        }
+    .empty {
+        width: calc(100% - 20px);
     }
 }
 
@@ -1183,15 +1080,21 @@ ul.see-all {
 }
 
 @media (max-width: 375px) {
-    .media-sel {
-        height: 30px;
-        &-item {
-            &--selected::after {
-                height: 3px;
-                bottom: 18px;
+    .empty {
+        &--caption {
+            margin-top: 15px;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        &--action {
+            &--caption {
+                font-size: 14px;
+                line-height: 17px;
+                margin-right: 2px;
             }
-            &-title {
-                font-size: 18px;
+            &--arrow {
+                height: 9px;
+                width: 17px;
             }
         }
     }
@@ -1276,6 +1179,13 @@ ul.see-all {
                     height: 0px;
                 }
             }
+        }
+    }
+    .empty {
+        &--caption {
+            margin-top: 15px;
+            font-size: 19px;
+            line-height: 23px;
         }
     }
 }

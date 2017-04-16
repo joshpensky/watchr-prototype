@@ -5,6 +5,7 @@
         "firstname": "Josh",
         "lastname": "Pensky",
         "picture": "http://i.imgur.com/mdZFU8j.jpg",
+        "hero": "http://i.imgur.com/jkCySNQ.jpg",
         "bio": "\"There's always money in the BANANA STAND!\"",
         "rank": {
             "name": "Grandwatchr",
@@ -22,7 +23,7 @@
             }
         },
         "friends": {
-            "1": "mike.hom",
+            "1": "mike_hom",
             "2": "djtannertanner",
             "3": "jesscooney",
             "4": "raymondjustus",
@@ -30,29 +31,37 @@
             "6": "dfdf_afaff",
             "7": "joshjehling"
         },
+        "genres": {
+            "1": "Sci-Fi",
+            "2": "Crime",
+            "3": "Comedy",
+            "4": "Drama",
+            "5": "Mystery",
+            "6": "Musical"
+        },
         "shows": {
             "Fargo": {
                 "progress": {
                     "1": true,
                     "2": true,
-                    "3": false,
+                    "3": true,
                     "4": true,
-                    "5": false,
-                    "6": false,
-                    "7": false,
+                    "5": true,
+                    "6": true,
+                    "7": true,
                     "8": true,
                     "9": true,
-                    "10": false,
-                    "11": false,
+                    "10": true,
+                    "11": true,
                     "12": true,
-                    "13": false,
-                    "14": false,
-                    "15": false,
+                    "13": true,
+                    "14": true,
+                    "15": true,
                     "16": true,
-                    "17": true,
+                    "17": false,
                     "18": false,
-                    "19": true,
-                    "20": true
+                    "19": false,
+                    "20": false
                 }
             },
             "Westworld": {
@@ -101,16 +110,19 @@
         },
         "movies":{},
         "favorites": {
-            "shows": {},
+            "shows": {
+                "1": "Fargo"
+            },
             "movies": {}
         }
     },
-    "mike.hom": {
-        "username": "mike.hom",
+    "mike_hom": {
+        "username": "mike_hom",
         "password": "urmomlawl",
         "firstname": "Mike",
         "lastname": "Hom",
         "picture": "http://i.imgur.com/G8CcdKt.png",
+        "hero": "http://i.imgur.com/lpYeQjm.jpg",
         "bio": "My name is Mike... that's about it",
         "rank": {
             "name": "Young Padawan",
@@ -135,6 +147,14 @@
             "5": "djtannertanner",
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
+        },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
         },
         "shows": {
             "Arrested Development": {
@@ -280,8 +300,7 @@
             "shows": {
                 "1": "Dirk Gently's Holistic Detective Agency",
                 "2": "The Good Place",
-                "3": "Fargo",
-                "4": "Legion"
+                "3": "Legion"
             },
             "movies": {}
         }
@@ -292,6 +311,7 @@
         "firstname": "Lilia",
         "lastname": "Kang",
         "picture": "http://i.imgur.com/MGvwRSA.jpg",
+        "hero": "http://i.imgur.com/p4nqTcz.jpg",
         "bio": "Idk why but I look like I'm from Westworld",
         "rank": {
             "name": "Binge Master",
@@ -309,19 +329,26 @@
             }
         },
         "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
+            "1": "mike_hom",
+            "2": "jesscooney",
+            "3": "dfdf_afaff",
+            "4": "maryann_reds"
+        },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
         },
         "shows": {},
         "movies": {},
         "favorites": {
             "shows": {},
-            "movies": {}
+            "movies": {
+                "1": "Adjustment Bureau"
+            }
         }
     },
     "jesscooney": {
@@ -330,6 +357,7 @@
         "firstname": "Jess",
         "lastname": "Cooney",
         "picture": "http://i.imgur.com/JeLtKJo.png",
+        "hero": "",
         "bio": "\"'You miss 100% of the shots you don't take' - Wayne Gretzky\" - Michael Scott",
         "rank": {
             "name": "Entertainment Guru",
@@ -355,6 +383,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -368,6 +404,7 @@
         "firstname": "Connor",
         "lastname": "Duffy",
         "picture": "http://i.imgur.com/TyjAw4A.jpg",
+        "hero": "",
         "bio": "I am one with the Force, and the Force is with me.",
         "rank": {
             "name": "Dabbler",
@@ -393,6 +430,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -406,6 +451,7 @@
         "firstname": "Tanner",
         "lastname": "Richardett",
         "picture": "http://i.imgur.com/sD3LGzX.png",
+        "hero": "",
         "bio": "you've seen lana banana but have u ever seen tanner bananer? didn't think so",
         "rank": {
             "name": "Binge-oholic",
@@ -431,6 +477,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -444,6 +498,7 @@
         "firstname": "Bryan",
         "lastname": "Elhert",
         "picture": "http://i.imgur.com/lYzr7yK.jpg",
+        "hero": "",
         "bio": "Gotta find that aesthetic...",
         "rank": {
             "name": "Novice",
@@ -469,6 +524,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -482,6 +545,7 @@
         "firstname": "Eric",
         "lastname": "Harris",
         "picture": "http://i.imgur.com/NcNh98X.jpg",
+        "hero": "",
         "bio": "A life of churning is hard. But hey, it gets butter.",
         "rank": {
             "name": "Couch Potato",
@@ -507,6 +571,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -520,6 +592,7 @@
         "firstname": "Ray",
         "lastname": "Namar",
         "picture": "http://i.imgur.com/t4jgLGg.jpg",
+        "hero": "",
         "bio": "Fantasy Costco: Where All Your Dreams Come True!",
         "rank": {
             "name": "Drama Queen",
@@ -545,6 +618,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -558,6 +639,7 @@
         "firstname": "Maryann",
         "lastname": "Rojas",
         "picture": "http://i.imgur.com/vagKMaU.png",
+        "hero": "",
         "bio": "I still haven't watched that Thor trailer",
         "rank": {
             "name": "Netflix Addict",
@@ -583,6 +665,14 @@
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
         },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
+        },
         "shows": {},
         "movies": {},
         "favorites": {
@@ -596,6 +686,7 @@
         "firstname": "Josh",
         "lastname": "Ehling",
         "picture": "http://i.imgur.com/0PxqWRd.png",
+        "hero": "",
         "bio": "I work at Microsoft",
         "rank": {
             "name": "Dabbler",
@@ -620,6 +711,14 @@
             "5": "djtannertanner",
             "6": "behlert.jpg",
             "7": "dfdf_afaff"
+        },
+        "genres": {
+            "1": "Fantasy",
+            "2": "Animation",
+            "3": "Comedy",
+            "4": "Sci-Fi",
+            "5": "Adventure",
+            "6": "Drama"
         },
         "shows": {},
         "movies": {},
