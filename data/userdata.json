@@ -114,6 +114,10 @@
                 "1": "Fargo"
             },
             "movies": {}
+        },
+        "challenges": {
+            "win": 5,
+            "lose": 0
         }
     },
     "mike_hom": {
@@ -303,6 +307,10 @@
                 "3": "Legion"
             },
             "movies": {}
+        },
+        "challenges": {
+            "win": 1,
+            "lose": 0
         }
     },
     "liliakang": {
@@ -349,6 +357,10 @@
             "movies": {
                 "1": "Adjustment Bureau"
             }
+        },
+        "challenges": {
+            "win": 10,
+            "lose": 0
         }
     },
     "jesscooney": {
@@ -396,6 +408,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 3,
+            "lose": 0
         }
     },
     "cocoduffs98": {
@@ -443,6 +459,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 2,
+            "lose": 0
         }
     },
     "djtannertanner": {
@@ -490,6 +510,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 1,
+            "lose": 0
         }
     },
     "behlert.jpg": {
@@ -537,6 +561,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 4,
+            "lose": 0
         }
     },
     "dfdf_afaff": {
@@ -584,6 +612,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 6,
+            "lose": 0
         }
     },
     "raymondjustus": {
@@ -631,6 +663,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 0,
+            "lose": 0
         }
     },
     "maryann_reds": {
@@ -678,6 +714,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 2,
+            "lose": 0
         }
     },
     "joshjehling": {
@@ -725,6 +765,10 @@
         "favorites": {
             "shows": {},
             "movies": {}
+        },
+        "challenges": {
+            "win": 0,
+            "lose": 0
         }
     }
 }

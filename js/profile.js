@@ -228,6 +228,7 @@ function buildActions() {
             challengeAction.classList.add("profile-actions-item--challenge");
             challengeAction.classList.add("profile-actions-item--icononly");
             challengeAction.innerHTML = "Challenge";
+            challengeAction.addEventListener("click", function() {startChallenge(true);}, false);
             recommendAction.classList.add("profile-actions-item");
             recommendAction.classList.add("profile-actions-item--recommend");
             recommendAction.classList.add("profile-actions-item--icononly");

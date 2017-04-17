@@ -50,7 +50,7 @@ function searchShows(query) {
                 finalUrl += "-";
             }
         }
-        if (show.toLowerCase().indexOf(query) !== -1) {
+        if (show.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
             var result = {};
             result["type"] = "show";
             result["title"] = show;
@@ -69,7 +69,8 @@ function searchUsers(query) {
         if (users[user].username != "josh_jpeg") {
             var username = users[user].username,
                 name = users[user].firstname + " " + users[user].lastname;
-            if (username.toLowerCase().indexOf(query) !== -1 || name.toLowerCase().indexOf(query) !== -1) {
+            if (username.toLowerCase().indexOf(query.toLowerCase()) !== -1
+            || name.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
                 var result = {};
                 result["type"] = "user";
                 result["title"] = name;

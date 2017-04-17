@@ -243,7 +243,7 @@
                 <div id="actions-bar--search" class="action--hidden nav-container">
                     <form id="searchform">
                         <div class="search-top">
-                            <input id="searchbar" type="search" name="watchrsearch" placeholder="Search..." autocomplete="off" oninput="searchBar();">
+                            <input id="searchbar" type="search" name="search" placeholder="Search..." autocomplete="off" oninput="searchBar();">
                             <div class="submit-button">
                                 <svg class="submitIcon" width="25" height="25" viewBox="0 0 100 100">
                                     <circle cx="45" cy="45" r="34.43"/>

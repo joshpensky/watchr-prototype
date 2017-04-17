@@ -714,7 +714,7 @@ input {
 
 .search-bottom .search-item {
   position: relative;
-  width: 100%;
+  width: auto;
   display: block;
   height: 50px;
   border-top: 2px solid #1a2431;
@@ -729,6 +729,28 @@ input {
   -ms-transition: 0.1s ease;
   -o-transition: 0.1s ease;
   transition: 0.1s ease;
+}
+
+.search-bottom .search-item::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 15%;
+  height: 70%;
+  width: 15px;
+  background: linear-gradient(to left, #222c3a, rgba(34, 44, 58, 0));
+  z-index: 11;
+}
+
+.search-bottom .search-item::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 15%;
+  height: 70%;
+  width: 10px;
+  background: #222c3a;
+  z-index: 10;
 }
 
 .search-bottom .search-item--searchall {

@@ -639,7 +639,7 @@ input {
     }
     .search-item {
         position: relative;
-        width: 100%;
+        width: auto;
         display: block;
         height: 50px;
         border-top: 2px solid $bot-level;
@@ -650,6 +650,26 @@ input {
         padding-left: 20px;
         padding-right: 20px;
         @include transition-ease(0.1s);
+        &::before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 15%;
+            height: 70%;
+            width: 15px;
+            background: $title-fade;
+            z-index: 11;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 15%;
+            height: 70%;
+            width: 10px;
+            background: $mid-level;
+            z-index: 10;
+        }
         &--searchall {
             height: 36px;
             line-height: 36px;

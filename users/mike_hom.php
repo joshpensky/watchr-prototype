@@ -5,13 +5,86 @@
         <title>watchr</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/css/profile.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <script type="text/javascript" src="/js/modal.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
         <script type="text/javascript" src="/js/profile.js"></script>
-        <script type="text/javascript" src="/js/modal.js"></script>
+        <script type="text/javascript" src="/js/challenge.js"></script>
     </head>
     <body>
         <?php include '../includes/nav.php'; ?>
+        <div class="overlay overlay--process overlay--hidden" id="overlay--challenge">
+            <div class="overlay-back overlay-back--hidden">
+                <div class="overlay-back-btn" onclick="startChallenge(false);">
+                    <div class="overlay-back-btn-arrow"></div>
+                    <div class="overlay-back-btn-type"></div>
+                </div>
+            </div>
+            <div class="overlay-content">
+                <div class="overlay-container">
+                    <div class="overlay-container-back" onclick="nextPage(false);"></div>
+                    <div class="overlay-img"></div>
+                    <div class="overlay-header">CHALLENGE</div>
+                    <div class="overlay-content-page overlay-content-page--p1" id="challenge-start">
+                        <div class="overlay-caption overlay-caption--main">Get Your Head in the Binge!</div>
+                        <div class="overlay-caption">Compete with friends in a race to see who can finish the challenged show first.</div>
+                        <div class="overlay-caption">Finish first and win a trophy to add to your personal collection!</div>
+                        <div class="overlay-caption overlay-caption--sub">(and bragging rights, of course.)</div>
+
+                        <div class="overlay-btn overlay-btn--primary" onclick="nextPage(true);">Choose your Opponents</div>
+                        <div class="overlay-btn" onclick="startChallenge(false);">Nevermind</div>
+                    </div>
+                    <div class="overlay-content-page overlay-content-page--p2 overlay-content-page--hidden overlay-content-page--invis" id="challenge-opponents">
+                        <div class="overlay-subheader">Your Opponents</div>
+                        <div class="overlay-caption">Choose up to three friends to compete with.</div>
+                        <ul class="opponent-list">
+                            <li class="opponent-item opponent-item--disabled"></li>
+                            <li class="opponent-item opponent-item--disabled"></li>
+                            <li class="opponent-item opponent-item--disabled"></li>
+                        </ul>
+                        <div class="searchbox">
+                            <div class="searchbox--top">
+                                <input class="searchbox--bar" type="search" name="search" placeholder="Search..." autocomplete="off" oninput="searchChallenge(this.value);"/>
+                            </div>
+                            <div class="searchbox--bottom">
+                                <ul class="searchbox-list"></ul>
+                            </div>
+                        </div>
+                        <div class="overlay-btn overlay-btn--primary overlay-btn--primary--disabled" onclick="nextPage(true);">Choose at least one opponent</div>
+                        <div class="overlay-btn" onclick="startChallenge(false);">Cancel Challenge</div>
+                    </div>
+                    <div class="overlay-content-page overlay-content-page--p3 overlay-content-page--hidden overlay-content-page--invis" id="challenge-show">
+                        <div class="overlay-subheader">The Challenge</div>
+                        <div class="overlay-caption">Choose a show to binge with your opponents.</div>
+                        <div class="searchbox searchbox--large">
+                            <div class="searchbox--top">
+                                <input class="searchbox--bar" type="search" name="search" placeholder="Search..." autocomplete="off" oninput="searchChallenge(this.value);"/>
+                            </div>
+                            <div class="searchbox--bottom">
+                                <ul class="searchbox-list"></ul>
+                            </div>
+                        </div>
+                        <div class="overlay-btn overlay-btn--primary overlay-btn--primary--disabled" onclick="nextPage(true);">Choose a show to watch</div>
+                        <div class="overlay-btn" onclick="startChallenge(false);">Cancel Challenge</div>
+                    </div>
+                    <div class="overlay-content-page overlay-content-page--p4 overlay-content-page--hidden overlay-content-page--invis" id="challenge-review">
+                        <div class="overlay-subheader">Review</div>
+                        <div class="overlay-caption">Please take a moment to review your challenge.</div>
+                        <ul class="challenge-review-list"></ul>
+                        <ul class="challenge-review-list"></ul>
+                        <div class="overlay-btn overlay-btn--primary" onclick="nextPage(true);">Send Challenge</div>
+                        <div class="overlay-btn" onclick="startChallenge(false);">Cancel Challenge</div>
+                    </div>
+                    <div class="overlay-content-page overlay-content-page--p5 overlay-content-page--hidden overlay-content-page--invis" id="challenge-sent">
+                        <div class="overlay-subheader">Challenge Sent!</div>
+                        <div class="overlay-caption">We will alert you when your opponents accept your challenge.</div>
+                        <div class="overlay--spacing"></div>
+                        <div class="overlay-btn overlay-btn--primary" onclick="startChallenge(false);">Close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal modal-remove modal--hidden modal-remove--show">
             <div class="modal-close" onclick="remModal(false, 'modal-remove--show', '');"></div>
             <div class="modal-img"></div>

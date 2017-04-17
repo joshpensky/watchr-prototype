@@ -201,8 +201,8 @@
 }
 
 .modal-close {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   background: url("/img/btn/close.png");
   background-position: center;
@@ -220,7 +220,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
   top: -100px;
@@ -244,6 +243,11 @@
   font-size: 20px;
   line-height: 22px;
   font-weight: 400;
+}
+
+.modal-body--main {
+  color: #9fa4ae;
+  font-weight: 600;
 }
 
 .modal-btns {
@@ -309,6 +313,792 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.overlay {
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 60px);
+  bottom: 0px;
+  background: #222c3a;
+  opacity: 1;
+  z-index: 5;
+  transition: all 0.5s ease, height 0.01s;
+}
+
+.overlay--hidden {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.overlay--end .overlay-header {
+  display: none;
+}
+
+.overlay--process::before {
+  height: 165px !important;
+}
+
+.overlay--process .overlay-content .overlay-container {
+  margin-top: 115px !important;
+  padding-top: 105px !important;
+}
+
+.overlay--process .overlay-content .overlay-container .overlay-img {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+}
+
+.overlay--process .overlay-content .overlay-container .overlay-header {
+  display: none;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  background: #0f1923;
+  top: 0px;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-back {
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background: #384b60;
+  z-index: 3;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-back--hidden {
+  height: 0px;
+}
+
+.overlay-back-btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: calc(50vw - 700px);
+  height: 26px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.overlay-back-btn-arrow {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url("/img/btn/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 15px;
+}
+
+.overlay-back-btn-type {
+  position: relative;
+  top: 1px;
+  color: #1a2431;
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-content {
+  position: relative;
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.overlay-content-page {
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-content-page--hidden {
+  opacity: 0;
+}
+
+.overlay-content-page--hidden_left {
+  transform: translateX(-10px);
+}
+
+.overlay-content-page--hidden_right {
+  transform: translateX(10px);
+}
+
+.overlay-content-page--invis {
+  display: none;
+}
+
+.overlay-content .overlay-container {
+  position: relative;
+  width: 100%;
+  margin: 150px auto 0;
+  background: #222c3a;
+  padding-top: 145px;
+  padding-bottom: 50px;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-content .overlay-container-back {
+  position: absolute;
+  top: 20px;
+  margin-left: 30px;
+  width: 25px;
+  height: 25px;
+  background: url("/img/btn/back-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.overlay-content .overlay-container-back--hidden {
+  transform: translateX(-55px);
+  opacity: 0;
+}
+
+.overlay-img {
+  position: absolute;
+  top: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -moz-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -ms-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -o-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+}
+
+.overlay-header {
+  position: relative;
+  text-align: center;
+  color: #c7ccd6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 7px;
+}
+
+.overlay-subheader {
+  position: relative;
+  text-align: center;
+  color: #c7ccd6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 7px;
+}
+
+.overlay-caption {
+  text-align: center;
+  color: #576777;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 5px;
+}
+
+.overlay-caption--main {
+  font-family: "Montserrat", sans-serif;
+  color: #9fa4ae;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.overlay-caption--sub {
+  color: #384b60;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.overlay-btn {
+  margin: 15px auto 0;
+  width: 80%;
+  max-width: 400px;
+  height: 44px;
+  border: 3px solid #9fa4ae;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9fa4ae;
+  cursor: pointer;
+}
+
+.overlay-btn--primary {
+  color: #fff;
+  border-color: #138fdf;
+  background: #138fdf;
+}
+
+.overlay-btn--primary--disabled {
+  cursor: not-allowed;
+  color: #222c3a;
+  border-color: #576777;
+  background: #576777;
+}
+
+.overlay--spacing {
+  height: 10px;
+}
+
+#overlay--challenge .overlay-back {
+  background: #ffdd6b;
+}
+
+#overlay--challenge .overlay-back::before {
+  background: #ffdd6b;
+}
+
+#overlay--challenge .overlay-back::after {
+  background: #ffdd6b;
+}
+
+#overlay--challenge .overlay-img {
+  background-image: url("/img/illus/challenge.png");
+}
+
+#overlay--challenge .overlay-header {
+  color: #ffdd6b;
+}
+
+#overlay--challenge .opponent-list {
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#overlay--challenge .opponent-list .opponent-item {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url("/img/defaults/add.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -moz-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -ms-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  -o-transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+  transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
+}
+
+#overlay--challenge .opponent-list .opponent-item--disabled {
+  transform: scale(0.8);
+  opacity: 0.7;
+}
+
+#overlay--challenge .searchbox {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#overlay--challenge .searchbox--large .searchbox--bottom {
+  height: 400px;
+}
+
+#overlay--challenge .searchbox--top {
+  width: 100%;
+  height: 50px;
+}
+
+#overlay--challenge .searchbox--top::before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background-image: url("/img/btn/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 13px;
+  top: 7px;
+  z-index: 1;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar {
+  -webkit-appearance: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 60px;
+  padding-right: 50px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #1a2431;
+  color: #9fa4ae;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar:focus {
+  outline: none;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar::-webkit-search-cancel-button {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-image: url("/img/btn/search-cancel.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar::-webkit-input-placeholder {
+  color: #334256;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar::-moz-input-placeholder {
+  color: #334256;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar::-ms-input-placeholder {
+  color: #334256;
+}
+
+#overlay--challenge .searchbox--top .searchbox--bar::-o-input-placeholder {
+  color: #334256;
+}
+
+#overlay--challenge .searchbox--bottom {
+  height: 300px;
+  background: #1a2431;
+  border-top: 3px solid #222c3a;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow-y: scroll;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list {
+  position: relative;
+  margin: 20px auto 0;
+  width: 90%;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-caption {
+  overflow: visible;
+  text-align: center;
+  color: #384b60;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 90px;
+  background: #222c3a;
+  border-radius: 15px;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--added .searchbox-item--button::before {
+  top: -90px;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--added .searchbox-item--button::after {
+  top: 10px;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--disabled .searchbox-item--button {
+  cursor: not-allowed;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--disabled .searchbox-item--button::before {
+  background-image: url("/img/btn/challenge-item-disabled.png");
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--user .searchbox-item--cover {
+  border-radius: 50%;
+  background-image: url("/img/defaults/profile.png");
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--show .searchbox-item--cover {
+  border-radius: 10px;
+  background-image: url("/img/defaults/show.png");
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--cover {
+  display: inline-block;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--title {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 110px;
+  width: calc(100% - 210px);
+  color: #c7ccd6;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  max-height: 44px;
+  overflow: hidden;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--caption {
+  display: block;
+  margin-left: 110px;
+  width: calc(100% - 210px);
+  color: #384b60;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  max-height: 15px;
+  overflow: hidden;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-left: 3px solid #1a2431;
+  cursor: pointer;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 10px;
+  left: 10px;
+  background-image: url("/img/btn/challenge-item-sword.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+#overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 110px;
+  left: 10px;
+  background-image: url("/img/btn/challenge-item-check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+#overlay--challenge .challenge-review-list {
+  margin: 20px auto 40px;
+  width: 90%;
+  max-width: 600px;
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-header {
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffdd6b;
+  margin-bottom: 10px;
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 90px;
+  background: #1a2431;
+  border-radius: 15px;
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item--user .challenge-review-item--cover {
+  border-radius: 50%;
+  background-image: url("/img/defaults/profile.png");
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item--show .challenge-review-item--cover {
+  border-radius: 10px;
+  background-image: url("/img/defaults/show.png");
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item--cover {
+  display: inline-block;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item--title {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 110px;
+  width: calc(100% - 140px);
+  color: #c7ccd6;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  max-height: 44px;
+  overflow: hidden;
+}
+
+#overlay--challenge .challenge-review-list .challenge-review-item--caption {
+  display: block;
+  margin-left: 110px;
+  width: calc(100% - 210px);
+  color: #384b60;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  max-height: 15px;
+  overflow: hidden;
+}
+
+@media (max-width: 1500px) {
+  .overlay-back-btn {
+    margin-left: 50px;
+  }
+  .overlay-content .overlay-container {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .overlay {
+    height: calc(100vh - 125px);
+  }
+}
+
+@media (max-width: 670px) {
+  .overlay-header {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 525px) {
+  .overlay-back-btn {
+    margin-left: 30px;
+  }
+  .overlay .overlay-content .overlay-container {
+    margin: 125px auto 0;
+    background: #222c3a;
+    padding-top: 120px;
+  }
+  .overlay-img {
+    top: -100px;
+    width: 200px;
+    height: 200px;
+  }
+  .overlay-header {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .overlay-subheader {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .overlay-caption {
+    font-size: 16px;
+  }
+  .overlay-caption--main {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .overlay-caption--sub {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  .overlay {
+    height: calc(100vh - 110px);
+  }
+  .overlay-back-btn {
+    margin-left: 20px;
+  }
+  .overlay .overlay-container-back {
+    margin-left: 20px;
+  }
+  .overlay-header {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--added .searchbox-item--button::before {
+    top: -110px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--added .searchbox-item--button::after {
+    top: 20px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--cover {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--title {
+    margin-top: 18px;
+    margin-left: 80px;
+    width: calc(100% - 170px);
+    font-size: 17px;
+    line-height: 20px;
+    max-height: 40px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--caption {
+    margin-left: 80px;
+    width: calc(100% - 170px);
+    font-size: 13px;
+    line-height: 13px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button {
+    width: 70px;
+    height: 90px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button::before {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+  }
+  #overlay--challenge .searchbox--bottom .searchbox-list .searchbox-item--button::after {
+    width: 50px;
+    height: 50px;
+    top: 110px;
+  }
+  #overlay--challenge .challenge-review-list .challenge-review-item--cover {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  #overlay--challenge .challenge-review-list .challenge-review-item--title {
+    margin-top: 16px;
+    margin-left: 80px;
+    width: calc(100% - 170px);
+    font-size: 17px;
+    line-height: 20px;
+    max-height: 40px;
+  }
+  #overlay--challenge .challenge-review-list .challenge-review-item--caption {
+    margin-left: 80px;
+    width: calc(100% - 170px);
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+@media (max-width: 350px) {
+  .overlay-header {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .content {
