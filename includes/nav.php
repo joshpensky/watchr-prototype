@@ -90,7 +90,7 @@
                         </svg>
                     </div>
                     <div id="nav-notif" class="nav-button nav-link" onclick="openActionsBar(this);">
-                        <svg class="svgIcon" width="25" height="25 " viewBox="0 0 100 100">
+                        <svg class="svgIcon" width="25" height="25" viewBox="0 0 100 100">
                             <path d="M82,66.58,77,34.93A27.34,27.34,0,0,0,50,11.86h0A27.34,27.34,0,0,0,23,
                             34.93L18,66.58a3.8,3.8,0,0,1-2.68,3c-4.62,1.37-7,5.22-7.87,10.16a4,4,0,0,0,4,
                             4.79H88.59a4,4,0,0,0,4-4.79c-.86-4.94-3.25-8.78-7.87-10.16A3.8,3.8,0,0,1,82,

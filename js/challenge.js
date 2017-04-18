@@ -215,7 +215,7 @@ function buildOppList(list, ops) {
         searchboxItem.classList.add("searchbox-item");
         searchboxItem.classList.add("searchbox-item--user");
         searchboxItemCover.classList.add("searchbox-item--cover");
-        searchboxItemCover.style.backgroundImage = "url('" + ops[i].cover + "')";
+        searchboxItemCover.style.backgroundImage = "url(" + ops[i].cover + ")";
         searchboxItemTitle.classList.add("searchbox-item--title");
         searchboxItemTitle.innerHTML = ops[i].name;
         searchboxItemCaption.classList.add("searchbox-item--caption");
@@ -291,8 +291,13 @@ function addOpponent(opp) {
     } else {
         if (chosenOpponents.length < 3) {
             var cover = chosenItem.querySelector(".searchbox-item--cover"),
-                url = cover.style.backgroundImage + " ";
-            url = url.split("url(\"")[1].split("\")")[0];
+                url = cover.style.backgroundImage + "";
+            url = url.split("url(")[1].split("\"");
+            if (url.length > 0) {
+                url = url[0] + url[1];
+            }
+            url = url.split(")")[0];
+
             // NEED TO GET USERNAME SOMEHOW
             var newOp = opponentConstructor(url, "", chosenItem.querySelector(".searchbox-item--title").innerHTML,
                 chosenItem.querySelector(".searchbox-item--caption").innerHTML.split("x Winner")[0]);
@@ -472,7 +477,11 @@ function addChallenge(btn) {
         if (chosenShow == null) {
             var cover = chosenItem.querySelector(".searchbox-item--cover"),
                 url = cover.style.backgroundImage + " ";
-            url = url.split("url(\"")[1].split("\")")[0];
+            url = url.split("url(")[1].split("\"");
+            if (url.length > 0) {
+                url = url[0] + url[1];
+            }
+            url = url.split(")")[0];
             chosenShow = challengeConstructor(url, chosenItem.querySelector(".searchbox-item--title").innerHTML,
                 chosenItem.querySelector(".searchbox-item--caption").innerHTML.split(" Seasons")[0]);
             chosenItem.classList.add("searchbox-item--added");
