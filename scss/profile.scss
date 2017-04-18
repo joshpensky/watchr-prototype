@@ -174,7 +174,7 @@ body {
         position: relative;
         text-align: center;
         color: $body-lt;
-        font-family: $montserrat;
+        font-family: $metropolis;
         font-weight: 800;
         font-size: 80px;
         line-height: 80px;
@@ -184,7 +184,7 @@ body {
         position: relative;
         text-align: center;
         color: $body-lt;
-        font-family: $montserrat;
+        font-family: $metropolis;
         font-weight: 600;
         font-size: 50px;
         line-height: 50px;
@@ -200,7 +200,7 @@ body {
         padding-right: 30px;
         margin-bottom: 5px;
         &--main {
-            font-family: $montserrat;
+            font-family: $metropolis;
             color: $body;
             font-weight: 500;
             font-size: 22px;
@@ -223,7 +223,7 @@ body {
         border-radius: 5px;
         text-align: center;
         line-height: 44px;
-        font-family: $montserrat;
+        font-family: $metropolis;
         font-size: 16px;
         font-weight: 500;
         color: $body;
@@ -503,7 +503,7 @@ body {
         max-width: 600px;
         .challenge-review-header {
             line-height: 22px;
-            font-family: $montserrat;
+            font-family: $metropolis;
             font-size: 18px;
             font-weight: 500;
             color: $yellow;
@@ -764,7 +764,7 @@ body {
 
 h1 {
     color: $white;
-    font-family: $montserrat;
+    font-family: $metropolis;
     font-size: 50px;
     line-height: 50px;
     margin: 0;
@@ -773,11 +773,11 @@ h1 {
 
 h2 {
     color: $white;
-    font-family: $montserrat;
+    font-family: $metropolis;
     margin-top: 4px;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 500;
+    font-size: 27px;
+    line-height: 27px;
+    font-weight: 600;
     margin: 0;
     padding: 0;
 }

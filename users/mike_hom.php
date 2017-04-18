@@ -9,6 +9,7 @@
         <script type="text/javascript" src="/js/modal.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
         <script type="text/javascript" src="/js/profile.js"></script>
+        <script type="text/javascript" src="/js/show.js"></script>
         <script type="text/javascript" src="/js/challenge.js"></script>
     </head>
     <body>
