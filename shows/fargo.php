@@ -4,21 +4,23 @@
         <meta charset="utf-8">
         <title>Fargo - watchr</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
         <link rel="stylesheet" type="text/css" href="/css/show.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
         <script type="text/javascript" src="/js/show.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
+        <script type="text/javascript" src="/js/modal.js"></script>
     </head>
     <body>
         <?php include '../includes/nav.php'; ?>
-        <div class="modal modal-remove modal--hidden">
-            <div class="modal-close" onclick="remModal(false);"></div>
+        <div class="modal modal-remove modal--hidden modal-remove--show">
+            <div class="modal-close" onclick="remModal(false, 'modal-remove--show', 'Fargo');"></div>
             <div class="modal-img"></div>
             <h2 class="modal-header">Remove Fargo from your Watchlist?</h2>
             <p class="modal-body">You will lose all progress you currently have on this show.</p>
             <div class="modal-btns">
-                <div class="modal-btn modal-btn-secondary" onclick="remShow(); remModal(false);">Yes</div>
-                <div class="modal-btn modal-btn-primary" onclick="remModal(false);">No</div>
+                <div class="modal-btn modal-btn-secondary" onclick="remShow(); remModal(false, 'modal-remove--show', 'Fargo');">Yes</div>
+                <div class="modal-btn modal-btn-primary" onclick="remModal(false, 'modal-remove--show', 'Fargo');">No</div>
             </div>
         </div>
         <div class="dark-cover dark-cover--hidden"></div>
@@ -36,7 +38,7 @@
                             <div class="show-header-info-btn-img"></div>
                             <p class="show-header-info-btn-type">Add to Watchlist</p>
                         </div>
-                        <div class="show-header-info-btn show-header-rmv-btn" onclick="remModal(true);">
+                        <div class="show-header-info-btn show-header-rmv-btn" onclick="remModal(true, 'modal-remove--show', 'Fargo');">
                             <div class="show-header-info-btn-img"></div>
                             <p class="show-header-info-btn-type">Remove Show</p>
                         </div>

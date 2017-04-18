@@ -27,7 +27,7 @@ body {
 
 h1 {
     color: $white;
-    font-family: $montserrat;
+    font-family: $metropolis;
     font-size: 50px;
     line-height: 50px;
     margin: 0;
@@ -36,10 +36,10 @@ h1 {
 
 h2 {
     color: $white;
-    font-family: $montserrat;
+    font-family: $metropolis;
     margin-top: 4px;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 27px;
+    line-height: 27px;
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -47,11 +47,11 @@ h2 {
 
 h3 {
     color: $white;
-    font-family: $montserrat;
+    font-family: $metropolis;
     margin-top: 4px;
     font-size: 22px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
@@ -69,57 +69,10 @@ h4 {
 }
 
 .media-sel {
-    margin-top: 15px;
-    margin-left: -50px;
+    left: -50px;
     width: calc(100% + 50px);
-    height: 43px;
-    border-bottom: 2px solid $bot-level;
-    position: relative;
-    @include transition-ease(.25s);
-    &-cont {
-        width: 100%;
-        white-space: nowrap;
-        overflow-x: scroll;
-        @include no-scrollbar;
-    }
-    &-item {
-        margin-right: 30px;
-        height: 43px;
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        &-title {
-            color: $top-level;
-            font-family: $montserrat;
-            font-weight: 600;
-            font-size: 25px;
-            margin: 0px;
-            text-align: center;
-            @include transition-ease(.25s);
-            position: relative;
-
-        }
-        &:active .media-sel-item-title, &:hover .media-sel-item-title, &:focus .media-sel-item-title {
-            color: $body-lt;
-        }
-        &:first-child {
-            margin-left: 50px;
-        }
-        &--selected {
-            .media-sel-item-title {
-                color: $body-lt;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                height: 5px;
-                background: $red;
-            }
-        }
+    &::before, &::after {
+        display: none;
     }
 }
 
@@ -1082,20 +1035,6 @@ ul.see-all {
     .hero {
         height: 300px;
     }
-    .media-sel {
-        height: 40px;
-        &-item {
-            margin-right: 20px;
-            &-title {
-                font-size: 25px;
-            }
-            &--selected {
-                &::after {
-                    bottom: 3px;
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 1000px) {
@@ -1123,7 +1062,7 @@ ul.see-all {
                 line-height: 120px;
                 text-align: center;
                 color: $top-level;
-                font-family: $montserrat;
+                font-family: $metropolis;
                 font-size: 35px;
                 font-weight: 600;
             }
@@ -1208,14 +1147,8 @@ ul.see-all {
         }
     }
     .media-sel {
+        left: -30px;
         width: calc(100% + 30px);
-        margin-left: -30px;
-        &-item {
-            margin-right: 15px;
-            &:first-child {
-                margin-left: 30px;
-            }
-        }
     }
     .episodes-container {
         width: calc(100% + 30px);
@@ -1353,43 +1286,13 @@ ul.see-all {
         }
     }
     .media-sel {
+        left: -20px;
         width: calc(100% + 20px);
-        margin-left: -20px;
-        height: 35px;
-        &-item {
-            margin-right: 25px;
-            &:first-child {
-                margin-left: 20px;
-            }
-            &-title {
-                font-size: 22px;
-            }
-            &--selected {
-                &::after {
-                    bottom: 8px;
-                    height: 5px;
-                }
-            }
-        }
     }
 }
 
 
 @media (max-width: 375px) {
-    .media-sel {
-        height: 35px;
-        &-item {
-            height: 35px;
-            &--selected::after {
-                height: 3px;
-                bottom: 0px;
-            }
-            &-title {
-                font-size: 18px;
-                line-height: 35px;
-            }
-        }
-    }
     .hero {
         .show-header {
             &-cover {

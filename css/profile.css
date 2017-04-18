@@ -16,9 +16,9 @@
 }
 
 .media-sel {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
-  height: 50px;
+  height: 35px;
   border-bottom: 2px solid #1a2431;
   position: relative;
   -webkit-transition: 0.25s ease;
@@ -66,8 +66,8 @@
 }
 
 .media-sel-item {
-  margin-right: 30px;
-  height: 50px;
+  margin-right: 20px;
+  height: 35px;
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -75,8 +75,9 @@
 
 .media-sel-item-title {
   color: #334256;
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
+  font-family: "Metropolis", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
   margin: 0px;
   text-align: center;
   -webkit-transition: 0.25s ease;
@@ -111,21 +112,14 @@
 }
 
 @media (max-width: 1280px) {
-  .media-sel {
-    height: 43px;
-  }
   .media-sel-item {
-    height: 43px;
     margin-right: 20px;
-  }
-  .media-sel-item-title {
-    font-size: 25px;
   }
 }
 
 @media (max-width: 525px) {
   .media-sel-item {
-    margin-right: 15px;
+    margin-right: 17px;
   }
   .media-sel-item:first-child {
     margin-left: 30px;
@@ -134,26 +128,7 @@
 
 @media (max-width: 425px) {
   .media-sel {
-    height: 40px;
-  }
-  .media-sel-item {
-    height: 40px;
-  }
-  .media-sel-item-title {
-    font-size: 25px;
-  }
-  .media-sel-item--selected::after {
-    bottom: 0px;
-    height: 4px;
-  }
-}
-
-@media (max-width: 375px) {
-  .media-sel {
     height: 33px;
-  }
-  .media-sel-cont {
-    margin-top: 0px;
   }
   .media-sel-item {
     height: 33px;
@@ -167,6 +142,15 @@
   }
   .media-sel-item-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .media-sel {
+    height: 33px;
+  }
+  .media-sel-cont {
+    margin-top: 0px;
   }
 }
 
@@ -260,7 +244,7 @@
   width: 130px;
   height: 50px;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-size: 18px;
   line-height: 50px;
   font-weight: 600;
@@ -520,7 +504,7 @@ body {
   position: relative;
   text-align: center;
   color: #c7ccd6;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-weight: 800;
   font-size: 80px;
   line-height: 80px;
@@ -531,7 +515,7 @@ body {
   position: relative;
   text-align: center;
   color: #c7ccd6;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-weight: 600;
   font-size: 50px;
   line-height: 50px;
@@ -550,7 +534,7 @@ body {
 }
 
 .overlay-caption--main {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   color: #9fa4ae;
   font-weight: 500;
   font-size: 22px;
@@ -574,7 +558,7 @@ body {
   border-radius: 5px;
   text-align: center;
   line-height: 44px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #9fa4ae;
@@ -895,7 +879,7 @@ body {
 
 #overlay--challenge .challenge-review-list .challenge-review-header {
   line-height: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #ffdd6b;
@@ -1113,7 +1097,7 @@ body {
 
 h1 {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
@@ -1122,11 +1106,11 @@ h1 {
 
 h2 {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metropolis", sans-serif;
   margin-top: 4px;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 500;
+  font-size: 27px;
+  line-height: 27px;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }

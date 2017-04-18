@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <title>Legion - watchr</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
         <link rel="stylesheet" type="text/css" href="/css/show.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
         <script type="text/javascript" src="/js/show.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
+        <!--<script type="text/javascript" src="/js/modal.js"></script>-->
     </head>
     <body>
         <?php include '../includes/nav.php'; ?>

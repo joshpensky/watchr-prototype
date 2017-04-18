@@ -141,26 +141,6 @@ function totalProgress() {
     }
 }
 
-function remModal(toggle, which) {
-    var body = document.getElementsByTagName('body')[0],
-        remModal = document.getElementsByClassName('modal-remove')[0],
-        darkCover = document.getElementsByClassName('dark-cover')[0],
-        progressBar = document.getElementsByClassName('show-header-progress-bar')[0];
-    if (toggle) {
-        if(progressBar.style.width === "0%") {
-            remShow();
-        } else {
-            remModal.classList.remove('modal--hidden');
-            darkCover.classList.remove('dark-cover--hidden');
-            body.style.overflow = "hidden";
-        }
-    } else {
-        remModal.classList.add('modal--hidden');
-        darkCover.classList.add('dark-cover--hidden');
-        body.style.overflow = "auto";
-    }
-}
-
 function remShow() {
     var show = document.getElementsByClassName('content')[0],
         episodes = document.getElementsByClassName('episode-item'),
