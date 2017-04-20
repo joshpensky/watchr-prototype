@@ -74,10 +74,10 @@
 }
 
 .media-sel-item-title {
-  color: #334256;
+  color: #576777;
   font-family: "Metropolis", sans-serif;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px;
   text-align: center;
   -webkit-transition: 0.25s ease;
@@ -216,6 +216,7 @@
   padding-left: 30px;
   padding-right: 30px;
   line-height: 34px;
+  font-weight: 700;
 }
 
 .modal-body {
@@ -287,7 +288,10 @@
 }
 
 body {
-  background: #0f1923;
+  background-color: #0f1923;
+  /*background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;*/
   position: relative;
   width: 100vw;
   margin: 0;
@@ -629,7 +633,7 @@ h4 {
   bottom: -7px;
   display: inline-block;
   float: right;
-  color: #334256;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -652,8 +656,8 @@ h4 {
   position: absolute;
   width: 8px;
   height: 8px;
-  border-top: 2px solid #334256;
-  border-right: 2px solid #334256;
+  border-top: 2px solid #576777;
+  border-right: 2px solid #576777;
   right: -4px;
   bottom: 4px;
   transform: translateX(100%) rotate(45deg);
@@ -724,7 +728,7 @@ ul.see-all {
 }
 
 .about-genres-item-type {
-  color: #334256;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 25px;
@@ -773,7 +777,7 @@ ul.see-all {
 }
 
 .about-streaming-title {
-  color: #334256;
+  color: #384b60;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -890,7 +894,7 @@ ul.see-all {
   position: relative;
   display: block;
   text-align: center;
-  color: #334256;
+  color: #576777;
   font-family: "Roboto", sans-serif;
   margin-top: 4px;
   font-size: 16px;
@@ -903,16 +907,12 @@ ul.see-all {
   transition: 0.25s ease;
 }
 
-.friends-watching-list .friends-watching-item:hover .friend-progress--pic, .friends-watching-list .friends-watching-item:focus .friend-progress--pic, .friends-watching-list .friends-watching-item:active .friend-progress--pic {
+.friends-watching-list .friends-watching-item:focus .friend-progress--pic, .friends-watching-list .friends-watching-item:active .friend-progress--pic {
   transform: scale(0.9);
 }
 
-.friends-watching-list .friends-watching-item:hover .friend-progress + .friends-watching-item--name, .friends-watching-list .friends-watching-item:focus .friend-progress + .friends-watching-item--name, .friends-watching-list .friends-watching-item:active .friend-progress + .friends-watching-item--name {
+.friends-watching-list .friends-watching-item:focus .friend-progress + .friends-watching-item--name, .friends-watching-list .friends-watching-item:active .friend-progress + .friends-watching-item--name {
   color: #fff;
-}
-
-.friends-watching-list .friends-watching-item:hover .friend-progress ~ .friends-watching-item--ep, .friends-watching-list .friends-watching-item:focus .friend-progress ~ .friends-watching-item--ep, .friends-watching-list .friends-watching-item:active .friend-progress ~ .friends-watching-item--ep {
-  color: #576777;
 }
 
 .episodes-container {
@@ -1051,7 +1051,7 @@ ul.see-all {
 .episodes-container .episode-list .episode-item-number {
   margin-bottom: 2px;
   margin-left: 15px;
-  color: #576777;
+  color: #9fa4ae;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -1265,7 +1265,7 @@ ul.see-all {
 
 .cast-list .cast-item-name {
   white-space: normal;
-  color: #9fa4ae;
+  color: #c7ccd6;
   font-family: "Nunito", sans-serif;
   font-size: 15px;
   line-height: 17px;
@@ -1295,7 +1295,7 @@ ul.see-all {
 
 .cast-list .cast-item-role {
   white-space: normal;
-  color: #334256;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 15px;
   line-height: 17px;
@@ -1377,7 +1377,7 @@ ul.see-all {
 
 .review-list .review-item-leftside-user {
   white-space: normal;
-  color: #9fa4ae;
+  color: #c7ccd6;
   font-family: "Nunito", sans-serif;
   font-size: 15px;
   line-height: 20px;
@@ -1395,7 +1395,7 @@ ul.see-all {
 
 .review-list .review-item-leftside-rank {
   white-space: normal;
-  color: #334256;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 15px;
   line-height: 20px;

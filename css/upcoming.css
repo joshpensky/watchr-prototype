@@ -74,10 +74,10 @@
 }
 
 .media-sel-item-title {
-  color: #334256;
+  color: #576777;
   font-family: "Metropolis", sans-serif;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px;
   text-align: center;
   -webkit-transition: 0.25s ease;
@@ -177,7 +177,10 @@ ul {
 }
 
 body {
-  background: #0f1923;
+  background-color: #0f1923;
+  /*background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;*/
   position: relative;
   width: 100vw;
   margin: 0;
@@ -337,7 +340,7 @@ h1 {
     margin-top: 110px;
   }
   h1 {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 40px;
   }
 }

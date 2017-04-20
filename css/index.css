@@ -10,36 +10,375 @@ body {
   flex-direction: column;
 }
 
-.content {
+.hero {
+  background: url("http://static.srcdn.com/wp-content/uploads/header3-stranger-things-80s-movies.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  z-index: 5;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(26, 36, 49, 0), #1a2431);
+}
+
+.header--container {
+  display: flex;
   width: 100%;
   max-width: 1500px;
-  position: relative;
   margin: 0 auto;
-  margin-top: 65px;
-  z-index: 1;
-  flex: 1;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-h1 {
-  color: #ff4040;
+.header--container .logo {
+  margin-left: 50px;
+  display: inline-flex;
+  align-items: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.header--container .login {
+  position: relative;
+  margin-right: 50px;
+  color: #138fdf;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #138fdf;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.phone {
+  height: 800px;
+  width: auto;
+  position: absolute;
+  bottom: -200px;
+  right: 50px;
+  transform: rotate(-30deg);
+}
+
+.hero--container {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero--container h1 {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #fff;
+  font-family: "Metropolis", sans-serif;
+  font-size: 70px;
+  line-height: 75px;
+  font-weight: 600;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.hero--container .cta--button {
+  display: inline-block;
+  margin-left: 50px;
+  color: #fff;
+  font-family: "Metropolis", sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 600;
+  background: #ff4040;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  border-radius: 7px;
+}
+
+.content {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #0f1923;
+  overflow: hidden;
+}
+
+.section#tracking .section-content h2 {
+  max-width: 500px;
+}
+
+.section#tracking .section-img {
+  background-image: url("/img/index/movie.png");
+}
+
+.section#recommends .section-img {
+  background-image: url("/img/index/present.png");
+}
+
+.section#trophies .section-img {
+  background-image: url("/img/index/trophy.png");
+}
+
+.section--alt {
+  background: #1a2431;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+
+.section--alt .section-img {
+  transform: rotate(3deg);
+  left: calc(50vw - 750px);
+  margin-right: 0px;
+  margin-left: 115px;
+}
+
+.section--alt .section-content {
+  transform: rotate(3deg);
+  text-align: right;
+}
+
+.section--alt .section-content h2 {
+  margin-left: 0px;
+  margin-right: 115px;
+  padding-right: 0px;
+  padding-left: 80px;
+}
+
+.section--alt .section-content h3 {
+  margin-left: 0px;
+  margin-right: 115px;
+  padding-right: 0px;
+  padding-left: 80px;
+}
+
+.section--alt .section-content p {
+  margin-left: 80px;
+  margin-right: 115px;
+  padding-right: 0px;
+  padding-left: 80px;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+}
+
+.section-img {
+  position: absolute;
+  right: calc(50vw - 750px);
+  margin-right: 50px;
+  bottom: -75px;
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-content {
+  position: relative;
+  top: 125px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.section-content h2 {
+  color: #fff;
   font-family: "Metropolis", sans-serif;
   font-size: 50px;
+  line-height: 55px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 50px;
+  padding-right: 50px;
 }
 
-.slider {
+.section-content h3 {
+  color: #ff4040;
+  font-family: "Metropolis", sans-serif;
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 50px;
+  margin-bottom: 8px;
+  padding-right: 50px;
+}
+
+.section-content p {
+  color: #9fa4ae;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  margin: 0;
+  margin-right: 50px;
+  margin-left: 50px;
+  max-width: 500px;
+  padding-right: 50px;
+}
+
+.cta-section {
   width: 100%;
-  height: 400px;
-  background: #334256;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #222c3a;
 }
 
-@media (max-width: 1280px) {
-  .content {
-    margin-top: 125px;
+@media (max-width: 875px) {
+  .section {
+    height: 100%;
+  }
+  .section--alt {
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  .section--alt .section-img {
+    transform: rotate(0deg) translateX(-50%) !important;
+  }
+  .section--alt .section-content {
+    text-align: left;
+    transform: rotate(0deg);
+  }
+  .section--alt .section-content h2 {
+    margin-right: 0px;
+    margin-left: 50px;
+    padding-left: 0px;
+    padding-right: 50px;
+  }
+  .section--alt .section-content h3 {
+    margin-right: 0px;
+    margin-left: 50px;
+    padding-left: 0px;
+    padding-right: 50px;
+  }
+  .section--alt .section-content p {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left: 0px;
+    padding-right: 50px;
+  }
+  .section .section-img {
+    position: relative;
+    bottom: -125px;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section .section-content {
+    top: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section .section-img {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
+@media (max-width: 525px) {
+  .header--container {
+    height: 65px;
+  }
+  .header--container .logo {
+    margin-left: 30px;
+  }
+  .header--container .login {
+    margin-right: 30px;
+  }
+  .hero--container h1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .hero--container .cta--button {
+    margin-left: 30px;
+  }
+  .section .section-img {
+    bottom: -85px;
+  }
+  .section-content h2, .section--alt .section-content h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-left: 30px;
+    padding-right: 30px;
+  }
+  .section-content h3, .section--alt .section-content h3 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-left: 30px;
+    padding-right: 30px;
+  }
+  .section-content p, .section--alt .section-content p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 30px;
+    padding-right: 30px;
   }
 }
 
 @media (max-width: 425px) {
-  .content {
-    margin-top: 110px;
+  .header--container .logo {
+    margin-left: 20px;
+  }
+  .header--container .login {
+    margin-right: 20px;
+  }
+  .hero--container h1 {
+    font-size: 40px;
+    line-height: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero--container .cta--button {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin-left: 20px;
+  }
+  .section-content h2, .section--alt .section-content h2 {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .section-content h3, .section--alt .section-content h3 {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+  .section-content p, .section--alt .section-content p {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
   }
 }

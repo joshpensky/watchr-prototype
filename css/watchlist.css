@@ -74,10 +74,10 @@
 }
 
 .media-sel-item-title {
-  color: #334256;
+  color: #576777;
   font-family: "Metropolis", sans-serif;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px;
   text-align: center;
   -webkit-transition: 0.25s ease;
@@ -171,7 +171,10 @@
 }
 
 body {
-  background: #0f1923;
+  background-color: #0f1923;
+  /*background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;*/
   position: relative;
   width: 100vw;
   margin: 0;
@@ -288,7 +291,7 @@ h1 {
 
 .friends-watching .friends-item-info--desc {
   vertical-align: top;
-  color: #9fa4ae;
+  color: #c7ccd6;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -301,14 +304,14 @@ h1 {
 }
 
 .friends-watching .friends-item-info--desc a, .friends-watching .friends-item-info--desc span {
-  color: #9fa4ae;
+  color: #c7ccd6;
   font-weight: 700;
   display: inline;
   cursor: pointer;
 }
 
 .friends-watching .friends-item-info--quantity {
-  color: #576777;
+  color: #9fa4ae;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -563,15 +566,15 @@ h1 {
   color: #138fdf;
 }
 
-.watchlist .show-button--mark-cont:hover, .watchlist .show-button--mark-cont:focus, .watchlist .show-button--mark-cont:active {
+.watchlist .show-button--mark-cont:focus, .watchlist .show-button--mark-cont:active {
   background: #138fdf;
 }
 
-.watchlist .show-button--mark-cont:hover .show-button--mark, .watchlist .show-button--mark-cont:focus .show-button--mark, .watchlist .show-button--mark-cont:active .show-button--mark {
+.watchlist .show-button--mark-cont:focus .show-button--mark, .watchlist .show-button--mark-cont:active .show-button--mark {
   background-image: url("/img/btn/check-hover.png");
 }
 
-.watchlist .show-button--mark-cont:hover p, .watchlist .show-button--mark-cont:focus p, .watchlist .show-button--mark-cont:active p {
+.watchlist .show-button--mark-cont:focus p, .watchlist .show-button--mark-cont:active p {
   color: #fff;
 }
 
@@ -596,15 +599,15 @@ h1 {
   border-bottom-right-radius: 20px;
 }
 
-.watchlist .show-button--watch-cont:hover, .watchlist .show-button--watch-cont:focus, .watchlist .show-button--watch-cont:active {
+.watchlist .show-button--watch-cont:focus, .watchlist .show-button--watch-cont:active {
   background: #00bf71;
 }
 
-.watchlist .show-button--watch-cont:hover .show-button--watch, .watchlist .show-button--watch-cont:focus .show-button--watch, .watchlist .show-button--watch-cont:active .show-button--watch {
+.watchlist .show-button--watch-cont:focus .show-button--watch, .watchlist .show-button--watch-cont:active .show-button--watch {
   background-image: url("/img/btn/watch-hover.png");
 }
 
-.watchlist .show-button--watch-cont:hover p, .watchlist .show-button--watch-cont:focus p, .watchlist .show-button--watch-cont:active p {
+.watchlist .show-button--watch-cont:focus p, .watchlist .show-button--watch-cont:active p {
   color: #222c3a;
 }
 
@@ -766,15 +769,15 @@ h1 {
   color: #138fdf;
 }
 
-.watchlist .movie-button--mark-cont:hover, .watchlist .movie-button--mark-cont:focus, .watchlist .movie-button--mark-cont:active {
+.watchlist .movie-button--mark-cont:focus, .watchlist .movie-button--mark-cont:active {
   background: #138fdf;
 }
 
-.watchlist .movie-button--mark-cont:hover .movie-button--mark, .watchlist .movie-button--mark-cont:focus .movie-button--mark, .watchlist .movie-button--mark-cont:active .movie-button--mark {
+.watchlist .movie-button--mark-cont:focus .movie-button--mark, .watchlist .movie-button--mark-cont:active .movie-button--mark {
   background-image: url("/img/btn/check-hover.png");
 }
 
-.watchlist .movie-button--mark-cont:hover p, .watchlist .movie-button--mark-cont:focus p, .watchlist .movie-button--mark-cont:active p {
+.watchlist .movie-button--mark-cont:focus p, .watchlist .movie-button--mark-cont:active p {
   color: #fff;
 }
 
@@ -799,15 +802,15 @@ h1 {
   border-bottom-right-radius: 20px;
 }
 
-.watchlist .movie-button--watch-cont:hover, .watchlist .movie-button--watch-cont:focus, .watchlist .movie-button--watch-cont:active {
+.watchlist .movie-button--watch-cont:focus, .watchlist .movie-button--watch-cont:active {
   background: #00bf71;
 }
 
-.watchlist .movie-button--watch-cont:hover .movie-button--watch, .watchlist .movie-button--watch-cont:focus .movie-button--watch, .watchlist .movie-button--watch-cont:active .movie-button--watch {
+.watchlist .movie-button--watch-cont:focus .movie-button--watch, .watchlist .movie-button--watch-cont:active .movie-button--watch {
   background-image: url("/img/btn/eye-hover.png");
 }
 
-.watchlist .movie-button--watch-cont:hover p, .watchlist .movie-button--watch-cont:focus p, .watchlist .movie-button--watch-cont:active p {
+.watchlist .movie-button--watch-cont:focus p, .watchlist .movie-button--watch-cont:active p {
   color: #222c3a;
 }
 
@@ -852,15 +855,15 @@ h1 {
   user-select: none;
 }
 
-.cta-section--btn:hover, .cta-section--btn:focus, .cta-section--btn:active {
+.cta-section--btn:focus, .cta-section--btn:active {
   background: #ff4040;
 }
 
-.cta-section--btn:hover .cta-section--btn--icon, .cta-section--btn:focus .cta-section--btn--icon, .cta-section--btn:active .cta-section--btn--icon {
+.cta-section--btn:focus .cta-section--btn--icon, .cta-section--btn:active .cta-section--btn--icon {
   stroke: #fff;
 }
 
-.cta-section--btn:hover .cta-section--btn--type, .cta-section--btn:focus .cta-section--btn--type, .cta-section--btn:active .cta-section--btn--type {
+.cta-section--btn:focus .cta-section--btn--type, .cta-section--btn:active .cta-section--btn--type {
   color: #fff;
 }
 
@@ -1271,7 +1274,7 @@ h1 {
     margin-top: 110px;
   }
   h1 {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 40px;
   }
   .friends-watching {

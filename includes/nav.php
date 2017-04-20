@@ -8,7 +8,7 @@
     <body>
         <nav id="primary">
             <div class="nav-container">
-                <a href="/index.php"><!-- <a href="http://webdev.joshuapensky.com"> -->
+                <a href="/home.php"><!-- <a href="http://webdev.joshuapensky.com"> -->
                     <div class="home">
                         <svg id="logo" width="35" height="35" viewBox="0 0 100 100">
                             <path class="logo-dark" d="M30.57,90.49C42.5,51.41,60.13,30.44,60.13,

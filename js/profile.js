@@ -524,7 +524,7 @@ function buildShows(showListContainer, final) {
             showItemBtnAddedType = document.createElement("p");
         showItemBtnAddCont.classList.add("show-item-btn");
         showItemBtnAddCont.classList.add("show-item-btn--add-cont");
-        showItemBtnAddCont.addEventListener("click", function(){addShow(this);}, false);
+        showItemBtnAddCont.addEventListener("click", function(){addShowWatchlist(this);}, false);
         showItemBtnAdd.classList.add("show-item-btn--add");
         showItemBtnAddType.innerHTML = "Add to Watchlist";
         showItemBtnAddCont.appendChild(showItemBtnAdd);
@@ -553,11 +553,11 @@ function buildShows(showListContainer, final) {
                 <div class="show-item-progress-bar"></div>
             </div>
             <div class="show-item-title">Arrested Development</div>
-            <div class="show-item-btn show-item-btn--add-cont" onclick="addShow(this);">
+            <div class="show-item-btn show-item-btn--add-cont" onclick="addShowWatchlist(this);">
                 <div class="show-item-btn--add"></div>
                 <p>Add to Watchlist</p>
             </div>
-            <div class="show-item-btn show-item-btn--added-cont" onclick="addShow(this);">
+            <div class="show-item-btn show-item-btn--added-cont" onclick="addShowWatchlist(this);">
                 <div class="show-item-btn--added"></div>
                 <p>In Watchlist</p>
             </div>
@@ -667,9 +667,9 @@ function compareUser(user1, user2) {
     }
 }
 
-// addShow : <HTML> --> void
+// addShowWatchlist : <HTML> --> void
 // adds a show to your watchlist based on the show button clicked
-function addShow(btn) {
+function addShowWatchlist(btn) {
     var episodes = document.getElementsByClassName('show-item'),
         index,
         add;

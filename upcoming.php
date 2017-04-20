@@ -12,7 +12,7 @@
     <body>
         <?php include 'includes/nav.php'; ?>
         <div class="content">
-            <h1>Watchlist</h1>
+            <h1>Upcoming</h1>
             <div class="media-sel">
                 <ul class="media-sel-cont">
                     <!--<li class="media-sel-item" onclick="changeSection(this);">

@@ -1,0 +1,29 @@
+@import "var";
+@import "sections";
+@import "modals";
+
+body {
+    background-color: $background;
+    /*background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;*/
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 65px;
+    z-index: 1;
+    flex: 1;
+}

@@ -7,7 +7,7 @@
         <footer>
             <div class="footer-content">
                 <div class="footer-content--top">
-                    <a href="/index.php"><!-- <a href="http://webdev.joshuapensky.com"> -->
+                    <a href="/home.php"><!-- <a href="http://webdev.joshuapensky.com"> -->
                         <div class="footer-home">
                             <svg id="logo" width="35" height="35" viewBox="0 0 100 100">
                                 <path class="logo-dark" d="M30.57,90.49C42.5,51.41,60.13,30.44,60.13,
@@ -30,18 +30,18 @@
                             <p id="logotype">watchr</p>
                         </div>
                         <div class="footer-content--top-links">
-                            <a href="../about.php">About</a>
-                            <a href="../jobs.php">Jobs</a>
-                            <a href="../press.php">Press</a>
-                            <a href="../faq.php">FAQ</a>
+                            <a>About</a>
+                            <a>Jobs</a>
+                            <a>Press</a>
+                            <a>FAQ</a>
                         </div>
                     </a>
                 </div>
                 <div class="footer-content--bot">
                     <div class="footer-content--bot-links">
-                        <a href="../legal.php">Legal</a>
-                        <a href="../privacy.php">Privacy</a>
-                        <a href="../cookies.php">Cookies</a>
+                        <a>Legal</a>
+                        <a>Privacy</a>
+                        <a>Cookies</a>
                     </div>
                     <p class="footer-content--bot-copyright">&copy; 2017 watchr</p>
                 </div>

@@ -5,6 +5,10 @@ footer {
   z-index: 12;
 }
 
+footer a {
+  cursor: pointer;
+}
+
 footer .footer-content {
   width: 100%;
   max-width: 1500px;

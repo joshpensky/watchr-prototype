@@ -74,10 +74,10 @@
 }
 
 .media-sel-item-title {
-  color: #334256;
+  color: #576777;
   font-family: "Metropolis", sans-serif;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px;
   text-align: center;
   -webkit-transition: 0.25s ease;
@@ -216,6 +216,7 @@
   padding-left: 30px;
   padding-right: 30px;
   line-height: 34px;
+  font-weight: 700;
 }
 
 .modal-body {
@@ -287,7 +288,10 @@
 }
 
 body {
-  background: #0f1923;
+  background-color: #0f1923;
+  /*background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;*/
   position: relative;
   width: 100vw;
   margin: 0;
@@ -465,7 +469,7 @@ body {
   margin-left: 30px;
   width: 25px;
   height: 25px;
-  background: url("/img/btn/back-dark.png");
+  background: url("/img/btn/back-light.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -524,7 +528,7 @@ body {
 
 .overlay-caption {
   text-align: center;
-  color: #576777;
+  color: #9fa4ae;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -535,7 +539,7 @@ body {
 
 .overlay-caption--main {
   font-family: "Metropolis", sans-serif;
-  color: #9fa4ae;
+  color: #c7ccd6;
   font-weight: 500;
   font-size: 22px;
   line-height: 26px;
@@ -543,7 +547,7 @@ body {
 }
 
 .overlay-caption--sub {
-  color: #384b60;
+  color: #576777;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 30px;
@@ -815,7 +819,7 @@ body {
   display: block;
   margin-left: 110px;
   width: calc(100% - 210px);
-  color: #384b60;
+  color: #576777;
   font-size: 15px;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -937,7 +941,7 @@ body {
   display: block;
   margin-left: 110px;
   width: calc(100% - 210px);
-  color: #384b60;
+  color: #576777;
   font-size: 15px;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -1163,11 +1167,20 @@ ul.see-all {
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  border-bottom: 3px solid #1a2431;
+}
+
+.empty--image::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #334256;
+  bottom: 0px;
+  left: 0px;
 }
 
 .empty--caption {
-  color: #222c3a;
+  color: #334256;
   text-align: center;
   font-family: "Nunito", sans-serif;
   margin-top: 25px;
@@ -1185,7 +1198,7 @@ ul.see-all {
 
 .empty--action--caption {
   display: inline-block;
-  color: #334256;
+  color: #576777;
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
@@ -1397,7 +1410,7 @@ ul.see-all {
 }
 
 .header-info-rank-type {
-  color: #334256;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -1646,7 +1659,7 @@ ul.see-all {
   font-family: "Nunito", sans-serif;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .friend-list {
@@ -1695,7 +1708,7 @@ ul.see-all {
   margin-top: 3px;
   margin-bottom: 10px;
   display: block;
-  color: #384b60;
+  color: #576777;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   line-height: 18px;

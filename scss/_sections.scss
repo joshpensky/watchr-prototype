@@ -55,10 +55,10 @@
         cursor: pointer;
         position: relative;
         &-title {
-            color: $top-level;
+            color: $caption-top;
             font-family: $metropolis;
             font-size: 21px;
-            font-weight: 500;
+            font-weight: 600;
             margin: 0px;
             text-align: center;
             @include transition-ease(.25s);

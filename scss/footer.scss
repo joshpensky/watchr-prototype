@@ -6,6 +6,10 @@ footer {
     background-color: $bot-level;
     z-index: 12;
 
+    a {
+        cursor: pointer;
+    }
+
     .footer-content {
         width: 100%;
         max-width: 1500px;
