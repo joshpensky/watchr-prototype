@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <title>watchr</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
         <link rel="stylesheet" type="text/css" href="/css/nav.css">
         <link rel="stylesheet" type="text/css" href="/css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <script type="text/javascript" src="/js/data.js"></script>
     </head>
     <body>
         <div class="hero">
@@ -37,7 +39,7 @@
             <!--<img class="phone" src="/img/phone.png">-->
             <div class="hero--container">
                 <h1>Join the Binging Revolution.</h1>
-                <div class="cta--button">Start Watching Today</div>
+                <a class="cta--button" href="onboarding/welcome.php">Start Watching Today</a>
             </div>
         </div>
         <div class="content">

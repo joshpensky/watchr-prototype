@@ -1,3 +1,120 @@
+.empty {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  white-space: normal;
+}
+
+.empty--image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("/img/defaults/empty.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.empty--image::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #334256;
+  bottom: 0px;
+  left: 0px;
+}
+
+.empty--caption {
+  color: #334256;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  margin-top: 25px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.empty--action {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.empty--action--caption {
+  display: inline-block;
+  color: #576777;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.empty--action--arrow {
+  display: inline-block;
+  height: 12px;
+  width: 20px;
+  background-image: url("/img/arrow-left.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1500px) {
+  .empty {
+    width: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 750px) {
+  .empty--image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 525px) {
+  .empty {
+    width: calc(100% - 30px);
+  }
+  .empty--image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 425px) {
+  .empty {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 375px) {
+  .empty--caption {
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .empty--action--caption {
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 2px;
+  }
+  .empty--action--arrow {
+    height: 9px;
+    width: 17px;
+  }
+}
+
+@media (max-width: 350px) {
+  .empty--caption {
+    margin-top: 15px;
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
+
 .profile-section--hidden {
   opacity: 0;
   transform: translateY(20px);
@@ -370,7 +487,6 @@ h4 {
   width: 100vw;
   left: calc(750px - 50vw);
   height: 400px;
-  background: url("/img/heroes/fargo.jpg");
   background-position: top;
   background-size: cover;
 }
@@ -397,8 +513,6 @@ h4 {
   background-position: center;
   background-size: cover;
   border-radius: 10px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   display: inline-block;
   vertical-align: bottom;
 }
@@ -704,6 +818,7 @@ ul.see-all {
 }
 
 .about {
+  padding-bottom: 0px;
   margin-top: 50px;
 }
 
@@ -720,7 +835,6 @@ ul.see-all {
 .about-genres-item-img {
   width: 25px;
   height: 25px;
-  background-image: url("/img/genres/crime.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -831,7 +945,9 @@ ul.see-all {
   top: 0px;
   left: 0px;
   position: absolute;
+  transform: rotate(-90deg);
   z-index: 2;
+  overflow: hidden;
 }
 
 .friends-watching-list .friends-watching-item .friend-progress--circle circle {

@@ -250,7 +250,7 @@ body {
 
 #overlay--challenge {
     .overlay-back {
-        background: $yellow;
+        //background: $yellow;
         &::before {
             background: $yellow;
         }
@@ -817,64 +817,6 @@ ul {
 ul.see-all {
     white-space: normal;
     overflow: visible;
-}
-
-.empty {
-    margin-top: 20px;
-    position: relative;
-    width: 100%;
-    &--image {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        background-image: url("/img/defaults/empty.png");
-        background-position: bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-        &::after {
-            content: '';
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: $top-level;
-            bottom: 0px;
-            left: 0px;
-        }
-    }
-    &--caption {
-        color: $top-level;
-        text-align: center;
-        font-family: $nunito;
-        margin-top: 25px;
-        font-size: 25px;
-        line-height: 30px;
-        font-weight: 700;
-    }
-    &--action {
-        margin-top: 3px;
-        margin-bottom: 10px;
-        text-align: center;
-        cursor: pointer;
-        &--caption {
-            display: inline-block;
-            color: $caption-top;
-            text-align: center;
-            font-family: $nunito;
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: 600;
-            margin-right: 3px;
-        }
-        &--arrow {
-            display: inline-block;
-            height: 12px;
-            width: 20px;
-            background-image: url("/img/arrow-left.png");
-            background-position: bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    }
 }
 
 .hero {
@@ -1641,9 +1583,6 @@ ul.see-all {
             left: 50px;
         }
     }
-    .empty {
-        width: calc(100% - 50px);
-    }
 }
 
 @media (max-width: 1280px) {
@@ -1682,11 +1621,6 @@ ul.see-all {
             }
         }
     }
-    .empty {
-        &--image {
-            height: 200px;
-        }
-    }
 }
 
 @media (max-width: 525px) {
@@ -1722,12 +1656,6 @@ ul.see-all {
     }
     .section {
         padding-left: 30px;
-    }
-    .empty {
-        width: calc(100% - 30px);
-        &--image {
-            height: 150px;
-        }
     }
 }
 
@@ -1781,9 +1709,6 @@ ul.see-all {
             }
         }
     }
-    .empty {
-        width: calc(100% - 20px);
-    }
 }
 
 @media (max-width: 400px) {
@@ -1822,27 +1747,6 @@ ul.see-all {
                     width: 0px;
                     height: 0px;
                 }
-            }
-        }
-    }
-}
-
-@media (max-width: 375px) {
-    .empty {
-        &--caption {
-            margin-top: 15px;
-            font-size: 22px;
-            line-height: 26px;
-        }
-        &--action {
-            &--caption {
-                font-size: 14px;
-                line-height: 17px;
-                margin-right: 2px;
-            }
-            &--arrow {
-                height: 9px;
-                width: 17px;
             }
         }
     }
@@ -1927,13 +1831,6 @@ ul.see-all {
                     height: 0px;
                 }
             }
-        }
-    }
-    .empty {
-        &--caption {
-            margin-top: 15px;
-            font-size: 19px;
-            line-height: 23px;
         }
     }
 }

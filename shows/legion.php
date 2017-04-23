@@ -2,43 +2,44 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Legion - watchr</title>
+        <title>watchr</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/css/fonts.css">
         <link rel="stylesheet" type="text/css" href="/css/show.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
+        <script type="text/javascript" src="/js/data.js"></script>
         <script type="text/javascript" src="/js/show.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
-        <!--<script type="text/javascript" src="/js/modal.js"></script>-->
+        <script type="text/javascript" src="/js/modal.js"></script>
     </head>
     <body>
         <?php include '../includes/nav.php'; ?>
-        <div class="modal modal-remove modal--hidden">
-            <div class="modal-close" onclick="remModal(false);"></div>
+        <div class="modal modal-remove modal--hidden modal-remove--show">
+            <div class="modal-close"></div>
             <div class="modal-img"></div>
-            <h2 class="modal-header">Remove Legion from your Watchlist?</h2>
+            <h2 class="modal-header">Remove Fargo from your Watchlist?</h2>
             <p class="modal-body">You will lose all progress you currently have on this show.</p>
             <div class="modal-btns">
-                <div class="modal-btn modal-btn-secondary" onclick="remShow(); remModal(false);">Yes</div>
-                <div class="modal-btn modal-btn-primary" onclick="remModal(false);">No</div>
+                <div class="modal-btn modal-btn-secondary">Yes</div>
+                <div class="modal-btn modal-btn-primary">No</div>
             </div>
         </div>
         <div class="dark-cover dark-cover--hidden"></div>
         <div class="content">
-            <div class="hero" style="background-image:url(http://i.onionstatic.com/avclub/6232/79/16x9/2400.jpg);">
+            <div class="hero">
                 <div class="show-header">
-                    <div class="show-header-cover" id="legion"></div>
+                    <div class="show-header-cover"></div>
                     <div class="show-header-progress">
                         <div class="show-header-progress-bar"></div>
                     </div>
                     <div class="show-header-info">
-                        <h1 class="show-header-info-title">Legion</h1>
-                        <h4 class="show-header-info-year">2017 - Present</h4>
+                        <h1 class="show-header-info-title"></h1>
+                        <h4 class="show-header-info-year"></h4>
                         <div class="show-header-info-btn" onclick="addShow(this);">
                             <div class="show-header-info-btn-img"></div>
                             <p class="show-header-info-btn-type">Add to Watchlist</p>
                         </div>
-                        <div class="show-header-info-btn show-header-rmv-btn" onclick="remModal(true);">
+                        <div class="show-header-info-btn show-header-rmv-btn">
                             <div class="show-header-info-btn-img"></div>
                             <p class="show-header-info-btn-type">Remove Show</p>
                         </div>
@@ -46,263 +47,22 @@
                 </div>
             </div>
             <div class="section about">
-                <ul class="about-genres">
-                    <li class="about-genres-item">
-                        <div class="about-genres-item-img" id="action"></div>
-                        <div class="about-genres-item-type">Action</div>
-                    </li>
-                    <li class="about-genres-item">
-                        <div class="about-genres-item-img" id="drama"></div>
-                        <div class="about-genres-item-type">Drama</div>
-                    </li>
-                    <li class="about-genres-item">
-                        <div class="about-genres-item-img" id="sci-fi"></div>
-                        <div class="about-genres-item-type">Sci-Fi</div>
-                    </li>
-                </ul>
-                <div class="about-details">
-                    <p class="about-details-rating">TV-MA</p>
-                    <p class="about-details-timing">1 hr</p>
-                    <p class="about-details-seasons">1 Season</p>
-                </div>
-                <p class="about-description">David Haller is a troubled young man diagnosed as schizophrenic, but after a strange encounter, he discovers special powers that will change his life forever.</p>
+                <ul class="about-genres"></ul>
+                <div class="about-details"></div>
+                <p class="about-description"></p>
                 <div class="about-streaming">
                     <p class="about-streaming-title">Streaming now on</p>
-                    <ul class="about-streaming-servies">
-                        <li class="about-streaming-services-item">
-                            <img src="/img/services/fxnow.png" />
-                        </li>
-                        <li class="about-streaming-services-item">
-                            <img src="/img/services/hulu.png" />
-                        </li>
-                    </ul>
+                    <ul class="about-streaming-servies"></ul>
                 </div>
-                <div class="section-header">
+                <div class="section-header" id="friends-watching">
                     <h3 class="section-header-type">Friends Who Watch</h3>
                     <div class="section-header-seeall section-header-seeall--small" onclick="seeAll(this, 'friends-watching-list');">See All</div>
                 </div>
-                <ul class="list friends-watching-list">
-                    <li class="friends-watching-item">
-                        <div class="friend-progress">
-                            <svg class="friend-progress--circle friend-progress--circle--finished" width="80" height="80" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36.5"/>
-                        		<circle class="prog" cx="40" cy="40" r="36.5"/>
-                        	</svg>
-                            <div class="friend-progress--pic" id="maryann"></div>
-                        </div>
-                        <p class="friends-watching-item--name">Maryann</p>
-                        <p class="friends-watching-item--ep">Finished</p>
-                    </li>
-                    <li class="friends-watching-item">
-                        <div class="friend-progress">
-                            <svg class="friend-progress--circle friend-progress--circle--finished" width="80" height="80" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36.5"/>
-                        		<circle class="prog" cx="40" cy="40" r="36.5"/>
-                        	</svg>
-                            <div class="friend-progress--pic" id="ray"></div>
-                        </div>
-                        <p class="friends-watching-item--name">Ray</p>
-                        <p class="friends-watching-item--ep">Finished</p>
-                    </li>
-                    <li class="friends-watching-item">
-                        <div class="friend-progress">
-                            <svg class="friend-progress--circle friend-progress--circle--finished" width="80" height="80" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36.5"/>
-                        		<circle class="prog" cx="40" cy="40" r="36.5"/>
-                        	</svg>
-                            <div class="friend-progress--pic" id="jess"></div>
-                        </div>
-                        <p class="friends-watching-item--name">Jess</p>
-                        <p class="friends-watching-item--ep">Finished</p>
-                    </li>
-                    <li class="friends-watching-item">
-                        <a href="/users/mike_hom.php">
-                            <div class="friend-progress">
-                                <svg class="friend-progress--circle" width="80" height="80" viewBox="0 0 80 80">
-                                    <circle cx="40" cy="40" r="36.5"/>
-                            		<circle class="prog" cx="40" cy="40" r="36.5"/>
-                            	</svg>
-                                <div class="friend-progress--pic" id="mike"></div>
-                            </div>
-                            <p class="friends-watching-item--name">Mike</p>
-                        </a>
-                        <p class="friends-watching-item--ep">S01E03</p>
-                    </li>
-                    <li class="friends-watching-item">
-                        <div class="friend-progress">
-                            <svg class="friend-progress--circle" width="80" height="80" viewBox="0 0 80 80">
-                                <circle cx="40" cy="40" r="36.5"/>
-                        		<circle class="prog" cx="40" cy="40" r="36.5"/>
-                        	</svg>
-                            <div class="friend-progress--pic" id="eric"></div>
-                        </div>
-                        <p class="friends-watching-item--name">Eric</p>
-                        <p class="friends-watching-item--ep">Added</p>
-                    </li>
-
-                </ul>
+                <ul class="list friends-watching-list"></ul>
             </div>
-            <div class="section">
+            <div class="section" id="seasons">
                 <div class="section-header">
                     <h2 class="section-header-type">Seasons</h2>
-                </div>
-                <div class="media-sel">
-                    <ul class="media-sel-cont">
-                        <li class="media-sel-item media-sel-item--selected" onclick="changeSection(this);">
-                            <div class="media-sel-item-title">Season 1</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="season-1 episodes-container profile-section">
-                    <!--<div class="section-header">
-                        <div class="section-header-seeall" onclick="seeAll(this, 'episode-list');">See All</div>
-                    </div>-->
-                    <ul class="list episode-list">
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6200/49/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 1</div>
-                            <div class="episode-item-title">Chapter 1</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6212/20/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 2</div>
-                            <div class="episode-item-title">Chapter 2</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6222/71/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 3</div>
-                            <div class="episode-item-title">Chapter 3</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6232/79/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 4</div>
-                            <div class="episode-item-title">Chapter 4</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6240/65/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 5</div>
-                            <div class="episode-item-title">Chapter 5</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6249/84/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 6</div>
-                            <div class="episode-item-title">Chapter 6</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6258/32/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 7</div>
-                            <div class="episode-item-title">Chapter 7</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                        <li class="episode-item episode-item--not-added">
-                            <div class="episode-item-img" style="background-image:url('http://i.onionstatic.com/avclub/6267/94/16x9/1200.jpg');"></div>
-                            <div class="episode-item-progress"></div>
-                            <div class="episode-item-number">Episode 8</div>
-                            <div class="episode-item-title">Chapter 8</div>
-                            <div class="episode-item-button episode-item-button--mark-cont" onclick="markAsWatched(this, true);">
-                                <div class="episode-item-button--mark"></div>
-                                <p>Mark as Watched</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--watch-cont">
-                                <div class="episode-item-button--watch"></div>
-                                <p>Watch Now</p>
-                            </div>
-                            <div class="episode-item-button episode-item-button--unmark-cont" onclick="markAsWatched(this, false);">
-                                <div class="episode-item-button--unmark"></div>
-                                <p>Mark as Unwatched</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="section">
@@ -311,76 +71,126 @@
                     <div class="section-header-seeall" onclick="seeAll(this, 'cast-list');">See All</div>
                 </div>
                 <ul class="list cast-list">
-                    <li class="cast-item cast-item--creator">
+                    <!--<li class="cast-item cast-item--creator">
                         <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTczOTU3NzY2NV5BMl5BanBnXkFtZTgwMjg3NDUzMDI@._V1_SY1000_CR0,0,1504,1000_AL_.jpg)"></div>
                         <div class="cast-item-name">Noah Hawley</div>
                         <div class="cast-item-role">Creator</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTY0NTY5OTI2MF5BMl5BanBnXkFtZTgwNDkzMzIxMzE@._V1_.jpg)"></div>
-                        <div class="cast-item-name">Dan Stevens</div>
-                        <div class="cast-item-role">David Haller</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxOTUwMDI0OF5BMl5BanBnXkFtZTcwNjIyNzkzNw@@._V1_SY1000_CR0,0,666,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Billy Bob Thornton</div>
+                        <div class="cast-item-role">Lorne Malvo</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ2MTEyMzU2OF5BMl5BanBnXkFtZTgwNjc1NTM4ODE@._V1_.jpg)"></div>
-                        <div class="cast-item-name">Rachel Keller</div>
-                        <div class="cast-item-role">Syd Barrett</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjE0MjAwOTMzMF5BMl5BanBnXkFtZTcwMDg1MjEyNw@@._V1_SY1000_CR0,0,685,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Martin Freeman</div>
+                        <div class="cast-item-role">Lester Nygaard</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyMzYyMjQ5OV5BMl5BanBnXkFtZTcwMTA0MTkxNw@@._V1_SY1000_CR0,0,697,1000_AL_.jpg)"></div>
-                        <div class="cast-item-name">Aubrey Plaza</div>
-                        <div class="cast-item-role">Lenny Busker</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMmU5ZTJmN2ItZmI0OC00NTQ3LWI0YzktMDNkNjkwNDg2OTVlL2ltYWdlXkEyXkFqcGdeQXVyMTkyNjMwNzc@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Allison Tolman</div>
+                        <div class="cast-item-role">Molly Solverson</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(http://www.uncapiano.com/sondheim/images/irwin.jpg)"></div>
-                        <div class="cast-item-name">Bill Irwin</div>
-                        <div class="cast-item-role">Cary Loudermilk</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5OTcxNjIzM15BMl5BanBnXkFtZTcwNDI0NjMyMw@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Colin Hanks</div>
+                        <div class="cast-item-role">Gus Grimly</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(http://www1.pictures.zimbio.com/gi/NYC+Special+Screening+HBO+Film+Confirmation+OnxJrmYAHNYl.jpg)"></div>
-                        <div class="cast-item-name">Jeremie Harris</div>
-                        <div class="cast-item-role">Ptonomy Wallace</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3NzkwNzM1MV5BMl5BanBnXkFtZTgwMzE2MTQ3MjE@._V1_SY1000_CR0,0,751,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Kirsten Dunst</div>
+                        <div class="cast-item-role">Peggy Blumquist</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(http://www.hawtcelebs.com/wp-content/uploads/2017/01/amber-midthunder-at-legion-premiere-in-los-angeles-01-26-2017_1.jpg)"></div>
-                        <div class="cast-item-name">Amber Midthunder</div>
-                        <div class="cast-item-role">Kerry Loudermilk</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNzcxNzcxMF5BMl5BanBnXkFtZTgwOTM1ODUzMTE@._V1_SY1000_CR0,0,685,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Patrick Wilson</div>
+                        <div class="cast-item-role">Lou Solverson</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjAzMDQxNzc2Nl5BMl5BanBnXkFtZTcwNjcyOTQ2NA@@._V1_.jpg)"></div>
-                        <div class="cast-item-name">Katie Aselton</div>
-                        <div class="cast-item-role">Amy Haller</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3NjM1NjM0N15BMl5BanBnXkFtZTcwMDUxNjk3Nw@@._V1_SY1000_CR0,0,695,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Jesse Plemons</div>
+                        <div class="cast-item-role">Ed Blumquist</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwNjg0MjUxMF5BMl5BanBnXkFtZTcwMTcyNjY0MQ@@._V1_.jpg)"></div>
-                        <div class="cast-item-name">Jean Smart</div>
-                        <div class="cast-item-role">Dr. Melanie Bird</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTQzNDM3OF5BMl5BanBnXkFtZTcwODQ3MDgzMw@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Ted Danson</div>
+                        <div class="cast-item-role">Hank Larsson</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BZjIyM2JjMjUtOTExOC00N2Q2LTljMmQtNzZjNjZiODY1MzhjL2ltYWdlXkEyXkFqcGdeQXVyMTk2Mjc4MQ@@._V1_SY1000_CR0,0,833,1000_AL_.jpg)"></div>
-                        <div class="cast-item-name">Mackenzie Gray</div>
-                        <div class="cast-item-role">The Eye</div>
-                    </li>
-                    <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTM4MTQ2NTEyOV5BMl5BanBnXkFtZTcwMDgyNjg5Nw@@._V1_.jpg)"></div>
-                        <div class="cast-item-name">Ellie Araiza</div>
-                        <div class="cast-item-role">Philly</div>
-                    </li>
-                    <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(http://cimg.tvgcdn.net/i/r/2014/09/03/3cec2d71-7209-442d-ba3d-b795fadf736b/resize/350x509/3facbd99dcdf705ca877d23e04110936/140903jermaine-clement1.jpg)"></div>
-                        <div class="cast-item-name">Jemaine Clement</div>
-                        <div class="cast-item-role">Oliver Bird</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxMDgwMzQwMV5BMl5BanBnXkFtZTcwNDc3NDg2Mw@@._V1_SY1000_CR0,0,720,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Bokeem Woodbine</div>
+                        <div class="cast-item-role">Mike Milligan</div>
                     </li>
                     <li class="cast-item">
                         <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxMDU4MTgxM15BMl5BanBnXkFtZTgwNDc1ODIzNjE@._V1_SY1000_SX665_AL_.jpg)"></div>
                         <div class="cast-item-name">Brad Mann</div>
-                        <div class="cast-item-role">Rudy</div>
+                        <div class="cast-item-role">Gale Kitchen</div>
                     </li>
                     <li class="cast-item">
-                        <div class="cast-item-img" style="background-image:url(http://vignette3.wikia.nocookie.net/fearthewalkingdead/images/1/13/Scott_Lawrence.jpg/revision/latest?cb=20150711105427)"></div>
-                        <div class="cast-item-name">Scott Lawrence</div>
-                        <div class="cast-item-role">Dr. Poole</div>
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3NDI0MjgyNl5BMl5BanBnXkFtZTcwNTUzMTE3OQ@@._V1_SY1000_CR0,0,643,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Carrie Coon</div>
+                        <div class="cast-item-role">Gloria Burgle</div>
                     </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwNjg0MjUxMF5BMl5BanBnXkFtZTcwMTcyNjY0MQ@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Jean Smart</div>
+                        <div class="cast-item-role">Floyd Gerhardt</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1Njg1NzI1Ml5BMl5BanBnXkFtZTcwNTE5ODk1OA@@._V1_SY1000_CR0,0,1101,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Bob Odenkirk</div>
+                        <div class="cast-item-role">Bill Oswalt</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BOTk4OTI4MjczOF5BMl5BanBnXkFtZTcwMzI3MTU5Mw@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Keith Carradine</div>
+                        <div class="cast-item-role">Lou Solverson</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BNDE3NDIyMDMzNl5BMl5BanBnXkFtZTcwNzIyNzY1OQ@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Cristin Milioti</div>
+                        <div class="cast-item-role">Betsy Solverson</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTgzMTA5MjA3MF5BMl5BanBnXkFtZTgwMzY3NjYxNzE@._V1_SY1000_CR0,0,702,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Joey King</div>
+                        <div class="cast-item-role">Greta Grimly</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxMDE2NTY1M15BMl5BanBnXkFtZTYwODgyMTk1._V1_.jpg)"></div>
+                        <div class="cast-item-name">Zahn McClarnon</div>
+                        <div class="cast-item-role">Haneze Dent</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMzE3YjVhYjgtZTQ0Zi00ZmIxLWFhNTYtNjBhZDNjMmY3YTdjL2ltYWdlXkEyXkFqcGdeQXVyMTUwMTc0OTQ@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Angus Sampson</div>
+                        <div class="cast-item-role">Bear Gerhardt</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1MjQ0MDg0Nl5BMl5BanBnXkFtZTcwNjYyNjI5Mg@@._V1_.jpg)"></div>
+                        <div class="cast-item-name">Ewan McGregor</div>
+                        <div class="cast-item-role">Emmit Stussy / Ray Stussy</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BYWMzMzcxMGItNzI5ZS00ZTAzLTkzNWQtZDAzYWExMGE4MGU4L2ltYWdlXkEyXkFqcGdeQXVyMzM4ODI1Nw@@._V1_SY1000_CR0,0,811,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Jim Gaffigan</div>
+                        <div class="cast-item-role">Donny Mashman</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BNDcwMjA2MDMwM15BMl5BanBnXkFtZTcwNjU1NzE4Mg@@._V1_SY1000_CR0,0,666,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Michael Stuhlbarg</div>
+                        <div class="cast-item-role">Sy Feltz</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BNTA3MjM4NTE0NV5BMl5BanBnXkFtZTcwOTU1OTY4NQ@@._V1_SY1000_CR0,0,666,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">David Thewlis</div>
+                        <div class="cast-item-role">V.M. Vargas</div>
+                    </li>
+                    <li class="cast-item">
+                        <div class="cast-item-img" style="background-image:url(https://images-na.ssl-images-amazon.com/images/M/MV5BNjE3MTU2NjU0OF5BMl5BanBnXkFtZTgwNjgwNzgwNzE@._V1_SY1000_CR0,0,712,1000_AL_.jpg)"></div>
+                        <div class="cast-item-name">Mary Elizabeth Winstead</div>
+                        <div class="cast-item-role">Nikki Swango</div>
+                    </li>-->
                 </ul>
             </div>
             <div class="section">

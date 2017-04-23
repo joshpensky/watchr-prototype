@@ -1,23 +1,156 @@
-var allShows;
+var allShows,
+    users,
+    thisUser;
 
-window.onload = function() {
-    loadJSON("/data/shows.json", function(response) {
-        allShows = JSON.parse(response);
+window.addEventListener("load", function() {
+    readFile(function(u, s) {
+        users = u;
+        allShows = s;
+        getUser();
+        createShows();
         initShows();
     });
+}, false);
+
+function getUser() {
+    for (user in users) {
+        if (user == "josh_jpeg") {
+            thisUser = users[user];
+        }
+    }
 }
 
-function loadJSON(file, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
+function createShows() {
+    var shows = thisUser.shows,
+        showsCont = document.querySelector(".shows"),
+        watchlist = showsCont.querySelector(".watchlist"),
+        showList = [];
+    console.log(shows);
+    for (show in shows) {
+        for (aShow in allShows) {
+            if (show === aShow) {
+                showList.push({user: shows[show].progress, showInfo: allShows[aShow]});
+            }
         }
-    };
-    xobj.send(null);
+    }
+    for (show in showList) {
+        var userProg = showList[show].user,
+            showInfo = showList[show].showInfo,
+            totalProg = 0,
+            lastWatched = 0,
+            epTitle = "",
+            epId = "";
+        for (prog in userProg) {
+            if (userProg[prog] == true) {
+                lastWatched = parseInt(prog);
+                totalProg += 1;
+            }
+        }
+        for (ssn in showInfo.seasons) {
+            for (ep in showInfo.seasons[ssn]) {
+                if (lastWatched == 0) {
+                    epTitle = showInfo.seasons[ssn][ep].title;
+                    epId = ssn + ep;
+                }
+                lastWatched -= 1;
+            }
+        }
+
+        if (epTitle != "") {
+            var url = showInfo.title.toLowerCase().split(" "),
+                finalUrl = "";
+            for (var i = 0; i < url.length; i++) {
+                finalUrl += url[i] + ((i < url.length - 1) ? "_" : "");
+            }
+
+            var showItem = document.createElement("li"),
+                showCover = document.createElement("a"),
+                showProg = document.createElement("div"),
+                showProgBar = document.createElement("div"),
+                showTopInfo = document.createElement("div"),
+                showEpType = document.createElement("div"),
+                showEpTitle = document.createElement("p"),
+                showBotInfo = document.createElement("div"),
+                showEpId = document.createElement("div"),
+                showTitle = document.createElement("p");
+            showItem.classList.add("show");
+            showCover.classList.add("show-cover");
+            showCover.style.backgroundImage = "url(" + showInfo.cover + ")";
+            showCover.href = "/shows/" + finalUrl + ".php";
+            showProg.classList.add("show-progress");
+            showProgBar.classList.add("show-progress--bar");
+            showTopInfo.classList.add("show--top-info");
+            showEpType.classList.add("show-episode--type");
+            showEpType.classList.add("show-episode--type--empty");
+            showEpTitle.classList.add("show-episode--title");
+            showEpTitle.innerHTML = epTitle;
+            showBotInfo.classList.add("show--bottom-info");
+            showEpId.classList.add("show-episode--id");
+            showEpId.innerHTML = epId;
+            showTitle.classList.add("show-title");
+            showTitle.innerHTML = showInfo.title;
+
+            var markBtn = document.createElement("div"),
+                markBtnImg = document.createElement("div"),
+                markBtnType = document.createElement("p");
+            markBtn.classList.add("show-button");
+            markBtn.classList.add("show-button--mark-cont");
+            markBtn.addEventListener("click", function(){markAsWatched(this);}, false);
+            markBtnImg.classList.add("show-button--mark");
+            markBtnType.innerHTML = "Mark as Watched";
+            markBtn.appendChild(markBtnImg);
+            markBtn.appendChild(markBtnType);
+
+            var watchBtn = document.createElement("div"),
+                watchBtnImg = document.createElement("div"),
+                watchBtnType = document.createElement("p");
+            watchBtn.classList.add("show-button");
+            watchBtn.classList.add("show-button--watch-cont");
+            watchBtnImg.classList.add("show-button--watch");
+            watchBtnType.innerHTML = "Watch Now";
+            watchBtn.appendChild(watchBtnImg);
+            watchBtn.appendChild(watchBtnType);
+
+            showProg.appendChild(showProgBar);
+            showTopInfo.appendChild(showEpType);
+            showTopInfo.appendChild(showEpTitle);
+            showBotInfo.appendChild(showEpId);
+            showBotInfo.appendChild(showTitle);
+            showItem.appendChild(showCover);
+            showItem.appendChild(showProg);
+            showItem.appendChild(showTopInfo);
+            showItem.appendChild(showBotInfo);
+            showItem.appendChild(markBtn);
+            showItem.appendChild(watchBtn);
+            watchlist.appendChild(showItem);
+            /*
+            <ul class="watchlist">
+                <li class="show">
+                    <a href="/shows/legion.php" class="show-cover" id="legion"></a>
+                    <div class="show-progress">
+                        <div class="show-progress--bar"></div>
+                    </div>
+                    <div class="show--top-info">
+                        <div class="show-episode--type show-episode--type--empty"></div>
+                        <p class="show-episode--title">Chapter 8</p>
+                    </div>
+                    <div class="show--bottom-info">
+                        <div class="show-episode--id">S01E08</div>
+                        <p class="show-title">Legion</p>
+                    </div>
+                    <div class="show-button show-button--mark-cont" onclick="markAsWatched(this);">
+                        <div class="show-button--mark"></div>
+                        <p>Mark as Watched</p>
+                    </div>
+                    <div class="show-button show-button--watch-cont">
+                        <div class="show-button--watch"></div>
+                        <p>Watch Now</p>
+                    </div>
+                </li>
+                */
+        }
+    }
+
 }
 
 function getShow(showName) {

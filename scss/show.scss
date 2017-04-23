@@ -84,7 +84,6 @@ h4 {
     width: 100vw;
     left: calc(750px - 50vw);
     height: 400px;
-    background: url("/img/heroes/fargo.jpg");
     background-position: top;
     background-size: cover;
     &::before {
@@ -106,8 +105,8 @@ h4 {
             background-position: center;
             background-size: cover;
             border-radius: 10px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
+            //border-bottom-left-radius: 0px;
+            //border-bottom-right-radius: 0px;
             display: inline-block;
             vertical-align: bottom;
         }
@@ -345,6 +344,7 @@ ul.see-all {
 }
 
 .about {
+    padding-bottom: 0px;
     margin-top: 50px;
     &-genres {
         margin-bottom: 10px;
@@ -355,7 +355,7 @@ ul.see-all {
             &-img {
                 width: 25px;
                 height: 25px;
-                background-image: url("/img/genres/crime.png");
+                //background-image: url("/img/genres/crime.png");
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -428,6 +428,7 @@ ul.see-all {
         }
     }
 }
+
 .friends-watching-list {
     margin-bottom: 15px;
     padding: 0px;
@@ -449,8 +450,9 @@ ul.see-all {
                 top: 0px;
                 left: 0px;
                 position: absolute;
-
+                transform: rotate(-90deg);
                 z-index: 2;
+                overflow: hidden;
                 circle {
                     fill: none;
                 	stroke: $mid-level;

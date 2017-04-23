@@ -47,7 +47,7 @@ function searchShows(query) {
         for (var i = 0; i < url.length; i++) {
             finalUrl += url[i];
             if (i != url.length - 1) {
-                finalUrl += "-";
+                finalUrl += "_";
             }
         }
         if (show.toLowerCase().indexOf(query.toLowerCase()) !== -1) {

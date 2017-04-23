@@ -4,27 +4,12 @@ var thisUser;
 var you;
 
 window.addEventListener("load", function() {
-    loadJSON("/data/userdata.json", function(response) {
-        loadJSON("/data/shows.json", function(response2) {
-            users = JSON.parse(response);
-            shows = JSON.parse(response2);
-            initProfile();
-        });
+    readFile(function(u, s) {
+        users = u;
+        shows = s;
+        initProfile();
     });
 }, false);
-
-function loadJSON(file, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
-}
 
 // getUser : String --> User
 // returns the User from the list of Users who has the given username
@@ -112,7 +97,7 @@ function initProfile() {
         expMovieH.classList.add('experience-movie--hidden');
     }
 
-    var genres = thisUser.genres;
+    var genres = thisUser.genres.loved;
     for (genre in genres) {
         var url = genres[genre].toLowerCase().split(" ")
             finalUrl = "";
@@ -598,8 +583,10 @@ function arrContains(arr, t) {
 function createFriendList(all, common) {
     var friends = [],
         friendsTemp = [];
-    if (thisUser != you) {
-        friends.push(you);
+    console.log(all);
+    console.log(common);
+    if (thisUser != you && (arrContains(all, you.username) || arrContains(common, you.username))) {
+        friends.unshift(you);
     }
     for (friend in common) {
         if (!arrContains(friends, getUser(common[friend]))) {
