@@ -54,6 +54,8 @@ function openActionsBar(actionElem) {
         } else if (actionElem === search) {
             navProfile.classList.add('action--hidden');
             navNotif.classList.add('action--hidden');
+            var searchbar = document.querySelector("#searchbar");
+            searchbar.focus();
         }
 
         navSec.classList.add('nav-open');

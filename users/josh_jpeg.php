@@ -11,7 +11,6 @@
         <script type="text/javascript" src="/js/modal.js"></script>
         <script type="text/javascript" src="/js/selector.js"></script>
         <script type="text/javascript" src="/js/profile.js"></script>
-        <script type="text/javascript" src="/js/show.js"></script>
         <script type="text/javascript" src="/js/challenge.js"></script>
     </head>
     <body>
@@ -104,7 +103,7 @@
             <h2 class="modal-header"></h2>
             <p class="modal-body"></p>
             <div class="modal-btns">
-                <div class="modal-btn modal-btn-secondary" onclick="remModal(false, 'modal-remove--friend', 'Mike');">Yes</div>
+                <div class="modal-btn modal-btn-secondary" onclick="addFriend(false); remModal(false, 'modal-remove--friend', 'Mike');">Yes</div>
                 <div class="modal-btn modal-btn-primary" onclick="remModal(false, 'modal-remove--friend', 'Mike');">No</div>
             </div>
         </div>

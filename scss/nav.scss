@@ -644,7 +644,7 @@ input {
         height: 50px;
         border-top: 2px solid $bot-level;
         font-family: $nunito;
-        color: $caption-top;
+        color: $body-lt;
         font-size: 15px;
         line-height: 50px;
         padding-left: 20px;
@@ -674,10 +674,10 @@ input {
             height: 36px;
             line-height: 36px;
             font-weight: 600;
-            color: $caption;
+            color: $body;
             span {
                 font-weight: 700;
-                color: $caption-top;
+                color: $body-lt;
             }
         }
         &--show, &--movie, &--user {

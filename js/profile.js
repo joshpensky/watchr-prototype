@@ -185,6 +185,9 @@ function initProfile() {
 
 function buildActions() {
     var profileActionsList = document.getElementsByClassName('profile-actions-list')[0];
+    while (profileActionsList.hasChildNodes()) {
+        profileActionsList.removeChild(profileActionsList.lastChild);
+    }
     if (thisUser == you) {
         var settingsAction = document.createElement("li"),
             editProfileAction = document.createElement("li");
@@ -221,7 +224,7 @@ function buildActions() {
             friendsAction.classList.add("profile-actions-item");
             friendsAction.classList.add("profile-actions-item--friends");
             friendsAction.innerHTML = "Friends";
-            friendsAction.addEventListener("click", function(){remModal(true, 'modal-remove--friend', thisUser.firstname);}, false);
+            friendsAction.addEventListener("click", function(){remModal(true, 'modal-remove--friend', thisUser.firstname, function(){addFriend(false, thisUser);});}, false);
             profileActionsList.appendChild(challengeAction);
             profileActionsList.appendChild(recommendAction);
             profileActionsList.appendChild(friendsAction);
@@ -230,6 +233,8 @@ function buildActions() {
             addFriendAction.classList.add("profile-actions-item");
             addFriendAction.classList.add("profile-actions-item--addfriend");
             addFriendAction.innerHTML = "Add Friend";
+            console.log(thisUser);
+            addFriendAction.addEventListener("click", function(){addFriend(true, thisUser);}, false);
             profileActionsList.appendChild(addFriendAction);
         }
     }
@@ -243,41 +248,32 @@ function buildActions() {
     */
 }
 
-function buildEmpty(caption, action) {
-    var empty = document.createElement("div"),
-        emptyImage = document.createElement("div"),
-        emptyCaption = document.createElement("div"),
-        emptyAction = document.createElement("div"),
-        emptyActionCaption = document.createElement("div"),
-        emptyActionArrow = document.createElement("div");
-    empty.classList.add("empty");
-    emptyImage.classList.add("empty--image");
-    emptyCaption.classList.add("empty--caption");
-    emptyCaption.innerHTML = caption;
-    emptyAction.classList.add("empty--action");
-    emptyActionCaption.classList.add("empty--action--caption");
-    emptyActionCaption.innerHTML = action;
-    emptyActionArrow.classList.add("empty--action--arrow");
-
-    emptyAction.appendChild(emptyActionCaption);
-    emptyAction.appendChild(emptyActionArrow);
-    empty.appendChild(emptyImage);
-    empty.appendChild(emptyCaption);
-    if (action != "") {
-        empty.appendChild(emptyAction);
+function addFriend(add, givenUser) {
+    console.log(givenUser);
+    console.log(you);
+    if (add) {
+        if (!arrContains(givenUser.friends, you.username)) {
+            givenUser.friends.push(you.username);
+        }
+        if (!arrContains(you.friends, givenUser.username)) {
+            you.friends.push(givenUser.username);
+        }
+        updateUsers(givenUser);
+    } else {
+        for (var i = 0; i < givenUser.friends.length; i++) {
+            if (givenUser.friends[i] == you.username) {
+                givenUser.friends.splice(i, 1);
+            }
+        }
+        for (var i = 0; i < you.friends.length; i++) {
+            if (you.friends[i] == givenUser.username) {
+                you.friends.splice(i, 1);
+            }
+        }
+        updateUsers(givenUser);
     }
-
-    return empty;
-    /*
-    <div class="empty">
-        <div class="empty--image"></div>
-        <div class="empty--caption">You haven't added any movies to your Watchlist.</div>
-        <div class="empty--action">
-            <div class="empty--action--caption">We've picked out some you might like</div>
-            <div class="empty--action--arrow"></div>
-        </div>
-    </div>
-    */
+    buildActions();
+    buildFriends();
 }
 
 // buildFriends : Array[Element] x Element --> void
@@ -313,8 +309,12 @@ function buildFriends() {
 
     var friends = document.getElementsByClassName('section friends')[0],
         friendCt = friends.getElementsByClassName('section-header-type--sub')[0],
-        friendContainer = friends.getElementsByClassName('friend-list')[0]
+        friendContainer = friends.getElementsByClassName('friend-list')[0],
         empty = buildEmpty("You haven't added any friends yet.", "Find people you may know here");
+
+    while (friendContainer.hasChildNodes()) {
+        friendContainer.removeChild(friendContainer.lastChild);
+    }
 
     if (friendsList.length == 0) {
         friends.appendChild(empty);
@@ -324,6 +324,7 @@ function buildFriends() {
             emptyElem.remove();
         }
         friendCt.innerHTML = "(<span>" + friendsList.length + "</span>)";
+
         for (friend in friendsList) {
             var friendItem = document.createElement("li");
             friendItem.classList.add("friend-item");
@@ -386,10 +387,19 @@ function buildFriends() {
 
 function buildFriendsHelp(item) {
     var friendsCont = item.getElementsByClassName('friend-item-btn--friends-cont')[0],
+        addFriendCont = item.getElementsByClassName('friend-item-btn--addfriend-cont')[0],
         name = item.getElementsByClassName('friend-item-info-name')[0].innerHTML.split("<br>"),
-        firstname = name[0];
+        firstname = name[0],
+        givenUser;
+    for (user in users) {
+        if (name[0] == users[user].firstname && name[1] == users[user].lastname) {
+            givenUser = users[user];
+        }
+    }
     if (friendsCont != undefined) {
-        friendsCont.addEventListener("click", function(){remModal(true, 'modal-remove--friend', firstname);}, false);
+        friendsCont.addEventListener("click", function(){remModal(true, 'modal-remove--friend', firstname, function(){addFriend(false, givenUser);});}, false);
+    } else if (addFriendCont != undefined) {
+        addFriendCont.addEventListener("click", function(){addFriend(true, givenUser);}, false);
     }
 }
 
@@ -583,8 +593,6 @@ function arrContains(arr, t) {
 function createFriendList(all, common) {
     var friends = [],
         friendsTemp = [];
-    console.log(all);
-    console.log(common);
     if (thisUser != you && (arrContains(all, you.username) || arrContains(common, you.username))) {
         friends.unshift(you);
     }
@@ -680,4 +688,16 @@ function addShowWatchlist(btn) {
     } else {
         episodes[index].classList.add('show-item--added');
     }
+}
+
+function updateUsers(givenUser) {
+    console.log(givenUser);
+    for (user in users) {
+        if (user == givenUser.username) {
+            users[user] = givenUser;
+        } else if (user == you.username) {
+            users[user] = you;
+        }
+    }
+    writeToFile(users, "userdata.json");
 }

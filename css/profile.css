@@ -482,7 +482,7 @@ body {
   transform: translateX(-50%);
   width: 100%;
   height: 60px;
-  background: #384b60;
+  background: rgba(34, 44, 58, 0.3);
   z-index: 3;
   -webkit-transition: 0.25s ease;
   -moz-transition: 0.25s ease;
@@ -519,7 +519,7 @@ body {
 .overlay-back-btn-type {
   position: relative;
   top: 1px;
-  color: #1a2431;
+  color: #ffdd6b;
   display: inline-block;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
@@ -701,14 +701,6 @@ body {
 
 .overlay--spacing {
   height: 10px;
-}
-
-#overlay--challenge .overlay-back::before {
-  background: #ffdd6b;
-}
-
-#overlay--challenge .overlay-back::after {
-  background: #ffdd6b;
 }
 
 #overlay--challenge .overlay-img {

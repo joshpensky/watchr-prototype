@@ -150,7 +150,10 @@ function createShows() {
                 */
         }
     }
-
+    if (!watchlist.hasChildNodes()) {
+        console.log(buildEmpty("You suck", ""));
+        watchlist.appendChild(buildEmpty("Your watchlist is currently empty.", "Find shows to watch"));
+    }
 }
 
 function getShow(showName) {
@@ -275,6 +278,7 @@ function markAsWatched(button) {
     progressBar.style.width = soFar + "%";
     if (soFar < 100) {
         if ((epCount - 1) == currEp) {
+            updateData(showName, currEp + 1);
             progressBar.style.width = 100 + "%";
             chosenShow.classList.add("show-finished");
             episodeType.innerHTML = "";
@@ -308,9 +312,10 @@ function markAsWatched(button) {
                     }
                 }
             }
+            updateData(showName, currEp);
             //console.log(nextEp[0]);
             epID.innerHTML = nextEp[0];
-            epTitle.innerHTML = nextEp[1];
+            epTitle.innerHTML = nextEp[1].title;
             soFar = getCurrEp(showArray, epID) * increase;
             progressBar.style.width = soFar + "%";
             premiere = isPremiere(showArray, epID.innerHTML);
@@ -327,4 +332,22 @@ function markAsWatched(button) {
             }
         }
     }
+}
+
+function updateData(showName, epNum) {
+    for (show in thisUser.shows) {
+        if (show == showName) {
+            for (ep in thisUser.shows[show].progress) {
+                if (parseInt(ep) == epNum) {
+                    thisUser.shows[show].progress[ep] = true;
+                }
+            }
+        }
+    }
+    for (user in users) {
+        if (user == thisUser.username) {
+            users[user] = thisUser;
+        }
+    }
+    writeToFile(users, "userdata.json");
 }

@@ -5,7 +5,8 @@
 
 var users,
     shows,
-    thisShow;
+    thisShow,
+    thisUser;
 
 window.addEventListener("load", function() {
     readFile(function(u, s) {
@@ -16,8 +17,7 @@ window.addEventListener("load", function() {
 }, false);
 
 function loadShow() {
-    var thisUser,
-        allShows = [],
+    var allShows = [],
         progress = [],
         show =  window.location.href.split("/shows/")[1].split(".php")[0].split("_"),
         showName = "",
@@ -97,10 +97,10 @@ function initModalBtns() {
         modalSecBtn = document.querySelector(".modal-btn-secondary"),
         modalPrimBtn = document.querySelector(".modal-btn-primary"),
         showRmvBtn = document.querySelector(".show-header-rmv-btn");
-    modalClose.addEventListener("click", function(){remModal(false, 'modal-remove--show', thisShow.title);}, false);
-    modalSecBtn.addEventListener("click", function(){remShow(); remModal(false, 'modal-remove--show', thisShow.title);}, false);
-    modalPrimBtn.addEventListener("click", function(){remModal(false, 'modal-remove--show', thisShow.title);}, false);
-    showRmvBtn.addEventListener("click", function(){remModal(true, 'modal-remove--show', thisShow.title);}, false);
+    modalClose.addEventListener("click", function(){remModal(false, 'modal-remove--show', thisShow.title, function(){remShow();});}, false);
+    modalSecBtn.addEventListener("click", function(){remShow(); remModal(false, 'modal-remove--show', thisShow.title, function(){remShow();});}, false);
+    modalPrimBtn.addEventListener("click", function(){remModal(false, 'modal-remove--show', thisShow.title, function(){remShow();});}, false);
+    showRmvBtn.addEventListener("click", function(){remModal(true, 'modal-remove--show', thisShow.title, function(){remShow();});}, false);
 }
 
 function initCast() {
@@ -437,8 +437,12 @@ function markAsWatched(button, add) {
     }
     if (add) {
         episodes[epIndex].classList.add('episode-item--watched');
+        thisUser.shows[thisShow.title].progress[epIndex + 1] = true;
+        updateUsers();
     } else {
         episodes[epIndex].classList.remove('episode-item--watched');
+        thisUser.shows[thisShow.title].progress[epIndex + 1] = false;
+        updateUsers();
     }
     totalProgress();
 }
@@ -496,6 +500,9 @@ function remShow() {
         episodes[i].classList.remove('episode-item--watched');
         episodes[i].classList.add('episode-item--not-added');
     }
+    delete thisUser.shows[thisShow.title];
+    updateUsers();
+    console.log(thisUser);
 }
 
 function addShow(addBtn) {
@@ -515,6 +522,19 @@ function addShow(addBtn) {
         for (var i = 0; i < episodes.length; i++) {
             episodes[i].classList.remove('episode-item--not-added');
         }
+        console.log(thisUser.shows[thisShow.title]);
+        if (thisUser.shows[thisShow.title] == undefined) {
+            var index = 1;
+            thisUser.shows[thisShow.title] = {progress: {}};
+            for (ssn in thisShow.seasons) {
+                for (ep in thisShow.seasons[ssn]) {
+                    thisUser.shows[thisShow.title].progress[index + ""] = false;
+                    index += 1;
+                }
+            }
+            updateUsers();
+        }
+
     } else if (show.classList.contains('added') && !show.classList.contains('finished')) {
         show.classList.remove('added');
         show.classList.add('finished');
@@ -525,24 +545,37 @@ function addShow(addBtn) {
         for (var i = 0; i < episodes.length; i++) {
             episodes[i].classList.add('episode-item--watched');
         }
+        var index = 1;
+        thisUser.shows[thisShow.title].progress = {};
+        for (ssn in thisShow.seasons) {
+            for (ep in thisShow.seasons[ssn]) {
+                thisUser.shows[thisShow.title].progress[index + ""] = true;
+                index += 1;
+            }
+        }
+        updateUsers();
     } else if (show.classList.contains('finished') && !show.classList.contains('added')) {
         progressBar.style.width = "0%";
         for (var i = 0; i < episodes.length; i++) {
             episodes[i].classList.remove('episode-item--watched');
         }
+        var index = 1;
+        thisUser.shows[thisShow.title].progress = {};
+        for (ssn in thisShow.seasons) {
+            for (ep in thisShow.seasons[ssn]) {
+                thisUser.shows[thisShow.title].progress[index + ""] = false;
+                index += 1;
+            }
+        }
+        updateUsers();
     }
     totalProgress();
 }
 
 function getFriendsWatching() {
     var showName = document.getElementsByClassName('show-header-info-title')[0].innerHTML,
-        friendNames,
+        friendNames = thisUser.friends,
         friends = [];
-    for (user in users) {
-        if (user == "josh_jpeg") {
-            friendNames = users[user].friends;
-        }
-    }
     for (name in friendNames) {
         for (user in users) {
             if (friendNames[name] == user) {
@@ -702,4 +735,13 @@ function getEpisodeID(lastWatched) {
             }
         }
     }
+}
+
+function updateUsers() {
+    for (user in users) {
+        if (user == thisUser.username) {
+            users[user] = thisUser;
+        }
+    }
+    writeToFile(users, "userdata.json");
 }

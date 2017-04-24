@@ -22,15 +22,15 @@
                 "hours": 16
             }
         },
-        "friends": {
-            "1": "mike_hom",
-            "2": "djtannertanner",
-            "3": "jesscooney",
-            "4": "raymondjustus",
-            "5": "maryann_reds",
-            "6": "dfdf_afaff",
-            "7": "joshjehling"
-        },
+        "friends": [
+            "mike_hom",
+            "djtannertanner",
+            "jesscooney",
+            "raymondjustus",
+            "maryann_reds",
+            "dfdf_afaff",
+            "joshjehling"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -40,12 +40,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -151,15 +147,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -169,12 +165,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Arrested Development": {
@@ -352,12 +344,12 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "mike_hom",
-            "2": "jesscooney",
-            "3": "dfdf_afaff",
-            "4": "maryann_reds"
-        },
+        "friends": [
+            "mike_hom",
+            "jesscooney",
+            "dfdf_afaff",
+            "maryann_reds"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -367,12 +359,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {},
         "movies": {},
@@ -410,15 +398,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -428,12 +416,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -494,15 +478,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -512,12 +496,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {},
         "movies": {},
@@ -553,15 +533,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -571,12 +551,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -637,15 +613,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -655,12 +631,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {},
         "movies": {},
@@ -696,15 +668,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -714,12 +686,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -780,15 +748,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -798,12 +766,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -864,15 +828,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "1": "Fantasy",
             "2": "Animation",
@@ -940,15 +904,15 @@
                 "hours": 3
             }
         },
-        "friends": {
-            "1": "josh_jpeg",
-            "2": "liliakang",
-            "3": "jesscooney",
-            "4": "cocoduffs98",
-            "5": "djtannertanner",
-            "6": "behlert.jpg",
-            "7": "dfdf_afaff"
-        },
+        "friends": [
+            "josh_jpeg",
+            "liliakang",
+            "jesscooney",
+            "cocoduffs98",
+            "djtannertanner",
+            "behlert.jpg",
+            "dfdf_afaff"
+        ],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -958,12 +922,8 @@
                 "Mystery",
                 "Musical"
             ],
-            "liked": [
-
-            ],
-            "disliked": [
-
-            ]
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {

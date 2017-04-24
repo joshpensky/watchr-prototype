@@ -25,7 +25,8 @@ window.addEventListener("keyup", function(e) {
 }, false);
 
 
-function remModal(toggle, which, what) {
+function remModal(toggle, which, what, yesFunc) {
+    console.log(yesFunc);
     var body = document.getElementsByTagName('body')[0],
         allModals = document.getElementsByClassName('modal-remove'),
         chosenModal,
@@ -37,6 +38,28 @@ function remModal(toggle, which, what) {
         }
     }
     if (toggle) {
+        var modalBtns = chosenModal.querySelector(".modal-btns");
+        while (modalBtns.hasChildNodes()) {
+            modalBtns.removeChild(modalBtns.lastChild);
+        }
+        var yesBtn = document.createElement("div"),
+            noBtn = document.createElement("div");
+        yesBtn.classList.add("modal-btn");
+        yesBtn.classList.add("modal-btn-secondary");
+        yesBtn.addEventListener("click", function(){yesFunc(); remModal(false, which, what);}, false);
+        yesBtn.innerHTML = "Yes";
+        noBtn.classList.add("modal-btn");
+        noBtn.classList.add("modal-btn-primary");
+        noBtn.addEventListener("click", function(){remModal(false, which, what);}, false);
+        noBtn.innerHTML = "No";
+        modalBtns.appendChild(yesBtn);
+        modalBtns.appendChild(noBtn);
+
+            /*
+            <div class="modal-btn modal-btn-secondary" onclick="addFriend(false); remModal(false, 'modal-remove--friend', 'Mike');">Yes</div>
+            <div class="modal-btn modal-btn-primary" onclick="remModal(false, 'modal-remove--friend', 'Mike');">No</div>*/
+
+
         var modalHeader = chosenModal.getElementsByClassName('modal-header')[0],
             modalBody = chosenModal.getElementsByClassName('modal-body')[0];
         if (which == 'modal-remove--show') {
