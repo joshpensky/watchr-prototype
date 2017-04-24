@@ -30,11 +30,11 @@
                     <li class="friends-item">
                         <div class="friends-item-img">
                             <a class="friends-item-img--show" id="breaking-bad"></a>
-                            <div class="friends-item-img--profile" id="lilia"></div>
+                            <a href="/users/liliakang.php" class="friends-item-img--profile" id="lilia"></a>
                         </div>
                         <div class="friends-item-info">
                             <div class="friends-item-info--desc">
-                                <span>Lilia</span> binged 3 episodes of <span>Breaking Bad</span>.</div>
+                                <a href="/users/liliakang.php">Lilia</a> binged 3 episodes of <span>Breaking Bad</span>.</div>
                             <div class="friends-item-info--quantity">S05E14 - S05E16</div>
                             <div class="friends-item-info--time">Just now</div>
                         </div>
@@ -42,11 +42,11 @@
                     <li class="friends-item">
                         <div class="friends-item-img">
                             <div class="friends-item-img--show" id="superstore"></div>
-                            <div class="friends-item-img--profile" id="tanner"></div>
+                            <a href="/users/djtannertanner.php" class="friends-item-img--profile" id="tanner"></a>
                         </div>
                         <div class="friends-item-info">
                             <div class="friends-item-info--desc">
-                                <span>Tanner</span> watched an episode of <span>Superstore</span>.</div>
+                                <a href="/users/djtannertanner.php">Tanner</a> watched an episode of <span>Superstore</span>.</div>
                             <div class="friends-item-info--quantity">S02E18</div>
                             <div class="friends-item-info--time">24 minutes ago</div>
                         </div>

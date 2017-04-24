@@ -26,7 +26,6 @@ window.addEventListener("keyup", function(e) {
 
 
 function remModal(toggle, which, what, yesFunc) {
-    console.log(yesFunc);
     var body = document.getElementsByTagName('body')[0],
         allModals = document.getElementsByClassName('modal-remove'),
         chosenModal,

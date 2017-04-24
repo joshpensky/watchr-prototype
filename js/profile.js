@@ -233,7 +233,6 @@ function buildActions() {
             addFriendAction.classList.add("profile-actions-item");
             addFriendAction.classList.add("profile-actions-item--addfriend");
             addFriendAction.innerHTML = "Add Friend";
-            console.log(thisUser);
             addFriendAction.addEventListener("click", function(){addFriend(true, thisUser);}, false);
             profileActionsList.appendChild(addFriendAction);
         }
@@ -249,8 +248,6 @@ function buildActions() {
 }
 
 function addFriend(add, givenUser) {
-    console.log(givenUser);
-    console.log(you);
     if (add) {
         if (!arrContains(givenUser.friends, you.username)) {
             givenUser.friends.push(you.username);
@@ -457,8 +454,9 @@ function buildShows(showListContainer, final) {
             theirProgress = final[show][showName].progress,
             theyWatched = 0,
             yourProgress = yourShows[showName],
-            youWatched = 0;
+            youWatched = -1;
         if (yourProgress != undefined) {
+            youWatched = 0;
             for (ep in yourProgress.progress) {
                 if (yourProgress.progress[ep]) {
                     youWatched += 1;
@@ -498,7 +496,7 @@ function buildShows(showListContainer, final) {
         showItemProgressYou.classList.add('show-item-progress');
         showItemProgressYou.classList.add('show-item-progress--you');
         showItemProgressYouBar.classList.add('show-item-progress-bar');
-        if (youWatched > 0) {
+        if (youWatched >= 0) {
             showItemProgressYouBar.style.width = ((youWatched /  size) * 100) + "%";
             showItem.classList.add('show-item--added');
             if (youWatched === size) {
@@ -570,7 +568,7 @@ function buildShows(showListContainer, final) {
 function buildShowsHelp(item) {
     var showItemBtnAddedCont = item.getElementsByClassName('show-item-btn--added-cont')[0],
         name = item.getElementsByClassName('show-item-title')[0].innerHTML;
-    showItemBtnAddedCont.addEventListener("click", function(){remModal(true, 'modal-remove--show', name);}, false);
+    showItemBtnAddedCont.addEventListener("click", function(){remModal(true, 'modal-remove--show', name, function(){addShowWatchlist(showItemBtnAddedCont);});}, false);
 }
 
 // arrContains : Array[Element] x Element --> Boolean
@@ -666,8 +664,7 @@ function compareUser(user1, user2) {
 // adds a show to your watchlist based on the show button clicked
 function addShowWatchlist(btn) {
     var episodes = document.getElementsByClassName('show-item'),
-        index,
-        add;
+        index = 0;
     if (btn.classList.contains('show-item-btn--add-cont')) {
         var buttons = document.getElementsByClassName('show-item-btn--add-cont');
         for (var i = 0; i < buttons.length; i++) {
@@ -683,15 +680,34 @@ function addShowWatchlist(btn) {
             }
         }
     }
+    var showName = episodes[index].querySelector(".show-item-title").innerHTML,
+        thisShow;
+    for (show in shows) {
+        if (show == showName) {
+            thisShow = shows[show];
+        }
+    }
     if (episodes[index].classList.contains('show-item--added')) {
         episodes[index].classList.remove('show-item--added');
+        delete you.shows[thisShow.title];
+        updateUsers(you);
     } else {
         episodes[index].classList.add('show-item--added');
+        if (you.shows[thisShow.title] == undefined) {
+            var index = 1;
+            you.shows[thisShow.title] = {progress: {}};
+            for (ssn in thisShow.seasons) {
+                for (ep in thisShow.seasons[ssn]) {
+                    you.shows[thisShow.title].progress[index + ""] = false;
+                    index += 1;
+                }
+            }
+            updateUsers(you);
+        }
     }
 }
 
 function updateUsers(givenUser) {
-    console.log(givenUser);
     for (user in users) {
         if (user == givenUser.username) {
             users[user] = givenUser;

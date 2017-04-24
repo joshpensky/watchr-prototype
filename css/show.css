@@ -507,6 +507,8 @@ h4 {
 }
 
 .hero .show-header-cover {
+  bottom: 0px;
+  position: absolute;
   width: 150px;
   height: 150px;
   background-image: url("/img/defaults/show.png");
@@ -556,8 +558,10 @@ h4 {
 }
 
 .hero .show-header-info {
+  white-space: normal;
   position: relative;
-  margin-left: 30px;
+  padding-left: 180px;
+  padding-right: 20px;
   display: inline-block;
 }
 
@@ -601,15 +605,15 @@ h4 {
   color: #7946fb;
 }
 
-.hero .show-header-info-btn.show-header-rmv-btn:hover, .hero .show-header-info-btn.show-header-rmv-btn:focus, .hero .show-header-info-btn.show-header-rmv-btn:active {
+.hero .show-header-info-btn.show-header-rmv-btn:focus, .hero .show-header-info-btn.show-header-rmv-btn:active {
   background: #7946fb;
 }
 
-.hero .show-header-info-btn.show-header-rmv-btn:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-img {
+.hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-img {
   background-image: url("/img/btn/remove-hover.png");
 }
 
-.hero .show-header-info-btn.show-header-rmv-btn:hover .show-header-info-btn-type, .hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-type {
+.hero .show-header-info-btn.show-header-rmv-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn.show-header-rmv-btn:active .show-header-info-btn-type {
   color: #fff;
 }
 
@@ -625,12 +629,12 @@ h4 {
   color: #138fdf;
 }
 
-.hero .show-header-info-btn.show-added:hover, .hero .show-header-info-btn.show-added:focus, .hero .show-header-info-btn.show-added:active {
+.hero .show-header-info-btn.show-added:focus, .hero .show-header-info-btn.show-added:active {
   background: #138fdf;
   color: #fff;
 }
 
-.hero .show-header-info-btn.show-added:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-added:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-added:active .show-header-info-btn-img {
+.hero .show-header-info-btn.show-added:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-added:active .show-header-info-btn-img {
   background-image: url("/img/btn/check-hover.png");
 }
 
@@ -646,12 +650,12 @@ h4 {
   color: #00bf71;
 }
 
-.hero .show-header-info-btn.show-finished:hover, .hero .show-header-info-btn.show-finished:focus, .hero .show-header-info-btn.show-finished:active {
+.hero .show-header-info-btn.show-finished:focus, .hero .show-header-info-btn.show-finished:active {
   background: #00bf71;
   color: #fff;
 }
 
-.hero .show-header-info-btn.show-finished:hover .show-header-info-btn-img, .hero .show-header-info-btn.show-finished:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-finished:active .show-header-info-btn-img {
+.hero .show-header-info-btn.show-finished:focus .show-header-info-btn-img, .hero .show-header-info-btn.show-finished:active .show-header-info-btn-img {
   background-image: url("/img/btn/check-hover.png");
 }
 
@@ -687,15 +691,15 @@ h4 {
   transition: 0.25s ease;
 }
 
-.hero .show-header-info-btn:hover, .hero .show-header-info-btn:focus, .hero .show-header-info-btn:active {
+.hero .show-header-info-btn:focus, .hero .show-header-info-btn:active {
   background: #ff4040;
 }
 
-.hero .show-header-info-btn:hover .show-header-info-btn-img, .hero .show-header-info-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn:active .show-header-info-btn-img {
+.hero .show-header-info-btn:focus .show-header-info-btn-img, .hero .show-header-info-btn:active .show-header-info-btn-img {
   background-image: url("/img/btn/add-hover.png");
 }
 
-.hero .show-header-info-btn:hover .show-header-info-btn-type, .hero .show-header-info-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn:active .show-header-info-btn-type {
+.hero .show-header-info-btn:focus .show-header-info-btn-type, .hero .show-header-info-btn:active .show-header-info-btn-type {
   color: #fff;
 }
 
@@ -793,15 +797,15 @@ h4 {
   transform: translateX(100%) rotate(135deg);
 }
 
-.section .section-header-seeall.section-header-seeall-open:hover:before, .section .section-header-seeall.section-header-seeall-open:focus:before, .section .section-header-seeall.section-header-seeall-open:active:before {
+.section .section-header-seeall.section-header-seeall-open:focus:before, .section .section-header-seeall.section-header-seeall-open:active:before {
   right: -10px;
 }
 
-.section .section-header-seeall:hover, .section .section-header-seeall:focus, .section .section-header-seeall:active {
+.section .section-header-seeall:focus, .section .section-header-seeall:active {
   color: #576777;
 }
 
-.section .section-header-seeall:hover:before, .section .section-header-seeall:focus:before, .section .section-header-seeall:active:before {
+.section .section-header-seeall:focus:before, .section .section-header-seeall:active:before {
   border-color: #576777;
   right: -6px;
 }
@@ -1230,15 +1234,15 @@ ul.see-all {
   color: #138fdf;
 }
 
-.episodes-container .episode-list .episode-item-button--mark-cont:hover, .episodes-container .episode-list .episode-item-button--mark-cont:focus, .episodes-container .episode-list .episode-item-button--mark-cont:active {
+.episodes-container .episode-list .episode-item-button--mark-cont:focus, .episodes-container .episode-list .episode-item-button--mark-cont:active {
   background: #138fdf;
 }
 
-.episodes-container .episode-list .episode-item-button--mark-cont:hover .episode-item-button--mark, .episodes-container .episode-list .episode-item-button--mark-cont:focus .episode-item-button--mark, .episodes-container .episode-list .episode-item-button--mark-cont:active .episode-item-button--mark {
+.episodes-container .episode-list .episode-item-button--mark-cont:focus .episode-item-button--mark, .episodes-container .episode-list .episode-item-button--mark-cont:active .episode-item-button--mark {
   background-image: url("/img/btn/check-hover.png");
 }
 
-.episodes-container .episode-list .episode-item-button--mark-cont:hover p, .episodes-container .episode-list .episode-item-button--mark-cont:focus p, .episodes-container .episode-list .episode-item-button--mark-cont:active p {
+.episodes-container .episode-list .episode-item-button--mark-cont:focus p, .episodes-container .episode-list .episode-item-button--mark-cont:active p {
   color: #fff;
 }
 
@@ -1263,15 +1267,15 @@ ul.see-all {
   border-bottom-right-radius: 20px;
 }
 
-.episodes-container .episode-list .episode-item-button--watch-cont:hover, .episodes-container .episode-list .episode-item-button--watch-cont:focus, .episodes-container .episode-list .episode-item-button--watch-cont:active {
+.episodes-container .episode-list .episode-item-button--watch-cont:focus, .episodes-container .episode-list .episode-item-button--watch-cont:active {
   background: #00bf71;
 }
 
-.episodes-container .episode-list .episode-item-button--watch-cont:hover .episode-item-button--watch, .episodes-container .episode-list .episode-item-button--watch-cont:focus .episode-item-button--watch, .episodes-container .episode-list .episode-item-button--watch-cont:active .episode-item-button--watch {
+.episodes-container .episode-list .episode-item-button--watch-cont:focus .episode-item-button--watch, .episodes-container .episode-list .episode-item-button--watch-cont:active .episode-item-button--watch {
   background-image: url("/img/btn/watch-hover.png");
 }
 
-.episodes-container .episode-list .episode-item-button--watch-cont:hover p, .episodes-container .episode-list .episode-item-button--watch-cont:focus p, .episodes-container .episode-list .episode-item-button--watch-cont:active p {
+.episodes-container .episode-list .episode-item-button--watch-cont:focus p, .episodes-container .episode-list .episode-item-button--watch-cont:active p {
   color: #222c3a;
 }
 
@@ -1298,15 +1302,15 @@ ul.see-all {
   border-bottom-right-radius: 20px;
 }
 
-.episodes-container .episode-list .episode-item-button--unmark-cont:hover, .episodes-container .episode-list .episode-item-button--unmark-cont:focus, .episodes-container .episode-list .episode-item-button--unmark-cont:active {
+.episodes-container .episode-list .episode-item-button--unmark-cont:focus, .episodes-container .episode-list .episode-item-button--unmark-cont:active {
   background: #7946fb;
 }
 
-.episodes-container .episode-list .episode-item-button--unmark-cont:hover .episode-item-button--unmark, .episodes-container .episode-list .episode-item-button--unmark-cont:focus .episode-item-button--unmark, .episodes-container .episode-list .episode-item-button--unmark-cont:active .episode-item-button--unmark {
+.episodes-container .episode-list .episode-item-button--unmark-cont:focus .episode-item-button--unmark, .episodes-container .episode-list .episode-item-button--unmark-cont:active .episode-item-button--unmark {
   background-image: url("/img/btn/unwatch-hover.png");
 }
 
-.episodes-container .episode-list .episode-item-button--unmark-cont:hover p, .episodes-container .episode-list .episode-item-button--unmark-cont:focus p, .episodes-container .episode-list .episode-item-button--unmark-cont:active p {
+.episodes-container .episode-list .episode-item-button--unmark-cont:focus p, .episodes-container .episode-list .episode-item-button--unmark-cont:active p {
   color: #fff;
 }
 
@@ -1367,15 +1371,15 @@ ul.see-all {
   transition: all 0.25s cubic-bezier(0, 0.63, 0.5, 2), background 0.25s ease;
 }
 
-.cast-list .cast-item-img:hover, .cast-list .cast-item-img:focus, .cast-list .cast-item-img:active {
+.cast-list .cast-item-img:focus, .cast-list .cast-item-img:active {
   transform: scale(0.95);
 }
 
-.cast-list .cast-item-img:hover + .cast-item-name, .cast-list .cast-item-img:focus + .cast-item-name, .cast-list .cast-item-img:active + .cast-item-name {
+.cast-list .cast-item-img:focus + .cast-item-name, .cast-list .cast-item-img:active + .cast-item-name {
   color: #fff;
 }
 
-.cast-list .cast-item-img:hover ~ .cast-item-role, .cast-list .cast-item-img:focus ~ .cast-item-role, .cast-list .cast-item-img:active ~ .cast-item-role {
+.cast-list .cast-item-img:focus ~ .cast-item-role, .cast-list .cast-item-img:active ~ .cast-item-role {
   color: #576777;
 }
 
@@ -1397,15 +1401,15 @@ ul.see-all {
   transition: 0.25s ease;
 }
 
-.cast-list .cast-item-name:hover, .cast-list .cast-item-name:focus, .cast-list .cast-item-name:active {
+.cast-list .cast-item-name:focus, .cast-list .cast-item-name:active {
   color: #fff;
 }
 
-.cast-list .cast-item-name:hover + .cast-item-img, .cast-list .cast-item-name:focus + .cast-item-img, .cast-list .cast-item-name:active + .cast-item-img {
+.cast-list .cast-item-name:focus + .cast-item-img, .cast-list .cast-item-name:active + .cast-item-img {
   transform: scale(0.95);
 }
 
-.cast-list .cast-item-name:hover ~ .cast-item-role, .cast-list .cast-item-name:focus ~ .cast-item-role, .cast-list .cast-item-name:active ~ .cast-item-role {
+.cast-list .cast-item-name:focus ~ .cast-item-role, .cast-list .cast-item-name:active ~ .cast-item-role {
   color: #576777;
 }
 
@@ -1567,72 +1571,12 @@ ul.see-all {
   cursor: pointer;
 }
 
-#me {
-  background-image: url("/img/profiles/me.jpg");
-}
-
 #lilia {
   background-image: url("/img/profiles/lilia.jpg");
 }
 
-#tanner {
-  background-image: url("/img/profiles/tanner.png");
-}
-
-#mike {
-  background-image: url("/img/profiles/mike.png");
-}
-
-#jess {
-  background-image: url("/img/profiles/jess.png");
-}
-
-#eric {
-  background-image: url("/img/profiles/eric.jpg");
-}
-
-#ray {
-  background-image: url("/img/profiles/ray.jpg");
-}
-
-#maryann {
-  background-image: url("/img/profiles/maryann.png");
-}
-
-#josh {
-  background-image: url("/img/profiles/josh.png");
-}
-
 #ben {
   background-image: url("/img/profiles/ben.png");
-}
-
-#crime {
-  background-image: url("/img/genres/crime.png");
-}
-
-#drama {
-  background-image: url("/img/genres/drama.png");
-}
-
-#thriller {
-  background-image: url("/img/genres/thriller.png");
-}
-
-#action {
-  background-image: url("/img/genres/action.png");
-}
-
-#sci-fi {
-  background-image: url("/img/genres/scifi.png");
-}
-
-#fargo {
-  background-image: url("/img/shows/fargo.jpg");
-}
-
-#legion {
-  background-image: url("/img/shows/legion.jpg");
 }
 
 @media (max-width: 1500px) {
@@ -1661,6 +1605,13 @@ ul.see-all {
   }
   .hero {
     height: 300px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero .show-header-info-title {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -1736,6 +1687,10 @@ ul.see-all {
   .hero .show-header {
     left: 30px;
   }
+  .hero .show-header-info-title {
+    font-size: 35px;
+    line-height: 35px;
+  }
   .cast-list .cast-item:last-child {
     margin-right: 30px;
   }
@@ -1757,7 +1712,7 @@ ul.see-all {
 
 @media (max-width: 450px) {
   .hero .show-header-info {
-    margin-left: 10px;
+    padding-left: 170px;
   }
   .hero .show-header-info-btn {
     margin-right: 7px;
@@ -1800,8 +1755,8 @@ ul.see-all {
     bottom: -45px;
   }
   .hero .show-header h1 {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
   }
   .hero .show-header h4 {
     font-size: 20px;
@@ -1815,7 +1770,7 @@ ul.see-all {
     width: 150px;
   }
   .hero .show-header-info {
-    margin-left: 20px;
+    padding-left: 150px;
   }
   .hero .show-header-info-btn {
     margin-bottom: 8px;
@@ -1871,19 +1826,15 @@ ul.see-all {
     width: 134px;
     left: -7px;
   }
-  .hero .show-header h1 {
-    font-size: 30px;
-    line-height: 30px;
-  }
   .hero .show-header h4 {
     font-size: 15px;
     line-height: 15px;
   }
   .hero .show-header-info {
-    margin-left: 15px;
+    padding-left: 135px;
   }
   .hero .show-header-info-btn {
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 10px;
   }
   .about-genres-item {

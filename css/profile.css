@@ -1709,6 +1709,14 @@ ul.see-all {
   overflow-x: scroll;
 }
 
+.friend-list::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  height: 0px;
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
 .friend-list .friend-item {
   margin-top: 30px;
   margin-right: 30px;

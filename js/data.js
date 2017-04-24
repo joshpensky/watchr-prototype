@@ -21,7 +21,6 @@ function writeToFile(jsonData, file) {
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     http.onreadystatechange = function() {
         if(http.readyState == 4 && http.status == 200) {
-            console.log(http.responseText);
             //var h = JSON.parse(http.responseText.split(";dir=data/" + file)[0]);
         }
     };
@@ -63,4 +62,23 @@ function buildEmpty(caption, action) {
         </div>
     </div>
     */
+}
+
+function seeAll(seeAllBtn, className) {
+    var list = document.getElementsByClassName(className)[0],
+        allLists = document.getElementsByClassName('list'),
+        allBtns = document.getElementsByClassName('section-header-seeall');
+    if (list.classList.contains('see-all')) {
+        list.classList.remove('see-all');
+        seeAllBtn.classList.remove('section-header-seeall-open');
+    } else {
+        for(var i = 0; i < allLists.length; i++) {
+            allLists[i].classList.remove('see-all');
+        }
+        list.classList.add('see-all');
+        for(var i = 0; i < allBtns.length; i++) {
+            allBtns[i].classList.remove('section-header-seeall-open');
+        }
+        seeAllBtn.classList.add('section-header-seeall-open');
+    }
 }

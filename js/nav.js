@@ -91,7 +91,6 @@ function buildSearchItems(query) {
         searchBottom.removeChild(searchBottom.lastChild);
     }
     for (result in results) {
-        console.log(results[result]);
         var searchItem = document.createElement("a"),
             searchItemImg = document.createElement("div"),
             searchItemTitle = document.createElement("div");

@@ -31,7 +31,6 @@ function loadShow() {
             showName += " ";
         }
     }
-    console.log(showName);
     for (show in shows) {
         if (show === showName) {
             thisShow = shows[show];
@@ -71,25 +70,6 @@ function loadShow() {
         }
     }
     getFriendsWatching();
-}
-
-function seeAll(seeAllBtn, className) {
-    var list = document.getElementsByClassName(className)[0],
-        allLists = document.getElementsByClassName('list'),
-        allBtns = document.getElementsByClassName('section-header-seeall');
-    if (list.classList.contains('see-all')) {
-        list.classList.remove('see-all');
-        seeAllBtn.classList.remove('section-header-seeall-open');
-    } else {
-        for(var i = 0; i < allLists.length; i++) {
-            allLists[i].classList.remove('see-all');
-        }
-        list.classList.add('see-all');
-        for(var i = 0; i < allBtns.length; i++) {
-            allBtns[i].classList.remove('section-header-seeall-open');
-        }
-        seeAllBtn.classList.add('section-header-seeall-open');
-    }
 }
 
 function initModalBtns() {
@@ -185,7 +165,7 @@ function initAbout() {
     for (season in thisShow.seasons) {
         numSns += 1;
     }
-    seasons.innerHTML = numSns + " Seasons";
+    seasons.innerHTML = numSns + ((numSns == 1) ? " Season" : " Seasons");
     detailsCont.appendChild(rating);
     detailsCont.appendChild(timing);
     detailsCont.appendChild(seasons);
@@ -502,7 +482,6 @@ function remShow() {
     }
     delete thisUser.shows[thisShow.title];
     updateUsers();
-    console.log(thisUser);
 }
 
 function addShow(addBtn) {
@@ -522,7 +501,6 @@ function addShow(addBtn) {
         for (var i = 0; i < episodes.length; i++) {
             episodes[i].classList.remove('episode-item--not-added');
         }
-        console.log(thisUser.shows[thisShow.title]);
         if (thisUser.shows[thisShow.title] == undefined) {
             var index = 1;
             thisUser.shows[thisShow.title] = {progress: {}};

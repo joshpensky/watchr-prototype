@@ -25,7 +25,6 @@ function createShows() {
         showsCont = document.querySelector(".shows"),
         watchlist = showsCont.querySelector(".watchlist"),
         showList = [];
-    console.log(shows);
     for (show in shows) {
         for (aShow in allShows) {
             if (show === aShow) {
@@ -151,7 +150,6 @@ function createShows() {
         }
     }
     if (!watchlist.hasChildNodes()) {
-        console.log(buildEmpty("You suck", ""));
         watchlist.appendChild(buildEmpty("Your watchlist is currently empty.", "Find shows to watch"));
     }
 }
@@ -313,7 +311,6 @@ function markAsWatched(button) {
                 }
             }
             updateData(showName, currEp);
-            //console.log(nextEp[0]);
             epID.innerHTML = nextEp[0];
             epTitle.innerHTML = nextEp[1].title;
             soFar = getCurrEp(showArray, epID) * increase;

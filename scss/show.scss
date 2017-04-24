@@ -99,6 +99,8 @@ h4 {
         left: calc(50vw - 700px);
         bottom: -50px;
         &-cover {
+            bottom: 0px;
+            position: absolute;
             width: 150px;
             height: 150px;
             background-image: url("/img/defaults/show.png");
@@ -137,8 +139,10 @@ h4 {
             }
         }
         &-info {
+            white-space: normal;
             position: relative;
-            margin-left: 30px;
+            padding-left: 180px;
+            padding-right: 20px;
             display: inline-block;
             &-year {
                 margin-bottom: 20px;
@@ -165,7 +169,7 @@ h4 {
                     .show-header-info-btn-type {
                         color: $purple;
                     }
-                    &:hover, &:focus, &:active {
+                     &:focus, &:active {
                         background: $purple;
                         .show-header-info-btn-img {
                             background-image: url("/img/btn/remove-hover.png");
@@ -183,7 +187,7 @@ h4 {
                     .show-header-info-btn-type {
                         color: $blue;
                     }
-                    &:hover, &:focus, &:active {
+                    &:focus, &:active {
                         background: $blue;
                         color: $white;
                         .show-header-info-btn-img {
@@ -199,7 +203,7 @@ h4 {
                     .show-header-info-btn-type {
                         color: $green;
                     }
-                    &:hover, &:focus, &:active {
+                    &:focus, &:active {
                         background: $green;
                         color: $white;
                         .show-header-info-btn-img {
@@ -229,7 +233,7 @@ h4 {
                     margin-left: 5px;
                     @include transition-ease(0.25s);
                 }
-                &:hover, &:focus, &:active {
+                 &:focus, &:active {
                     background: $red;
                     .show-header-info-btn-img {
                         background-image: url("/img/btn/add-hover.png");
@@ -314,14 +318,14 @@ h4 {
                     bottom: 6px;
                     transform: translateX(100%) rotate(135deg);
                 }
-                &:hover, &:focus, &:active {
+                &:focus, &:active {
                     &:before {
                         right: -10px;
                         //transform: translateX(100%) rotate(150deg);
                     }
                 }
             }
-            &:hover, &:focus, &:active {
+            &:focus, &:active {
                 color: $caption-top;
                 &:before {
                     border-color: $caption-top;
@@ -678,7 +682,7 @@ ul.see-all {
                         color: $blue;
                     }
                 }
-                &--mark-cont:hover,&--mark-cont:focus, &--mark-cont:active {
+                &--mark-cont:focus, &--mark-cont:active {
                     background: $blue;
                     .episode-item-button--mark {
                         background-image: url("/img/btn/check-hover.png");
@@ -704,7 +708,7 @@ ul.see-all {
                 &--watch-cont {
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
-                    &:hover, &:focus, &:active {
+                    &:focus, &:active {
                         background: $green;
                         .episode-item-button--watch {
                             background-image: url("/img/btn/watch-hover.png");
@@ -733,7 +737,7 @@ ul.see-all {
                     border-width: 0px;
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
-                    &:hover, &:focus, &:active {
+                    &:focus, &:active {
                         background: $purple;
                         .episode-item-button--unmark {
                             background-image: url("/img/btn/unwatch-hover.png");
@@ -782,7 +786,7 @@ ul.see-all {
             margin-bottom: 10px;
             cursor: pointer;
             @include transition-jelly(0.25s);
-            &:hover, &:focus, &:active  {
+            &:focus, &:active  {
                 transform: scale(0.95);
                 &+ .cast-item-name {
                     color: $white;
@@ -804,7 +808,7 @@ ul.see-all {
             overflow: hidden;
             cursor: pointer;
             @include transition-ease(0.25s);
-            &:hover, &:focus, &:active {
+             &:focus, &:active {
                 color: $white;
                 &+ .cast-item-img {
                     transform: scale(0.95);
@@ -948,58 +952,11 @@ ul.see-all {
     }
 }
 
-#me {
-    background-image: url("/img/profiles/me.jpg");
-}
 #lilia {
     background-image: url("/img/profiles/lilia.jpg");
 }
-#tanner {
-    background-image: url("/img/profiles/tanner.png");
-}
-#mike {
-    background-image: url("/img/profiles/mike.png");
-}
-#jess {
-    background-image: url("/img/profiles/jess.png");
-}
-#eric {
-    background-image: url("/img/profiles/eric.jpg");
-}
-#ray {
-    background-image: url("/img/profiles/ray.jpg");
-}
-#maryann {
-    background-image: url("/img/profiles/maryann.png");
-}
-#josh {
-    background-image: url("/img/profiles/josh.png");
-}
 #ben {
     background-image: url("/img/profiles/ben.png");
-}
-
-#crime {
-    background-image: url("/img/genres/crime.png");
-}
-#drama {
-    background-image: url("/img/genres/drama.png");
-}
-#thriller {
-    background-image: url("/img/genres/thriller.png");
-}
-#action {
-    background-image: url("/img/genres/action.png");
-}
-#sci-fi {
-    background-image: url("/img/genres/scifi.png");
-}
-
-#fargo {
-    background-image: url("/img/shows/fargo.jpg");
-}
-#legion {
-    background-image: url("/img/shows/legion.jpg");
 }
 
 @media (max-width: 1500px) {
@@ -1039,7 +996,18 @@ ul.see-all {
     }
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 850px) {
+    .hero {
+        .show-header {
+            &-info {
+                &-title {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 750px) {
@@ -1132,6 +1100,12 @@ ul.see-all {
     .hero {
         .show-header {
             left: 30px;
+            &-info {
+                &-title {
+                    font-size: 35px;
+                    line-height: 35px;
+                }
+            }
         }
     }
     .cast-list {
@@ -1169,7 +1143,8 @@ ul.see-all {
     .hero {
         .show-header {
             &-info {
-                margin-left: 10px;
+                padding-left: 170px;
+
                 &-btn {
                     margin-right: 7px;
                     height: 25px;
@@ -1214,8 +1189,8 @@ ul.see-all {
             left: 20px;
             bottom: -45px;
             h1 {
-                font-size: 40px;
-                line-height: 40px;
+                font-size: 30px;
+                line-height: 30px;
             }
             h4 {
                 font-size: 20px;
@@ -1229,7 +1204,7 @@ ul.see-all {
                 width: 150px;
             }
             &-info {
-                margin-left: 20px;
+                padding-left: 150px;
                 &-btn {
                     margin-bottom: 8px;
                 }
@@ -1305,18 +1280,14 @@ ul.see-all {
                 width: 134px;
                 left: -7px;
             }
-            h1 {
-                font-size: 30px;
-                line-height: 30px;
-            }
             h4 {
                 font-size: 15px;
                 line-height: 15px;
             }
             &-info {
-                margin-left: 15px;
+                padding-left: 135px;
                 &-btn {
-                    padding-left: 10px;
+                    padding-left: 5px;
                     padding-right: 10px;
                 }
             }
