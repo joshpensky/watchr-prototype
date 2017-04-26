@@ -4,10 +4,12 @@ function readFile(callback) {
     http.open("GET", url, true);
     http.onreadystatechange = function() {
         if(http.readyState == 4 && http.status == 200) {
-            var response = http.responseText.split("ENDOFFILE");
-            users = JSON.parse(response[0]);
-            shows = JSON.parse(response[1]);
-            callback(users, shows);
+            var response = http.responseText.split("ENDOFFILE"),
+                loggedIn = JSON.parse(response[0]),
+                users = JSON.parse(response[1]),
+                shows = JSON.parse(response[2]),
+                movies = JSON.parse(response[3]);
+            callback(loggedIn, users, shows, movies);
         }
     }
     http.send();
@@ -25,6 +27,43 @@ function writeToFile(jsonData, file) {
         }
     };
     http.send(data);
+}
+
+function createUser(username) {
+    var http = new XMLHttpRequest();
+    var url = "/newuser.php";//your url to the server side file that will receive the data.
+    var data = "username=" + username;
+    http.open("POST", url, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.onreadystatechange = function() {
+        if(http.readyState == 4 && http.status == 200) {
+            console.log(http.responseText);
+            //var h = JSON.parse(http.responseText.split(";dir=data/" + file)[0]);
+        }
+    };
+    http.send(data);
+}
+
+function createShows() {
+    readFile(function(l, u, s, m) {
+        var shows = s;
+        var http = new XMLHttpRequest();
+        var url = "/newshow.php";//your url to the server side file that will receive the data.
+
+
+        for (show in shows) {
+            http.open("POST", url, true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.onreadystatechange = function() {
+                if(http.readyState == 4 && http.status == 200) {
+                    console.log(http.responseText);
+                    //var h = JSON.parse(http.responseText.split(";dir=data/" + file)[0]);
+                }
+            };
+            var data = "showname=" + shows[show].title.toLowerCase();
+            http.send(data);
+        }
+    });
 }
 
 function buildEmpty(caption, action) {
@@ -81,4 +120,22 @@ function seeAll(seeAllBtn, className) {
         }
         seeAllBtn.classList.add('section-header-seeall-open');
     }
+}
+
+function loginUser(username) {
+    // ADDS LINK
+    var login = {
+        loggedin: username
+    };
+    writeToFile(login, "login.json");
+    window.location.href = "/home.php";
+}
+
+function logoutUser() {
+    // ADDS LINK
+    var login = {
+        loggedin: ""
+    };
+    writeToFile(login, "login.json");
+    window.location.href = "/index.php";
 }

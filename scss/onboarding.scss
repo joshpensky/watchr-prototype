@@ -115,7 +115,7 @@ a {
     font-weight: 500;
     padding-left: 35px;
     margin-bottom: 10px;
-    &--like, &--love, &--dislike {
+    &--like, &--love, &--dislike, &--watch, &--unwatch {
         &::before {
             content: '';
             position: absolute;
@@ -141,6 +141,16 @@ a {
     &--dislike {
         &::before {
             background-image: url("/img/onboarding/dislike.png");
+        }
+    }
+    &--watch {
+        &::before {
+            background-image: url("/img/onboarding/watch.png");
+        }
+    }
+    &--unwatch {
+        &::before {
+            background-image: url("/img/onboarding/unwatch.png");
         }
     }
 }
@@ -190,6 +200,43 @@ form {
             &:focus {
                 border-color: $yellow;
             }
+        }
+    }
+    .textarea {
+        resize: none;
+        position: relative;
+        background: $bot-level;
+        border: 0;
+        height: 75px;
+        width: calc(100% - 30px);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 8px;
+        //margin-bottom: 25px;
+        display: block;
+        border: 2px solid $mid-level;
+        font-family: $nunito;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 600;
+        color: $body;
+        &:focus {
+            outline: none;
+            border-color: $blue;
+        }
+        &::-webkit-input-placeholder{
+            color: $top-level;
+        }
+        &::-moz-input-placeholder{
+            color: $top-level;
+        }
+        &::-ms-input-placeholder{
+            color: $top-level;
+        }
+        &::-o-input-placeholder{
+            color: $top-level;
         }
     }
     .button {
@@ -242,6 +289,21 @@ form {
         color: $mid-level;
         border-color: $caption;
         background: $caption;
+    }
+}
+
+.refresh {
+    display: inline-block;
+    color: $blue;
+    font-family: $metropolis;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+    &--disabled {
+        color: $caption;
+        cursor: not-allowed;
     }
 }
 
@@ -402,6 +464,190 @@ form {
     }
 }
 
+.pick-container {
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    margin-top: -40px;
+    @include no-scrollbar;
+    .pick-item {
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        border-radius: 20px;
+        margin-right: 30px;
+        width: 200px;
+        background: $bot-level;
+        border: 2px solid $bot-level;
+        cursor: pointer;
+        @include transition-ease(0.2s);
+        &::before {
+            content: '';
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            height: 40px;
+            left: -10px;
+            opacity: 0;
+            animation: none;
+        }
+        &:first-child {
+            margin-left: 75px;
+        }
+        &--animate {
+            animation: jelly .2s linear 0s 1;
+            &::before {
+                animation: float .5s linear 0s 1;
+            }
+        }
+        &--watched {
+            border: 2px solid $green;
+            &::before {
+                background-image: url("/img/onboarding/watch-anim.png");
+            }
+        }
+        &--unwatched {
+            border: 2px solid $purple;
+            &::before {
+                background-image: url("/img/onboarding/unwatch-anim.png");
+            }
+        }
+        &-cover {
+            width: 170px;
+            height: 170px;
+            margin-top: 15px;
+            margin-left: 15px;
+            border-radius: 10px;
+            background-image: url("/img/defaults/show.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &-title {
+            white-space: normal;
+            width: 170px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            max-height: 75px;
+            font-size: 20px;
+            line-height: 25px;
+            color: $body;
+            font-family: $nunito;
+        }
+    }
+}
+
+.chosen-list {
+    white-space: nowrap;
+    overflow-x: scroll;
+    @include no-scrollbar;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .chosen-item {
+        position: relative;
+        display: inline-block;
+        border-radius: 15px;
+        margin-right: 15px;
+        width: 100px;
+        height: 100px;
+        background: $bot-level;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include transition-ease(0.25s);
+        &:first-child {
+            margin-left: 75px;
+        }
+        &--disabled {
+            opacity: 0.75;
+            transform: scale(0.9);
+        }
+    }
+}
+#movies {
+    .pick-container {
+        .pick-item {
+            &-cover {
+                width: 170px;
+                height: 255px;
+            }
+            &-title {
+                max-height: 100px;
+            }
+        }
+    }
+    .chosen-list {
+        .chosen-item {
+            width: 100px;
+            height: 150px;
+        }
+    }
+}
+
+
+.services-container {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    @include no-scrollbar;
+    @include no-select;
+    margin-bottom: 10px;
+    .services {
+        display: inline-block;
+        position: relative;
+        width: auto;
+        .services-row {
+            padding-left: 20px;
+            padding-right: 20px;
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 15px;
+            .service-item {
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 8px;
+                background: $bot-level;
+                margin-left: 5px;
+                margin-right: 5px;
+                position: relative;
+                height: 30px;
+                width: auto;
+                cursor: pointer;
+                @include transition-ease(0.25s);
+                img {
+                    height: 100%;
+                    width: auto;
+                    @include transition-ease(0.25s);
+                }
+                &--textonly {
+                    position: relative;
+                    top: -9px;
+                    img {
+                        display: none;
+                    }
+                    color: $caption-top;
+                    font-family: $nunito;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    height: 100%;
+                }
+                &--added {
+                    background: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
 @keyframes jelly {
     0% {
         transform: scale(1, 1);
@@ -466,6 +712,20 @@ form {
     }
     .button {
         margin-left: 50px;
+    }
+    .chosen-list {
+        .chosen-item {
+            &:first-child {
+                margin-left: 50px;
+            }
+        }
+    }
+    .shows-container {
+        .show-item {
+            &:first-child {
+                margin-left: 50px;
+            }
+        }
     }
 }
 
@@ -540,6 +800,20 @@ form {
             line-height: 14px;
         }
     }
+    .chosen-list {
+        .chosen-item {
+            &:first-child {
+                margin-left: 30px;
+            }
+        }
+    }
+    .shows-container {
+        .show-item {
+            &:first-child {
+                margin-left: 30px;
+            }
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -563,5 +837,19 @@ form {
     }
     .button {
         margin-left: 20px;
+    }
+    .chosen-list {
+        .chosen-item {
+            &:first-child {
+                margin-left: 20px;
+            }
+        }
+    }
+    .shows-container {
+        .show-item {
+            &:first-child {
+                margin-left: 20px;
+            }
+        }
     }
 }

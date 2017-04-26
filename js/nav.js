@@ -1,3 +1,29 @@
+var loggedUser;
+
+window.addEventListener("load", function() {
+    readFile(function(l, u, s, m) {
+        if (l.loggedin == "") {
+            logoutUser();
+        } else {
+            for(user in u) {
+                if (user == l.loggedin) {
+                    loggedUser = u[user];
+                }
+            }
+            setUserbar();
+        }
+    });
+}, false);
+
+function setUserbar() {
+    var userProfileBtn = document.querySelector("#userprofile--btn"),
+        userProfilePic = document.querySelector("#userprofile--pic");
+    userProfileBtn.href = "/users/" + loggedUser.username + ".php";
+    if (loggedUser.picture != "") {
+        userProfilePic.style.backgroundImage = "url(" + loggedUser.picture + ")";
+    }
+}
+
 function openActionsBar(actionElem) {
     "use strict";
     var navSec = document.getElementById('nav-sec'),

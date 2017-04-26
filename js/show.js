@@ -6,11 +6,16 @@
 var users,
     shows,
     thisShow,
-    thisUser;
+    loggedUser;
 
 window.addEventListener("load", function() {
-    readFile(function(u, s) {
+    readFile(function(l, u, s, m) {
         users = u;
+        for (user in users) {
+            if (user == l.loggedin) {
+                loggedUser = users[user];
+            }
+        }
         shows = s;
         loadShow();
     });
@@ -23,28 +28,25 @@ function loadShow() {
         showName = "",
         episodes = document.getElementsByClassName('episode-item');
     for (var i = 0; i < show.length; i++) {
-        showName += show[i][0].toUpperCase();
+        var tempName = "";
+        tempName += show[i][0].toUpperCase();
         for (var j = 1; j < show[i].length; j++) {
-            showName += ((show[i][j - 1] == "-") ? show[i][j].toUpperCase() : show[i][j]);
+            tempName += ((show[i][j - 1] == "-") ? show[i][j].toUpperCase() : show[i][j]);
         }
-        if (i < show.length - 1) {
-            showName += " ";
-        }
+        show[i] = tempName;
     }
+    showName = show.join(" ");
     for (show in shows) {
-        if (show === showName) {
+        if (shows[show].title.toLowerCase() == showName.toLowerCase()) {
             thisShow = shows[show];
         }
     }
-    for (user in users) {
-        if (user == "josh_jpeg") {
-            thisUser = users[user];
-        }
-    }
-    for (show in thisUser.shows) {
+    console.log(thisShow);
+
+    for (show in loggedUser.shows) {
         var newShow = []
         newShow.push(show);
-        newShow.push(thisUser.shows[show]);
+        newShow.push(loggedUser.shows[show]);
         allShows.push(newShow);
     }
 
@@ -417,11 +419,11 @@ function markAsWatched(button, add) {
     }
     if (add) {
         episodes[epIndex].classList.add('episode-item--watched');
-        thisUser.shows[thisShow.title].progress[epIndex + 1] = true;
+        loggedUser.shows[thisShow.title].progress[epIndex + 1] = true;
         updateUsers();
     } else {
         episodes[epIndex].classList.remove('episode-item--watched');
-        thisUser.shows[thisShow.title].progress[epIndex + 1] = false;
+        loggedUser.shows[thisShow.title].progress[epIndex + 1] = false;
         updateUsers();
     }
     totalProgress();
@@ -480,7 +482,7 @@ function remShow() {
         episodes[i].classList.remove('episode-item--watched');
         episodes[i].classList.add('episode-item--not-added');
     }
-    delete thisUser.shows[thisShow.title];
+    delete loggedUser.shows[thisShow.title];
     updateUsers();
 }
 
@@ -501,12 +503,12 @@ function addShow(addBtn) {
         for (var i = 0; i < episodes.length; i++) {
             episodes[i].classList.remove('episode-item--not-added');
         }
-        if (thisUser.shows[thisShow.title] == undefined) {
+        if (loggedUser.shows[thisShow.title] == undefined) {
             var index = 1;
-            thisUser.shows[thisShow.title] = {progress: {}};
+            loggedUser.shows[thisShow.title] = {progress: {}};
             for (ssn in thisShow.seasons) {
                 for (ep in thisShow.seasons[ssn]) {
-                    thisUser.shows[thisShow.title].progress[index + ""] = false;
+                    loggedUser.shows[thisShow.title].progress[index + ""] = false;
                     index += 1;
                 }
             }
@@ -524,10 +526,10 @@ function addShow(addBtn) {
             episodes[i].classList.add('episode-item--watched');
         }
         var index = 1;
-        thisUser.shows[thisShow.title].progress = {};
+        loggedUser.shows[thisShow.title].progress = {};
         for (ssn in thisShow.seasons) {
             for (ep in thisShow.seasons[ssn]) {
-                thisUser.shows[thisShow.title].progress[index + ""] = true;
+                loggedUser.shows[thisShow.title].progress[index + ""] = true;
                 index += 1;
             }
         }
@@ -538,10 +540,10 @@ function addShow(addBtn) {
             episodes[i].classList.remove('episode-item--watched');
         }
         var index = 1;
-        thisUser.shows[thisShow.title].progress = {};
+        loggedUser.shows[thisShow.title].progress = {};
         for (ssn in thisShow.seasons) {
             for (ep in thisShow.seasons[ssn]) {
-                thisUser.shows[thisShow.title].progress[index + ""] = false;
+                loggedUser.shows[thisShow.title].progress[index + ""] = false;
                 index += 1;
             }
         }
@@ -552,7 +554,7 @@ function addShow(addBtn) {
 
 function getFriendsWatching() {
     var showName = document.getElementsByClassName('show-header-info-title')[0].innerHTML,
-        friendNames = thisUser.friends,
+        friendNames = loggedUser.friends,
         friends = [];
     for (name in friendNames) {
         for (user in users) {
@@ -717,8 +719,8 @@ function getEpisodeID(lastWatched) {
 
 function updateUsers() {
     for (user in users) {
-        if (user == thisUser.username) {
-            users[user] = thisUser;
+        if (user == loggedUser.username) {
+            users[user] = loggedUser;
         }
     }
     writeToFile(users, "userdata.json");

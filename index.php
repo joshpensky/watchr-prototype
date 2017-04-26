@@ -9,6 +9,15 @@
         <link rel="stylesheet" type="text/css" href="/css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Nunito:400,600,700|Roboto:400,500" rel="stylesheet">
         <script type="text/javascript" src="/js/data.js"></script>
+        <script>
+            window.addEventListener("load", function() {
+                readFile(function(l, u, s, m) {
+                    if (l.loggedin != "") {
+                        window.location.href = "/home.php";
+                    }
+                });
+            }, false);
+        </script>
     </head>
     <body>
         <div class="hero">
@@ -34,7 +43,7 @@
                     </svg>
                     <p id="logotype">watchr</p>
                 </a>
-                <a class="login" href="home.php">Log In</a>
+                <a class="login" href="login.php">Log In</a>
             </div>
             <!--<img class="phone" src="/img/phone.png">-->
             <div class="hero--container">
@@ -68,7 +77,17 @@
                 <div class="section-img"></div>
             </div>
         </div>
-        <div class="cta-section"></div>
+        <div class="cta-section">
+            <div class="cta-section--wrapper">
+                <div class="cta-section--wrapper--inner">
+                    <h1>Join the Binging Revolution.</h1>
+                    <div class="cta-stack">
+                        <a class="cta--button" href="onboarding/welcome.php">Start Watching Today</a>
+                        <p class="cta--button--label">Already have an account? Log in <a href="login.php">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>

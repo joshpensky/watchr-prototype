@@ -1,27 +1,27 @@
 var allShows,
-    users,
-    thisUser;
+    allUsers,
+    loggedUser;
 
 window.addEventListener("load", function() {
-    readFile(function(u, s) {
-        users = u;
+    readFile(function(l, u, s, m) {
+        allUsers = u;
         allShows = s;
-        getUser();
-        createShows();
+        loggedUser = getUser(l.loggedin);
+        buildShows();
         initShows();
     });
 }, false);
 
-function getUser() {
-    for (user in users) {
-        if (user == "josh_jpeg") {
-            thisUser = users[user];
+function getUser(username) {
+    for (user in allUsers) {
+        if (user == username) {
+            return allUsers[user];
         }
     }
 }
 
-function createShows() {
-    var shows = thisUser.shows,
+function buildShows() {
+    var shows = loggedUser.shows,
         showsCont = document.querySelector(".shows"),
         watchlist = showsCont.querySelector(".watchlist"),
         showList = [];
@@ -56,11 +56,7 @@ function createShows() {
         }
 
         if (epTitle != "") {
-            var url = showInfo.title.toLowerCase().split(" "),
-                finalUrl = "";
-            for (var i = 0; i < url.length; i++) {
-                finalUrl += url[i] + ((i < url.length - 1) ? "_" : "");
-            }
+            var showUrl = showInfo.title.toLowerCase().split(" ").join("_");
 
             var showItem = document.createElement("li"),
                 showCover = document.createElement("a"),
@@ -75,7 +71,7 @@ function createShows() {
             showItem.classList.add("show");
             showCover.classList.add("show-cover");
             showCover.style.backgroundImage = "url(" + showInfo.cover + ")";
-            showCover.href = "/shows/" + finalUrl + ".php";
+            showCover.href = "/shows/" + showUrl + ".php";
             showProg.classList.add("show-progress");
             showProgBar.classList.add("show-progress--bar");
             showTopInfo.classList.add("show--top-info");
@@ -158,12 +154,12 @@ function getShow(showName) {
     var seasonsArray = [];
     var jsonSeasons;
     if (showName in allShows) {
-        showSeasons = allShows[showName].seasons;
+        jsonSeasons = allShows[showName].seasons;
     }
-    for (var ssn in showSeasons) {
+    for (var ssn in jsonSeasons) {
         var season = []
-        for (var ep in showSeasons[ssn]) {
-            var episode = [ssn + ep, showSeasons[ssn][ep]];
+        for (var ep in jsonSeasons[ssn]) {
+            var episode = [ssn + ep, jsonSeasons[ssn][ep]];
             season.push(episode);
         }
         seasonsArray.push(season);
@@ -216,7 +212,8 @@ function isFinale(showArray, epID) {
 }
 
 function initShows() {
-    var shows = document.getElementsByClassName('show');
+    var watchlist = document.querySelector(".shows").querySelector(".watchlist"),
+        shows = watchlist.getElementsByClassName('show');
     for (var i = 0; i < shows.length; i++) {
         var chosenShow = shows[i],
             showName = chosenShow.getElementsByClassName('show-title')[0].innerHTML,
@@ -255,8 +252,9 @@ function initShows() {
 }
 
 function markAsWatched(button) {
-    var shows = document.getElementsByClassName('show'),
-        allBtns = document.getElementsByClassName('show-button--mark-cont')
+    var watchlist = document.querySelector(".shows").querySelector(".watchlist"),
+        shows = watchlist.getElementsByClassName('show'),
+        allBtns = watchlist.getElementsByClassName('show-button--mark-cont')
         index = 0;
     for (var i = 0; i < allBtns.length; i++) {
         if (allBtns[i] === button) {
@@ -332,19 +330,19 @@ function markAsWatched(button) {
 }
 
 function updateData(showName, epNum) {
-    for (show in thisUser.shows) {
+    for (show in loggedUser.shows) {
         if (show == showName) {
-            for (ep in thisUser.shows[show].progress) {
+            for (ep in loggedUser.shows[show].progress) {
                 if (parseInt(ep) == epNum) {
-                    thisUser.shows[show].progress[ep] = true;
+                    loggedUser.shows[show].progress[ep] = true;
                 }
             }
         }
     }
-    for (user in users) {
-        if (user == thisUser.username) {
-            users[user] = thisUser;
+    for (user in allUsers) {
+        if (user == loggedUser.username) {
+            allUsers[user] = loggedUser;
         }
     }
-    writeToFile(users, "userdata.json");
+    writeToFile(allUsers, "userdata.json");
 }

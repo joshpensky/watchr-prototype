@@ -2,27 +2,12 @@ var opponents,
     challenges;
 
 window.addEventListener("load", function() {
-    loadJSON("/data/userdata.json", function(response) {
-        loadJSON("/data/shows.json", function(response2) {
-            opponents = JSON.parse(response);
-            challenges = JSON.parse(response2);
-            initChallenge();
-        });
+    readFile(function(l, u, s, m) {
+        opponents = u;
+        challenges = s;
+        initChallenge();
     });
 }, false);
-
-function loadJSON(file, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
-}
 
 var chosenOpponents = [],
     chosenShow = null;
@@ -173,9 +158,9 @@ function initChallenge() {
     var opponentPage = document.getElementById('challenge-opponents'),
         challengePage = document.getElementById('challenge-show'),
         reviewPage = document.getElementById('challenge-review'),
-        thisUser = window.location.href.split("/users/")[1].split(".php")[0];
+        you = window.location.href.split("/users/")[1].split(".php")[0];
     for (user in opponents) {
-        if (opponents[user].username == thisUser) {
+        if (opponents[user].username == you) {
             chosenOpponents.push(opponentConstructor(opponents[user].picture, opponents[user].username,
                 opponents[user].firstname + " " + opponents[user].lastname, opponents[user].challenges.win));
         }

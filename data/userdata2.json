@@ -1,6 +1,7 @@
 {
     "josh_jpeg": {
         "username": "josh_jpeg",
+        "email": "joshuapensky@gmail.com",
         "password": "notapassword",
         "firstname": "Josh",
         "lastname": "Pensky",
@@ -29,8 +30,11 @@
             "raymondjustus",
             "maryann_reds",
             "dfdf_afaff",
-            "joshjehling"
+            "joshjehling",
+            "liliakang",
+            "behlert_jpg"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -44,7 +48,7 @@
             "disliked": []
         },
         "shows": {
-            "Fargo": {
+            "The Good Place": {
                 "progress": {
                     "1": true,
                     "2": true,
@@ -58,57 +62,19 @@
                     "10": true,
                     "11": true,
                     "12": true,
-                    "13": true,
-                    "14": true,
-                    "15": true,
-                    "16": true,
-                    "17": false,
-                    "18": false,
-                    "19": false,
-                    "20": false
+                    "13": true
                 }
             },
-            "Westworld": {
+            "Dirk Gently's Holistic Detective Agency": {
                 "progress": {
-                    "1": true,
-                    "2": true,
-                    "3": false,
-                    "4": true,
-                    "5": false,
-                    "6": false,
-                    "7": false,
-                    "8": true,
-                    "9": true,
-                    "10": false
-                }
-            },
-            "Legion": {
-                "progress": {
-                    "1": true,
-                    "2": true,
-                    "3": true,
-                    "4": true,
-                    "5": true,
-                    "6": true,
-                    "7": true,
-                    "8": false
-                }
-            },
-            "The Good Place": {
-                "progress": {
-                    "1": true,
-                    "2": true,
+                    "1": false,
+                    "2": false,
                     "3": false,
                     "4": false,
                     "5": false,
                     "6": false,
                     "7": false,
-                    "8": false,
-                    "9": false,
-                    "10": false,
-                    "11": false,
-                    "12": false,
-                    "13": false
+                    "8": false
                 }
             }
         },
@@ -126,6 +92,7 @@
     },
     "mike_hom": {
         "username": "mike_hom",
+        "email": "hom.m@drexel.edu",
         "password": "urmomlawl",
         "firstname": "Mike",
         "lastname": "Hom",
@@ -153,9 +120,10 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
+            "behlert_jpg",
             "dfdf_afaff"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -323,7 +291,8 @@
     },
     "liliakang": {
         "username": "liliakang",
-        "password": "hashtagteammichael4evah",
+        "email": "liliakang@gmail.com",
+        "password": "ilovemichael",
         "firstname": "Lilia",
         "lastname": "Kang",
         "picture": "http://i.imgur.com/MGvwRSA.jpg",
@@ -348,8 +317,11 @@
             "mike_hom",
             "jesscooney",
             "dfdf_afaff",
-            "maryann_reds"
+            "maryann_reds",
+            "josh_jpeg",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -377,11 +349,12 @@
     },
     "jesscooney": {
         "username": "jesscooney",
+        "email": "ilovedogs1998@yahoo.com",
         "password": "mellamojejica",
         "firstname": "Jess",
         "lastname": "Cooney",
         "picture": "http://i.imgur.com/JeLtKJo.png",
-        "hero": "",
+        "hero": "http://i.huffpost.com/gen/1697907/images/o-THE-OFFICE-NBC-facebook.jpg",
         "bio": "\"'You miss 100% of the shots you don't take' - Wayne Gretzky\" - Michael Scott",
         "rank": {
             "name": "Entertainment Guru",
@@ -401,12 +374,13 @@
         "friends": [
             "josh_jpeg",
             "liliakang",
-            "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
-            "dfdf_afaff"
+            "behlert_jpg",
+            "dfdf_afaff",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -457,6 +431,7 @@
     },
     "cocoduffs98": {
         "username": "cocoduffs98",
+        "email": "cocoduffy@hotmail.com",
         "password": "hehehehehehe",
         "firstname": "Connor",
         "lastname": "Duffy",
@@ -484,9 +459,11 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
-            "dfdf_afaff"
+            "behlert_jpg",
+            "dfdf_afaff",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -512,6 +489,7 @@
     },
     "djtannertanner": {
         "username": "djtannertanner",
+        "email": "tantantannytan@yahoo.com",
         "password": "wheresthatlavendhairtho",
         "firstname": "Tanner",
         "lastname": "Richardett",
@@ -539,9 +517,11 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
-            "dfdf_afaff"
+            "behlert_jpg",
+            "dfdf_afaff",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -590,8 +570,9 @@
             "lose": 0
         }
     },
-    "behlert.jpg": {
-        "username": "behlert.jpg",
+    "behlert_jpg": {
+        "username": "behlert_jpg",
+        "email": "memelord5342@gmail.com",
         "password": "memeslmao",
         "firstname": "Bryan",
         "lastname": "Elhert",
@@ -619,9 +600,11 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
-            "dfdf_afaff"
+            "behlert_jpg",
+            "dfdf_afaff",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -647,6 +630,7 @@
     },
     "dfdf_afaff": {
         "username": "dfdf_afaff",
+        "email": "mydadsaspy32@gmail.com",
         "password": "connorismylover",
         "firstname": "Eric",
         "lastname": "Harris",
@@ -674,9 +658,10 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
+            "behlert_jpg",
             "dfdf_afaff"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -727,6 +712,7 @@
     },
     "raymondjustus": {
         "username": "raymondjustus",
+        "email": "raymondjustus@gmail.com",
         "password": "fantasycostco",
         "firstname": "Ray",
         "lastname": "Namar",
@@ -754,9 +740,11 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
-            "dfdf_afaff"
+            "behlert_jpg",
+            "dfdf_afaff",
+            "jack_collens"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",
@@ -807,6 +795,7 @@
     },
     "maryann_reds": {
         "username": "maryann_reds",
+        "email": "startrekfannum1@gmail.com",
         "password": "startrekfannumbahuno",
         "firstname": "Maryann",
         "lastname": "Rojas",
@@ -834,16 +823,21 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
+            "behlert_jpg",
             "dfdf_afaff"
         ],
+        "services": [],
         "genres": {
-            "1": "Fantasy",
-            "2": "Animation",
-            "3": "Comedy",
-            "4": "Sci-Fi",
-            "5": "Adventure",
-            "6": "Drama"
+            "loved": [
+                "Sci-Fi",
+                "Crime",
+                "Comedy",
+                "Drama",
+                "Mystery",
+                "Musical"
+            ],
+            "liked": [],
+            "disliked": []
         },
         "shows": {
             "Fargo": {
@@ -883,6 +877,7 @@
     },
     "joshjehling": {
         "username": "joshjehling",
+        "email": "joshjehling@microsoft.com",
         "password": "microsoftjob",
         "firstname": "Josh",
         "lastname": "Ehling",
@@ -910,9 +905,10 @@
             "jesscooney",
             "cocoduffs98",
             "djtannertanner",
-            "behlert.jpg",
+            "behlert_jpg",
             "dfdf_afaff"
         ],
+        "services": [],
         "genres": {
             "loved": [
                 "Sci-Fi",

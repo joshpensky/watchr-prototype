@@ -1,11 +1,13 @@
-var users;
-var shows;
-var thisUser;
-var you;
+var users,
+    shows,
+    thisUser,
+    you;
 
 window.addEventListener("load", function() {
-    readFile(function(u, s) {
+    readFile(function(l, u, s, m) {
         users = u;
+        you = getUser(l.loggedin);
+        thisUser = getUser(window.location.href.split("/users/")[1].split(".php")[0]);
         shows = s;
         initProfile();
     });
@@ -22,15 +24,6 @@ function getUser(username) {
 }
 
 function initProfile() {
-    var username = window.location.href.split("/users/")[1].split(".php")[0];
-    for (user in users) {
-        if (users[user].username == username) {
-            thisUser = users[user];
-        }
-        if (users[user].username == "josh_jpeg") {
-            you = users[user];
-        }
-    }
     document.title = thisUser.firstname + " " + thisUser.lastname + " - watchr";
     var hero = document.getElementsByClassName('hero')[0],
         name = document.getElementsByClassName('header-info-name')[0],
@@ -64,37 +57,50 @@ function initProfile() {
     rank.innerHTML = thisUser.rank.name;
     // show experience
     expShowY.innerHTML = thisUser.rank.shows.years + " <span>years</span>";
-    if (expShowY.innerHTML == "0 <span>years</span>" || expShowY.innerHTML == "NaN <span>years</span>") {
+    if (expShowY.innerHTML == "0 <span>years</span>") {
+        console.log(expShowY.innerHTML);
         expShowY.classList.add('experience-show--hidden');
     }
     expShowM.innerHTML = thisUser.rank.shows.months + " <span>months</span>";
-    if (expShowM.innerHTML == "0 <span>months</span>" || expShowM.innerHTML == "NaN <span>months</span>") {
+    if (expShowM.innerHTML == "0 <span>months</span>") {
+        console.log(expShowM.innerHTML);
         expShowM.classList.add('experience-show--hidden');
     }
     expShowD.innerHTML = thisUser.rank.shows.days + " <span>days</span>";
-    if (expShowD.innerHTML == "0 <span>days</span>" || expShowD.innerHTML == "NaN <span>days</span>") {
+    if (expShowD.innerHTML == "0 <span>days</span>") {
         expShowD.classList.add('experience-show--hidden');
     }
     expShowH.innerHTML = thisUser.rank.shows.hours + " <span>hours</span>";
-    if (expShowH.innerHTML == "0 <span>hours</span>" || expShowH.innerHTML == "NaN <span>hours</span>") {
-        expShowH.classList.add('experience-show--hidden');
+    if (expShowH.innerHTML == "0 <span>hours</span>") {
+        console.log(expShowH.innerHTML);
+        if ((expShowY.classList.contains('experience-show--hidden'))
+        && (expShowM.classList.contains('experience-show--hidden'))
+        && (expShowD.classList.contains('experience-show--hidden'))) {
+            console.log("yup");
+        } else {
+            expShowH.classList.add('experience-show--hidden');
+        }
     }
     // movie experience
     expMovieY.innerHTML = thisUser.rank.movies.years + " <span>years</span>";
-    if (expMovieY.innerHTML == "0 <span>years</span>" || expMovieY.innerHTML == "NaN <span>years</span>") {
+    if (expMovieY.innerHTML == "0 <span>years</span>") {
         expMovieY.classList.add('experience-movie--hidden');
     }
     expMovieM.innerHTML = thisUser.rank.movies.months + " <span>months</span>";
-    if (expMovieM.innerHTML == "0 <span>months</span>" || expMovieM.innerHTML == "NaN <span>months</span>") {
+    if (expMovieM.innerHTML == "0 <span>months</span>") {
         expMovieM.classList.add('experience-movie--hidden');
     }
     expMovieD.innerHTML = thisUser.rank.movies.days + " <span>days</span>";
-    if (expMovieD.innerHTML == "0 <span>days</span>" || expMovieD.innerHTML == "NaN <span>days</span>") {
+    if (expMovieD.innerHTML == "0 <span>days</span>") {
         expMovieD.classList.add('experience-movie--hidden');
     }
     expMovieH.innerHTML = thisUser.rank.movies.hours + " <span>hours</span>";
-    if (expMovieH.innerHTML == "0 <span>hours</span>" || expMovieH.innerHTML == "NaN <span>hours</span>") {
-        expMovieH.classList.add('experience-movie--hidden');
+    if (expMovieH.innerHTML == "0 <span>hours</span>") {
+        if ((!expMovieY.classList.contains('experience-movie--hidden'))
+        || (!expMovieM.classList.contains('experience-movie--hidden'))
+        || (!expMovieD.classList.contains('experience-movie--hidden'))) {
+            expMovieH.classList.add('experience-show--hidden');
+        }
     }
 
     var genres = thisUser.genres.loved;
@@ -248,6 +254,7 @@ function buildActions() {
 }
 
 function addFriend(add, givenUser) {
+    console.log(givenUser);
     if (add) {
         if (!arrContains(givenUser.friends, you.username)) {
             givenUser.friends.push(you.username);
@@ -278,6 +285,8 @@ function addFriend(add, givenUser) {
 function buildFriends() {
     var friendsList,
         commonFriends = [];
+    console.log(thisUser);
+    console.log(you);
     if (thisUser == you) {
         var friends = [];
         for (friend in you.friends) {
@@ -312,7 +321,6 @@ function buildFriends() {
     while (friendContainer.hasChildNodes()) {
         friendContainer.removeChild(friendContainer.lastChild);
     }
-
     if (friendsList.length == 0) {
         friends.appendChild(empty);
     } else {
@@ -328,7 +336,9 @@ function buildFriends() {
 
             var friendItemImg = document.createElement("a");
             friendItemImg.classList.add('friend-item-img');
-            friendItemImg.style.backgroundImage = "url(" + friendsList[friend].picture + ")";
+            if (friendsList[friend].picture != "") {
+                friendItemImg.style.backgroundImage = "url(" + friendsList[friend].picture + ")";
+            }
             // ADDS LINK
             friendItemImg.href = "/users/" + friendsList[friend].username + ".php";
 
@@ -479,7 +489,9 @@ function buildShows(showListContainer, final) {
         var showItemCover = document.createElement("a");
         showItemCover.classList.add("show-item-cover");
         showItemCover.style.backgroundImage = "url(" + shows[showName].cover + ")";
-        showItemCover.href = shows[showName].link;
+        // ADDS LINK
+        var showUrl = "/shows/" + shows[showName].title.toLowerCase().split(" ").join("_") + ".php";
+        showItemCover.href = showUrl;
 
         var showItemProgressThem = document.createElement("div"),
             showItemProgressThemBar = document.createElement("div"),

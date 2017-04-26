@@ -1,29 +1,20 @@
-var users, shows;
+var users, shows, movies, currUser;
 
 window.addEventListener("load", function() {
-    loadJSON("/data/userdata.json", function(response) {
-        loadJSON("/data/shows.json", function(response2) {
-            users = JSON.parse(response);
-            shows = JSON.parse(response2);
-        });
+    readFile(function(l, u, s, m) {
+        users = u;
+        for (user in users) {
+            if (user == l.loggedin) {
+                currUser = users[user];
+            }
+        }
+        shows = s;
+        movies = m;
     });
 }, false);
 
-function loadJSON(file, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
-}
-
 function returnResults(query) {
-    return filterResults(searchShows(query), [], searchUsers(query));
+    return filterResults(searchShows(query), searchMovies(query), searchUsers(query));
 }
 
 function filterResults(shows, movies, users) {
@@ -42,21 +33,32 @@ function filterResults(shows, movies, users) {
 function searchShows(query) {
     var results = [];
     for (show in shows) {
-        var url = show.toLowerCase().split(" "),
-            finalUrl = "";
-        for (var i = 0; i < url.length; i++) {
-            finalUrl += url[i];
-            if (i != url.length - 1) {
-                finalUrl += "_";
-            }
-        }
+        var url = shows[show].title.toLowerCase().split(" ").join("_");
         if (show.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
             var result = {};
             result["type"] = "show";
-            result["title"] = show;
+            result["title"] = shows[show].title;
             // ADDS LINKS
-            result ["link"] = "/shows/" + finalUrl + ".php";
+            result ["link"] = "/shows/" + url + ".php";
             result["img"] = shows[show].cover;
+            results.push(result);
+        }
+    }
+    return results;
+}
+
+function searchMovies(query) {
+    var results = [];
+    for (movie in movies) {
+        var url = movies[movie].title.toLowerCase().split(" ").join("_");
+        console.log(url);
+        if (movie.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+            var result = {};
+            result["type"] = "movie";
+            result["title"] = movies[movie].title;
+            // ADDS LINKS
+            result ["link"] = "/shows/" + url + ".php";
+            result["img"] = movies[movie].cover;
             results.push(result);
         }
     }
@@ -66,7 +68,7 @@ function searchShows(query) {
 function searchUsers(query) {
     var results = [];
     for (user in users) {
-        if (users[user].username != "josh_jpeg") {
+        if (users[user].username != currUser.username) {
             var username = users[user].username,
                 name = users[user].firstname + " " + users[user].lastname;
             if (username.toLowerCase().indexOf(query.toLowerCase()) !== -1

@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="/css/nav.css">
+        <script type="text/javascript" src="/js/data.js"></script>
         <script type="text/javascript" src="/js/nav.js"></script>
         <script type="text/javascript" src="/js/search.js"></script>
     </head>
@@ -101,7 +102,7 @@
                         </svg>
                     </div>
                     <div id="nav-profile" class="nav-button nav-link" onclick="openActionsBar(this);">
-                        <div class="profilepic" id="me"></div>
+                        <div class="profilepic" id="userprofile--pic"></div>
                     </div>
                 </div>
             </div>
@@ -110,12 +111,12 @@
             <nav id="actions-bar" class="nav-closed">
                 <!-- PROFILE ACTIONS BAR - START -->
                 <div id="actions-bar--profile" class="action--hidden nav-container">
-                    <a class="nav-link" href="anon.html">
+                    <a class="nav-link" onclick="logoutUser();">
                         <div id="nav-logout" class="nav-button">
                             <p class="nav-title">Log Out</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="help.html">
+                    <a class="nav-link">
                         <div id="nav-help" class="nav-button">
                             <svg class="svgIcon" width="20" height="20" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="47.49"/>
@@ -128,7 +129,7 @@
                             <p class="nav-title">Help</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="settings.html">
+                    <a class="nav-link">
                         <div id="nav-settings" class="nav-button">
                             <svg class="svgIcon" width="20" height="20" viewBox="0 0 100 100">
                                 <circle cx="50" cy="49.93" r="16"/>
@@ -157,7 +158,7 @@
                             <p class="nav-title">Settings</p>
                         </div>
                     </a>
-                    <a class="nav-link" href="profile.html">
+                    <a class="nav-link" id="userprofile--btn">
                         <div id="nav-profile" class="nav-button">
                             <svg class="svgIcon" width="20" height="20" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="47.48"/>

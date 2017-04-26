@@ -1,0 +1,385 @@
+.empty {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  white-space: normal;
+}
+
+.empty--image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("/img/defaults/empty.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.empty--image::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #334256;
+  bottom: 0px;
+  left: 0px;
+}
+
+.empty--caption {
+  color: #334256;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  margin-top: 25px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.empty--action {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.empty--action--caption {
+  display: inline-block;
+  color: #576777;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.empty--action--arrow {
+  display: inline-block;
+  height: 12px;
+  width: 20px;
+  background-image: url("/img/arrow-left.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1500px) {
+  .empty {
+    width: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 750px) {
+  .empty--image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 525px) {
+  .empty {
+    width: calc(100% - 30px);
+  }
+  .empty--image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 425px) {
+  .empty {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 375px) {
+  .empty--caption {
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .empty--action--caption {
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 2px;
+  }
+  .empty--action--arrow {
+    height: 9px;
+    width: 17px;
+  }
+}
+
+@media (max-width: 350px) {
+  .empty--caption {
+    margin-top: 15px;
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
+
+body {
+  background-color: #0f1923;
+  background-image: url("/img/background.png");
+  background-attachment: fixed;
+  background-size: 400px;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: "Metropolis", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+}
+
+form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  background: #222c3a;
+  margin: 0 auto;
+}
+
+form .field--cont {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form .field--cont-checkbox {
+  height: 20px;
+  position: relative;
+  margin-top: 15px;
+  align-items: center;
+}
+
+form .textfield {
+  position: relative;
+  background: #1a2431;
+  border: 0;
+  height: 50px;
+  width: calc(100% - 30px);
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 8px;
+  display: block;
+  border: 2px solid #222c3a;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 600;
+  color: #9fa4ae;
+}
+
+form .textfield:focus {
+  outline: none;
+  border-color: #138fdf;
+}
+
+form .textfield::-webkit-input-placeholder {
+  color: #334256;
+}
+
+form .textfield::-moz-input-placeholder {
+  color: #334256;
+}
+
+form .textfield::-ms-input-placeholder {
+  color: #334256;
+}
+
+form .textfield::-o-input-placeholder {
+  color: #334256;
+}
+
+form .textfield--error {
+  border-color: #ffdd6b;
+}
+
+form .textfield--error:focus {
+  border-color: #ffdd6b;
+}
+
+form .password--label {
+  float: right;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #138fdf;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+form .button {
+  width: calc(100% - 60px);
+  -webkit-appearance: none;
+  margin-left: 32px;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 50px;
+  border: 2px solid #9fa4ae;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #9fa4ae;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+form .button:focus {
+  outline: none;
+}
+
+form .button--primary {
+  background: #138fdf;
+  color: #fff;
+  border-color: #138fdf;
+}
+
+form .button--disabled {
+  cursor: not-allowed;
+  color: #222c3a;
+  border-color: #384b60;
+  background: #384b60;
+}
+
+form .checkbox {
+  position: relative;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: #9fa4ae;
+  border: 2px solid #9fa4ae;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+form .checkbox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/btn/check-hover.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -2px;
+  left: -2px;
+  z-index: 1;
+  opacity: 0;
+}
+
+form .checkbox:focus {
+  outline: none;
+  border-color: #138fdf;
+}
+
+form .checkbox:checked {
+  background: #138fdf;
+  border-color: #138fdf;
+}
+
+form .checkbox:checked::before {
+  opacity: 1;
+}
+
+form .checkbox--label {
+  position: relative;
+  margin-left: 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  top: 4px;
+  vertical-align: top;
+  color: #9fa4ae;
+}
+
+form .caption {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #9fa4ae;
+}
+
+form .caption a {
+  text-decoration: none;
+  color: #138fdf;
+}
+
+form .caption--pass {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+form .msg {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #9fa4ae;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #9fa4ae;
+  margin-top: 15px;
+}
+
+form .msg--error {
+  color: #ffdd6b;
+  border-color: #ffdd6b;
+  background: rgba(255, 221, 107, 0.25);
+}
+
+form .msg--hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  form {
+    border-radius: 0;
+  }
+}

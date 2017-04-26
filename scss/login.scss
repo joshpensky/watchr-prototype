@@ -1,0 +1,237 @@
+@import "var";
+
+body {
+    background-color: $background;
+    background-image: url("/img/background.png");
+    background-attachment: fixed;
+    background-size: 400px;
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    margin: 30px auto;
+}
+
+h1 {
+    font-family: $metropolis;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    color: $white;
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex: 1;
+}
+
+form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 12px;
+    background: $mid-level;
+    margin: 0 auto;
+    .field--cont {
+        padding-left: 30px;
+        padding-right: 30px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        &-checkbox {
+            height: 20px;
+            position: relative;
+            margin-top: 15px;
+            align-items: center;
+        }
+    }
+    .textfield {
+        position: relative;
+        background: $bot-level;
+        border: 0;
+        height: 50px;
+        width: calc(100% - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 8px;
+        //margin-bottom: 25px;
+        display: block;
+        border: 2px solid $mid-level;
+        font-family: $nunito;
+        font-size: 20px;
+        line-height: 50px;
+        font-weight: 600;
+        color: $body;
+        &:focus {
+            outline: none;
+            border-color: $blue;
+        }
+        &::-webkit-input-placeholder{
+            color: $top-level;
+        }
+        &::-moz-input-placeholder{
+            color: $top-level;
+        }
+        &::-ms-input-placeholder{
+            color: $top-level;
+        }
+        &::-o-input-placeholder{
+            color: $top-level;
+        }
+        &--error {
+            border-color: $yellow;
+            &:focus {
+                border-color: $yellow;
+            }
+        }
+    }
+    .password--label {
+        float: right;
+        font-family: $nunito;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: $blue;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .button {
+        width: calc(100% - 60px);
+        -webkit-appearance: none;
+        margin-left: 32px;
+        margin-top: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 50px;
+        border: 2px solid $body;
+        font-family: $nunito;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 700;
+        color: $body;
+        background: none;
+        border-radius: 8px;
+        cursor: pointer;
+        @include transition-ease(0.25s);
+        &:focus {
+            outline: none;
+        }
+        &--primary {
+            background: $blue;
+            color: $white;
+            border-color: $blue;
+        }
+        &--disabled {
+            cursor: not-allowed;
+            color: $mid-level;
+            border-color: $caption;
+            background: $caption;
+        }
+    }
+    .checkbox {
+        position: relative;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: $body;
+        border: 2px solid $body;
+        @include transition-ease(0.25s);
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url("/img/btn/check-hover.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: -2px;
+            left: -2px;
+            z-index: 1;
+            opacity: 0;
+        }
+        &:focus {
+            outline: none;
+            border-color: $blue;
+        }
+        &:checked {
+            background: $blue;
+            border-color: $blue;
+            &::before {
+                opacity: 1;
+            }
+        }
+        &--label {
+            position: relative;
+            margin-left: 5px;
+            font-family: $nunito;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            top: 4px;
+            vertical-align: top;
+            color: $body;
+        }
+
+    }
+    .caption {
+        text-align: center;
+        font-family: $nunito;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: $body;
+        a {
+            text-decoration: none;
+            color: $blue;
+        }
+        &--pass {
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+    }
+    .msg {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid $body;
+        font-family: $nunito;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+        color: $body;
+        margin-top: 15px;
+        &--error {
+            color: $yellow;
+            border-color: $yellow;
+            background: rgba(255, 221, 107, 0.25);
+        }
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        border-radius: 0;
+    }
+}

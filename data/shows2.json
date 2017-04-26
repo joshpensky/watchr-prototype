@@ -1,7 +1,6 @@
 {
     "Westworld": {
         "title": "Westworld",
-        "link": "/shows/westworld.php",
         "cover": "http://is2.mzstatic.com/image/thumb/Music71/v4/c6/67/41/c667414a-75ea-1f53-08b7-9304671d96b4/source/600x600bb.jpg",
         "hero": "http://i.lv3.hbo.com/assets/images/series/westworld/episodes/media-blast/160819-westworld-s1-blast-07-1280.jpg",
         "rating": "TV-MA",
@@ -12,7 +11,7 @@
         "genres": [
             "Drama",
             "Mystery",
-            "Sci-Fi"
+            "scifi"
         ],
         "services": [
             "HBO GO",
@@ -56,7 +55,6 @@
     },
     "Legion": {
         "title": "Legion",
-        "link": "/shows/legion.php",
         "cover": "http://is2.mzstatic.com/image/thumb/Music111/v4/25/76/58/257658f7-0cb5-8d2f-aad3-2ab2aff356d4/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/6232/79/16x9/2400.jpg",
         "rating": "TV-MA",
@@ -67,7 +65,7 @@
         "genres": [
             "Action",
             "Drama",
-            "Sci-Fi"
+            "scifi"
         ],
         "services": [
             "FXNOW",
@@ -86,29 +84,28 @@
             }
         },
         "creators": [
-            {"name": "Noah Hawley", "picture": ""}
+            {"name": "Noah Hawley", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTczOTU3NzY2NV5BMl5BanBnXkFtZTgwMjg3NDUzMDI@._V1_SY1000_CR0,0,1504,1000_AL_.jpg"}
         ],
         "cast": [
-            {"name": "Dan Stevens", "role": "David Haller", "picture": ""},
-            {"name": "Rachel Keller", "role": "Syd Barrett", "picture": ""},
-            {"name": "Aubrey Plaza", "role": "Lenny Busker", "picture": ""},
-            {"name": "Bill Irwin", "role": "Cary Loudermilk", "picture": ""},
-            {"name": "Jeremie Harris", "role": "Ptonomy Wallace", "picture": ""},
-            {"name": "Amber Midthunder", "role": "Kerry Loudermilk", "picture": ""},
-            {"name": "Katie Aselton", "role": "Amy Haller", "picture": ""},
-            {"name": "Jean Smart", "role": "Dr. Melanie Bird", "picture": ""},
-            {"name": "Mackenzie Gray", "role": "The Eye", "picture": ""},
-            {"name": "Ellie Araiza", "role": "Philly", "picture": ""},
-            {"name": "Jemaine Clement", "role": "Oliver Bird", "picture": ""}
+            {"name": "Dan Stevens", "role": "David Haller", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY0NTY5OTI2MF5BMl5BanBnXkFtZTgwNDkzMzIxMzE@._V1_.jpg"},
+            {"name": "Rachel Keller", "role": "Syd Barrett", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ2MTEyMzU2OF5BMl5BanBnXkFtZTgwNjc1NTM4ODE@._V1_.jpg"},
+            {"name": "Aubrey Plaza", "role": "Lenny Busker", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyMzYyMjQ5OV5BMl5BanBnXkFtZTcwMTA0MTkxNw@@._V1_SY1000_CR0,0,697,1000_AL_.jpg"},
+            {"name": "Bill Irwin", "role": "Cary Loudermilk", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0MTYwMTcwOF5BMl5BanBnXkFtZTYwOTUwNTU0._V1_.jpg"},
+            {"name": "Jeremie Harris", "role": "Ptonomy Wallace", "picture": "http://vignette1.wikia.nocookie.net/xmenfirstclass/images/1/1e/Jeremie_Harris.jpg/revision/latest?cb=20170213151615&path-prefix=fr"},
+            {"name": "Amber Midthunder", "role": "Kerry Loudermilk", "picture": "http://www.hawtcelebs.com/wp-content/uploads/2017/01/amber-midthunder-at-legion-premiere-in-los-angeles-01-26-2017_1.jpg"},
+            {"name": "Katie Aselton", "role": "Amy Haller", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAzMDQxNzc2Nl5BMl5BanBnXkFtZTcwNjcyOTQ2NA@@._V1_.jpg"},
+            {"name": "Jean Smart", "role": "Dr. Melanie Bird", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwNjg0MjUxMF5BMl5BanBnXkFtZTcwMTcyNjY0MQ@@._V1_.jpg"},
+            {"name": "Mackenzie Gray", "role": "The Eye", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjIyM2JjMjUtOTExOC00N2Q2LTljMmQtNzZjNjZiODY1MzhjL2ltYWdlXkEyXkFqcGdeQXVyMTk2Mjc4MQ@@._V1_UY317_CR25,0,214,317_AL_.jpg"},
+            {"name": "Ellie Araiza", "role": "Philly", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM4MTQ2NTEyOV5BMl5BanBnXkFtZTcwMDgyNjg5Nw@@._V1_.jpg"},
+            {"name": "Jemaine Clement", "role": "Oliver Bird", "picture": "http://cimg.tvgcdn.net/i/r/2014/09/03/3cec2d71-7209-442d-ba3d-b795fadf736b/resize/350x509/3facbd99dcdf705ca877d23e04110936/140903jermaine-clement1.jpg"}
         ]
     },
     "Crazy Ex-Girlfriend": {
         "title": "Crazy Ex-Girlfriend",
-        "link": "/shows/crazy_ex-girlfriend.php",
         "cover": "http://is4.mzstatic.com/image/thumb/Music62/v4/fa/79/e8/fa79e8a1-1c2c-4a34-f311-d4e4161191c6/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/5582/70/16x9/2400.jpg",
         "rating": "TV-14",
-        "length": "42 min",
+        "length": "42min",
         "yearStart": 2015,
         "yearEnd": 0,
         "description": "A young woman abandons a choice job at a law firm and her life in New York in an attempt to find happiness in the unlikely locale of West Covina, California.",
@@ -158,18 +155,32 @@
             }
         },
         "creators": [
-            {"name": "Rachel Bloom", "picture": ""},
-            {"name": "Aline Brosh McKenna", "picture": ""}
+            {"name": "Rachel Bloom", "picture": "http://m.aceshowbiz.com/webimages/wennpic/rachel-bloom-2016-bafta-los-angeles-awards-season-tea-01.jpg"},
+            {"name": "Aline Brosh McKenna", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MDgwMDU1OF5BMl5BanBnXkFtZTcwOTAzNTUxNw@@._V1_UY317_CR13,0,214,317_AL_.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name":"Rahcel Bloom", "role":"Rebecca Bunch", "picture":"http://m.aceshowbiz.com/webimages/wennpic/rachel-bloom-2016-bafta-los-angeles-awards-season-tea-01.jpg"},
+            {"name":"Donna Lynne Champlin", "role":"Paula Proctor", "picture":"http://vignette2.wikia.nocookie.net/shesthecrazyexgirlfriend/images/6/63/Donna_Lynne_Champlin_2.png/revision/latest?cb=20160518193953"},
+            {"name":"Vincent Rodriguez III", "role":"Josh Chan", "picture":"http://media.hollywood.com/images/667x1000/7675654.jpg"},
+            {"name":"Pete Gardner", "role":"Darryl Whitefeather", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTM2NDg0MTIxOV5BMl5BanBnXkFtZTcwMjE1MjIzMQ@@._V1_UY317_CR3,0,214,317_AL_.jpg"},
+            {"name":"Santino Fontana", "role":"Greg Serrano", "picture":"http://cdn-media.backstage.com/files/media/uploads/zinnia/Santino-Fontana_GettyImages.jpg.644x3000_q100.jpg"},
+            {"name":"Vella Lovell", "role":"Heather Davis", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2ODI2NDg3NV5BMl5BanBnXkFtZTgwMTA5NDI1NjE@._V1_SY1000_CR0,0,709,1000_AL_.jpg"},
+            {"name":"Gabrielle Ruiz", "role":"Valencia Perez", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjM0OTA0MzQ3NV5BMl5BanBnXkFtZTgwNzg2Mzg2NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name":"Scott Michael Foster", "role":"Nathaniel Plimpton", "picture":"http://tvseriesfinale.com/wp-content/uploads/2016/09/shutterstock_239767174-315x400.jpg"},
+            {"name":"David Hull", "role":"White Josh", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjc2NzA4OTQ3M15BMl5BanBnXkFtZTgwNDEyMjAwMzE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name":"Erick Lopez", "role":"Hector", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYzMjA0MzQ5MV5BMl5BanBnXkFtZTgwNTc4ODU5NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name":"Steve Monroe", "role":"Scott Proctor", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BODgzNzU5MzA0Nl5BMl5BanBnXkFtZTgwNDcyODEwNjE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name":"Gina Gallego", "role":"Mrs. Hernandez", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5NTU4ODIwOF5BMl5BanBnXkFtZTgwMzI5MDUyOTE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name":"Tovah Feldshuh", "role":"Naomi Bunch", "picture":"https://s-media-cache-ak0.pinimg.com/originals/19/06/33/1906337f26d3bb3367188abf9edcb792.jpg"},
+            {"name":"Rene Gube", "role":"Father Brah", "picture":"http://static.tvgcdn.net/mediabin/galleries/shows/g_l/gq_gz/ground_floor/season1/ground-floor-08.jpg"}
+        ]
     },
     "Fargo": {
         "title": "Fargo",
-        "link": "/shows/fargo.php",
         "cover": "http://is4.mzstatic.com/image/thumb/Music122/v4/b2/d0/ce/b2d0ce19-7fc2-8003-a897-b5cdfad1a9e0/source/600x600bb.jpg",
         "hero": "https://thekillingtimestv.files.wordpress.com/2014/04/fargo-martin-freeman-01-phone-booth-033.jpg",
         "rating": "TV-MA",
-        "length": "53 min",
+        "length": "53min",
         "yearStart": 2014,
         "yearEnd": 0,
         "description": "Various chronicles of deception, intrigue and murder in and around frozen Minnesota. Yet all of these tales mysteriously lead back one way or another to Fargo, ND.",
@@ -239,7 +250,6 @@
     },
     "Dirk Gently's Holistic Detective Agency": {
         "title": "Dirk Gently's Holistic Detective Agency",
-        "link": "/shows/dirk_gently's_holistic_detective_agency.php",
         "cover": "http://is3.mzstatic.com/image/thumb/Music71/v4/9f/d7/70/9fd770cf-78b6-5e63-ad39-23e56c8d2110/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/6054/16/16x9/2400.jpg",
         "rating": "TV-14",
@@ -249,7 +259,7 @@
         "description": "Holistic detective Dirk Gently investigates cases involving the supernatural.",
         "genres": [
             "Comedy",
-            "Sci-Fi"
+            "scifi"
         ],
         "services": [
             "BBC America"
@@ -267,17 +277,28 @@
             }
         },
         "creators": [
-            {"name": "Max Landis", "picture": ""}
+            {"name": "Max Landis", "picture": "http://www.aceshowbiz.com/images/wennpic/max-landis-premiere-american-ultra-01.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Samuel Barnett", "role": "Dirk Gently", "picture":"https://nyoobserver.files.wordpress.com/2016/10/gettyimages-579391962.jpg?quality=80&w=432"},
+            {"name": "Elijah Wood", "role": "Todd Brotzman", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_SY1000_CR0,0,666,1000_AL_.jpg"},
+            {"name": "Hannah Marks", "role": "Amanda Brotzman", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTk0NDA2MV5BMl5BanBnXkFtZTgwOTUyMDM3NjE@._V1_SY1000_CR0,0,730,1000_AL_.jpg"},
+            {"name": "Fiona Dourif", "role": "Bart Curlish", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzNDg1MzExNV5BMl5BanBnXkFtZTcwMjIxMTA5NQ@@._V1_.jpg"},
+            {"name": "Jade Eshete", "role": "Farah Black", "picture":"https://kushiteprince.files.wordpress.com/2016/03/jade-eshete.jpg?w=545"},
+            {"name": "Mpho Koaho", "role": "Ken", "picture":"http://vignette1.wikia.nocookie.net/fallingskies/images/c/c6/MphoKoahoFallinmgSkiesTVEinterview2.jpg/revision/latest?cb=20110807195433"},
+            {"name": "Michael Eklund", "role": "Martin", "picture":"https://vignette4.wikia.nocookie.net/batesmotel/images/2/25/MichaelEklund.jpg/revision/latest?cb=20150902103604"},
+            {"name": "Dustin Milligan", "role": "Sgt. Hugo Friedkin", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2OTkwNzcyNl5BMl5BanBnXkFtZTgwNDY0NjczOTE@._V1_SY1000_CR0,0,688,1000_AL_.jpg"},
+            {"name": "Neil Brown Jr.", "role": "Estevez", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMDUzMjA3Ml5BMl5BanBnXkFtZTcwODE0NDM3Ng@@._V1_.jpg"},
+            {"name": "Aaron Douglas", "role": "Gordon Rimmer", "picture":"https://vignette1.wikia.nocookie.net/stargate/images/8/84/AaronDouglas.jpg/revision/latest?cb=20150823060654"},
+            {"name": "Richard Schiff", "role": "Zimmerfield", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM0MDE5MzIwNF5BMl5BanBnXkFtZTYwNjgzMDI0._V1_.jpg"}
+        ]
     },
     "Silicon Valley": {
         "title": "Silicon Valley",
-        "link": "/shows/silicon_valley.php",
         "cover": "http://is4.mzstatic.com/image/thumb/Music60/v4/3c/86/d1/3c86d17a-28d6-f7ec-2f52-b7e40111252c/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/5784/19/16x9/2400.jpg",
         "rating": "TV-MA",
-        "length": "28 min",
+        "length": "28min",
         "yearStart": 2014,
         "yearEnd": 0,
         "description": "Follows the struggle of Richard Hendricks, a silicon valley engineer trying to build his own company called Pied Piper.",
@@ -325,17 +346,30 @@
             }
         },
         "creators": [
-            {"name": "Mike Judge", "picture": ""}
+            {"name": "Mike Judge", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2OTY1Mzg3MV5BMl5BanBnXkFtZTcwNzI0MjExNw@@._V1_SY1000_CR0,0,665,1000_AL_.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Thomas Middleditch", "role": "Richard Hendricks", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwNjMwMDAzN15BMl5BanBnXkFtZTgwOTU3NjMwMTE@._V1_.jpg"},
+            {"name": "T.J. Miller", "role": "Erlich Bachman", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMzI0NTEwMF5BMl5BanBnXkFtZTcwMjk4MDkxNA@@._V1_.jpg"},
+            {"name": "Josh Brener", "role": "Nelson Bigetti", "picture":"https://vignette1.wikia.nocookie.net/bigbangtheory/images/5/54/Josh.jpg/revision/latest?cb=20130822115417"},
+            {"name": "Martin Starr", "role": "Bertram Gilfoyle", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDM5NzY3NzAxMl5BMl5BanBnXkFyZXN1bWU@._V1_SY1000_CR0,0,665,1000_AL_.jpg"},
+            {"name": "Kumail Nanjiani", "role": "Dinesh Chugtai", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3Mjk3NTMxMF5BMl5BanBnXkFtZTcwODA1MTU0NQ@@._V1_SY1000_SX750_AL_.jpg"},
+            {"name": "Amanda Crew", "role": "Monica", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkyOTIwMzE1MF5BMl5BanBnXkFtZTgwMzU5Mzc2MDE@._V1_SY1000_CR0,0,660,1000_AL_.jpg"},
+            {"name": "Zach Woods", "role": "Donald 'Jared' Dunn", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3MzQ4MzQ4MV5BMl5BanBnXkFtZTgwOTA2OTQ4NjE@._V1_SY1000_CR0,0,665,1000_AL_.jpg"},
+            {"name": "Matt Ross", "role": "Gavin Belson", "picture":"https://vignette4.wikia.nocookie.net/americanhorrorstory/images/9/96/Matt%2BRoss.jpg/revision/latest?cb=20130906122046"},
+            {"name": "Jimmy O. Yang", "role": "Jian Yang", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3MDk0OTEyMV5BMl5BanBnXkFtZTgwNzMxMDg2MDE@._V1_.jpg"},
+            {"name": "Suzanne Cryer", "role": "Laurie Bream", "picture":"http://www.hawtcelebs.com/wp-content/uploads/2016/01/suzanne-cryer-at-27th-annual-producers-guild-awards-in-los-angeles-01-23-2016_3.jpg"},
+            {"name": "Christopher Evan Welch", "role": "Peter Gregory", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyOTcyNzY4M15BMl5BanBnXkFtZTYwNDQyNTA1._V1_.jpg"},
+            {"name": "Chris Diamantopoulos", "role": "Russ Hanneman", "picture":"http://static1.purepeople.com/articles/2/19/07/2/@/136986-chris-diamantopoulos-637x0-1.jpg"},
+            {"name": "Stephen Tobolowsky", "role": "Jack Barker", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTYyMTU5NzcyMF5BMl5BanBnXkFtZTcwNDYxNDk3Mw@@._V1_.jpg"}
+        ]
     },
     "The Good Place": {
         "title": "The Good Place",
-        "link": "/shows/the_good_place.php",
         "cover": "http://is5.mzstatic.com/image/thumb/Music71/v4/3a/63/9f/3a639fc4-181e-4a87-16c1-aa9537e86ed1/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/5985/77/16x9/2400.jpg",
         "rating": "TV-PG",
-        "length": "30 min",
+        "length": "30min",
         "yearStart": 2016,
         "yearEnd": 0,
         "description": "A woman struggles to define what it means to be \"good\".",
@@ -365,17 +399,23 @@
             }
         },
         "creators": [
-            {"name": "Michael Schur", "picture": ""}
+            {"name": "Michael Schur", "picture": "https://static01.nyt.com/images/2017/01/19/arts/19GOODPLACE2/19GOODPLACE2-blog427.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Kristen Bell", "role": "Eleanor Shellstrop", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2MjkzOTIxMV5BMl5BanBnXkFtZTgwNzM3MTkzMTE@._V1_SY1000_CR0,0,718,1000_AL_.jpg"},
+            {"name": "William Jackson Harper", "role": "Chidi Anagonye", "picture":"http://www4.pictures.zimbio.com/gi/NBCUniversal+2016+Upfront+Presentation+YXyb90OJA_fl.jpg"},
+            {"name": "Jameela Jamil", "role": "Tahani Al-Jamil", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3MjE1NTc5OF5BMl5BanBnXkFtZTgwOTUxODQ2ODE@._V1_.jpg"},
+            {"name": "D'Arcy Corden", "role": "Janet", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA0NDk1MzI0M15BMl5BanBnXkFtZTgwMjg0MDI5OTE@._V1_.jpg"},
+            {"name": "Manny Jacinto", "role": "Jianyu Li", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU1NTcxODczOV5BMl5BanBnXkFtZTgwNDk3NjY5OTE@._V1_.jpg"},
+            {"name": "Ted Danson", "role": "Michael", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTQzNDM3OF5BMl5BanBnXkFtZTcwODQ3MDgzMw@@._V1_.jpg"}
+        ]
     },
     "Review": {
         "title": "Review",
-        "link": "/shows/review.php",
         "cover": "http://is3.mzstatic.com/image/thumb/Video/v4/5a/07/87/5a0787a4-60e8-b361-c091-5e174c830999/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/5544/77/16x9/2400.jpg",
         "rating": "TV-14",
-        "length": "30 min",
+        "length": "30min",
         "yearStart": 2014,
         "yearEnd": 0,
         "description": "A critic takes aim at intense real-life experiences in lieu of food or cinema. Fair game includes divorce, anonymous sex and all manner of criminal activity.",
@@ -416,19 +456,26 @@
             }
         },
         "creators": [
-            {"name": "Jeffrey Blitz", "picture": ""},
-            {"name": "Andrew Daly", "picture": ""},
-            {"name": "Charlie Siskel", "picture": ""}
+            {"name": "Jeffrey Blitz", "picture": "http://cache2.asset-cache.net/xr/130443657.jpg?v=1&c=IWSAsset&k=3&d=77BFBA49EF87892155F29F61288AC1CA304F0A4B69DAC5853B77F6B8B613F30BF5A6568A3120AC6AE30A760B0D811297"},
+            {"name": "Andrew Daly", "picture": "http://www1.pictures.zimbio.com/gi/Premiere+HBO+East+Bound+Down+2nd+Season+Arrivals+oU8Y_hl_-hGl.jpg"},
+            {"name": "Charlie Siskel", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5ODM0Mzk1MV5BMl5BanBnXkFtZTgwNzU1MDY0NDE@._V1_SY1000_CR0,0,747,1000_AL_.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Andrew Daly", "role": "Forrest MacNeil", "picture":"http://www1.pictures.zimbio.com/gi/Premiere+HBO+East+Bound+Down+2nd+Season+Arrivals+oU8Y_hl_-hGl.jpg"},
+            {"name": "Jessica St. Clair", "role": "Suzanna MacNeil", "picture":"http://www3.pictures.zimbio.com/gi/Premiere+DreamWorks+Out+My+League+Arrivals+I-ZUQoBMlJ-x.jpg"},
+            {"name": "Megan Stevenson", "role": "A.J. Gibbs", "picture":"http://www2.pictures.zimbio.com/gi/Megan+Stevenson+w_zePYZ1S_ym.jpg"},
+            {"name": "Michael Croner", "role": "Josh", "picture":"http://www2.pictures.zimbio.com/gi/H+Michael+Croner+Review+Premiere+Party+Hollywood+xq8gSLnhFhsl.jpg"},
+            {"name": "Tara Karsian", "role": "Lucille", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzkzNjA1MzY1NV5BMl5BanBnXkFtZTgwNzY0OTE1MDI@._V1_SY1000_CR0,0,649,1000_AL_.jpg"},
+            {"name": "James Urbaniak", "role": "Grant Grunderschmidt", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5Mzk1NDUyMV5BMl5BanBnXkFtZTgwODQyMDY0MDI@._V1_SY1000_CR0,0,664,1000_AL_.jpg"},
+            {"name": "Hayley Huntley", "role": "Tina", "picture":"http://i.imgur.com/I7MqJw2.jpg"}
+        ]
     },
     "Curb Your Enthusiasm": {
         "title": "Curb Your Enthusiasm",
-        "link": "/shows/curb_your_enthusiasm.php",
         "cover": "http://is5.mzstatic.com/image/thumb/Music6/v4/9f/b8/53/9fb853a6-3277-df09-367b-af813650b4f2/source/600x600bb.jpg",
         "hero": "http://static.srcdn.com/wp-content/uploads/Curb-Your-Enthusiasm-promo-image.jpg",
         "rating": "TV-MA",
-        "length": "28 min",
+        "length": "28min",
         "yearStart": 2000,
         "yearEnd": 0,
         "description": "The life and times of Larry David and the predicaments he gets himself in with his friends and complete strangers.",
@@ -538,17 +585,27 @@
             }
         },
         "creators": [
-            {"name": "Larry David", "picture": ""}
+            {"name": "Larry David", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1Njg4MzQxNV5BMl5BanBnXkFtZTcwNDgzNDUwMw@@._V1_.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Larry David", "role": "Larry David", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1Njg4MzQxNV5BMl5BanBnXkFtZTcwNDgzNDUwMw@@._V1_.jpg"},
+            {"name": "Jeff Garlin", "role": "Jeff Greene", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzY4MDE4OTk2MF5BMl5BanBnXkFtZTcwNjYxMzA2MQ@@._V1_.jpg"},
+            {"name": "Cheryl Hines", "role": "Cheryl David", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2NTQ0MTQyNF5BMl5BanBnXkFtZTcwMDU5MTQyNg@@._V1_UY317_CR8,0,214,317_AL_.jpg"},
+            {"name": "Susie Essman", "role": "Susie Greene", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1NDY0MDg5NV5BMl5BanBnXkFtZTcwMzE0MzI3MQ@@._V1_UY317_CR4,0,214,317_AL_.jpg"},
+            {"name": "Richard Lewis", "role": "Richard Lewis", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTA5NDIzMzk0ODJeQTJeQWpwZ15BbWU2MDA3OTI0Mw@@._V1_.jpg"},
+            {"name": "Bob Einstein", "role": "Marty Funkhouser", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NDk1MDUxOV5BMl5BanBnXkFtZTYwNjAxNjU0._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "J.B. Smoove", "role": "Leon Black", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjI1NjI3NDQzOF5BMl5BanBnXkFtZTcwMzYzMDQ1NA@@._V1_UY317_CR9,0,214,317_AL_.jpg"},
+            {"name": "Ashly Halloway", "role": "Sammi Greene", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MjgyMzg2MF5BMl5BanBnXkFtZTcwMTU3NTIzMQ@@._V1_.jpg"},
+            {"name": "Ted Danson", "role": "Ted Danson", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTQzNDM3OF5BMl5BanBnXkFtZTcwODQ3MDgzMw@@._V1_UY317_CR10,0,214,317_AL_.jpg"},
+            {"name": "Shelley Berman", "role": "Nat David", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTI4NTA2Mzg1Ml5BMl5BanBnXkFtZTcwMjQ4MTMzMQ@@._V1_UY317_CR23,0,214,317_AL_.jpg"}
+        ]
     },
     "Community": {
         "title": "Community",
-        "link": "/shows/community.php",
         "cover": "http://is5.mzstatic.com/image/thumb/Music49/v4/43/b2/70/43b270ad-cc79-e530-9cbc-6ed0ebbe36f5/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/5121/26/16x9/2400.jpg",
         "rating": "TV-PG",
-        "length": "22 min",
+        "length": "22min",
         "yearStart": 2009,
         "yearEnd": 2015,
         "description": "A suspended lawyer is forced to enroll in a community college with an eclectic staff and student body.",
@@ -685,17 +742,31 @@
             }
         },
         "creators": [
-            {"name": "Dan Harmon", "picture": ""}
+            {"name": "Dan Harmon", "picture": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDY2NzI3MF5BMl5BanBnXkFtZTcwODY5MjI3NA@@._V1_SY1000_CR0,0,689,1000_AL_.jpg"}
         ],
-        "cast": []
+        "cast": [
+            {"name": "Joel McHale", "role": "Jeff Winger", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2ODA0NzMwNV5BMl5BanBnXkFtZTgwOTA4MDA3NTE@._V1_.jpg"},
+            {"name": "Gillian Jacobs", "role": "Britta Perry", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk5OTc5MTM1OV5BMl5BanBnXkFtZTcwMTU4NDI1NA@@._V1_SY1000_CR0,0,729,1000_AL_.jpg"},
+            {"name": "Danny Pudi", "role": "Abed Nadir", "picture":"http://cdn.collider.com/wp-content/uploads/danny-pudi-image.jpg"},
+            {"name": "Alison Brie", "role": "Annie Edison", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2MDc2NjY1NF5BMl5BanBnXkFtZTcwMDY2MjE3Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Ken Jeong", "role": "Ben Chang", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMTczNzU4Nl5BMl5BanBnXkFtZTYwODUxMjMy._V1_UY317_CR3,0,214,317_AL_.jpg"},
+            {"name": "Yvette Nicole Brown", "role": "Shirley Bennett", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTgzNzAzODUwMF5BMl5BanBnXkFtZTgwMzg4NzE2NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Jim Rash", "role": "Dean Pelton", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzNDcwMzYzNl5BMl5BanBnXkFtZTcwNjA4MTYyNA@@._V1_UY317_CR5,0,214,317_AL_.jpg"},
+            {"name": "Donald Glover", "role": "Troy Barnes", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzUxNTU5ODkxNl5BMl5BanBnXkFtZTgwOTIyNjc5MDI@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Chevy Chase", "role": "Pierce Hawthorne", "picture":"http://vignette2.wikia.nocookie.net/chuck/images/2/27/Chevy_Chase.jpg/revision/latest?cb=20100312013943"},
+            {"name": "Richard Erdman", "role": "Leonard", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxNDYwMzQ1MF5BMl5BanBnXkFtZTcwMzg4OTAyOQ@@._V1_UY317_CR1,0,214,317_AL_.jpg"},
+            {"name": "John Oliver", "role": "Professor Ian Duncan", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjM0Mjg2NDU2M15BMl5BanBnXkFtZTgwMzkwOTQzMjE@._V1_SY1000_CR0,0,749,1000_AL_.jpg"},
+            {"name": "Keith David", "role": "Elroy Patashnik", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTI5OTU4ODI1MF5BMl5BanBnXkFtZTcwMjU1NjkyNA@@._V1_.jpg"},
+            {"name": "Paget Brewster", "role": "Frankie Dart", "picture":"http://cimg.tvgcdn.net/i/r/2012/08/21/278ee838-2dbe-43d3-b3fa-326de708a905/resize/350x509/62c9780ad827287ee9e91c2dabdf2973/120821PagetBrewster1.jpg"},
+            {"name": "Jonathan Banks", "role": "Professor Buzz Hickey", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI3MTE0OTI0MF5BMl5BanBnXkFtZTcwMzc2MzU3NQ@@._V1_SY1000_CR0,0,745,1000_AL_.jpg"}
+        ]
     },
     "Arrested Development": {
         "title": "Arrested Development",
-        "link": "/shows/arrested_development.php",
         "cover": "http://is3.mzstatic.com/image/thumb/Music6/v4/09/aa/33/09aa3319-c1ce-2d91-a90b-1f706559e2ca/source/600x600bb.jpg",
         "hero": "http://i.onionstatic.com/avclub/4346/94/16x9/2400.jpg",
         "rating": "TV-PG",
-        "length": "22 min",
+        "length": "22min",
         "yearStart": 2003,
         "yearEnd": 0,
         "description": "Level-headed son Michael Bluth takes over family affairs after his father is imprisoned. But the rest of his spoiled, dysfunctional family are making his job unbearable.",
@@ -785,8 +856,606 @@
             }
         },
         "creators": [
-            {"name": "Mitchell Hurwitz", "picture": ""}
+            {"name": "Mitchell Hurwitz", "picture": "http://cdn.collider.com/wp-content/uploads/arrested-development-mitch-hurwitz2.jpg"}
         ],
+        "cast": [
+            {"name": "Jason Bateman", "role": "Michael Bluth", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwOTQ0MDUyNF5BMl5BanBnXkFtZTcwNTQ1MzY1Mw@@._V1_.jpg"},
+            {"name": "Portia de Rossi", "role": "Lindsay Bluth Fünke", "picture":"https://vignette2.wikia.nocookie.net/scream/images/f/fc/Portia5.jpg/revision/latest?cb=20161001195445"},
+            {"name": "Will Arnett", "role": "Gob Bluth", "picture":"http://television.mxdwn.com/wp-content/uploads/2015/01/will-arnett-premiere-arrested-development-season-4-01.jpg"},
+            {"name": "Michael Cera", "role": "George-Michael Bluth", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTgyNDgxMjUyOV5BMl5BanBnXkFtZTcwMDYxNzY1OQ@@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Alia Shawkat", "role": "Maeby Fünke", "picture":"http://i.imgur.com/Uyrz5Lo.jpg"},
+            {"name": "Tony Hale", "role": "Buster Bluth", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNjI2OTg1NV5BMl5BanBnXkFtZTcwODI2MTc1MQ@@._V1_UY317_CR4,0,214,317_AL_.jpg"},
+            {"name": "David Cross", "role": "Tobias Fünke", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzMzgwOTI1N15BMl5BanBnXkFtZTcwNTg5ODk2Mw@@._V1_.jpg"},
+            {"name": "Jeffrey Tambor", "role": "George Bluth Sr. / Oscar Bluth", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxMzA3NzQzM15BMl5BanBnXkFtZTcwMTQxMDc3MQ@@._V1_.jpg"},
+            {"name": "Jessica Walter", "role": "Lucille Bluth", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkyNjA5NTA1NV5BMl5BanBnXkFtZTcwNjU0NjgyMQ@@._V1_.jpg"},
+            {"name": "Ron Howard", "role": "Narrator / Ron Howard", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzMDczMjUxNF5BMl5BanBnXkFtZTcwODY1Njk5Mg@@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Henry Winkler", "role": "Barry Zuckercorn", "picture":"https://upload.wikimedia.org/wikipedia/commons/2/26/Henry_winkler_%40_wizard_world_nyc_experience_2013.jpg"},
+            {"name": "Liza Minelli", "role": "Lucille Austero", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMyOTY1NDI0NV5BMl5BanBnXkFtZTYwNTA4OTUz._V1_.jpg"},
+            {"name": "Mae Whitman", "role": "Ann Veal", "picture":"http://vignette3.wikia.nocookie.net/jakeandtheneverlandpirates/images/7/7f/Mae-whitman-at-the-pirate-fairy-premiere-in-burbank_1.jpg/revision/latest?cb=20160131063823"}
+        ]
+    },
+    "Grey's Anatomy": {
+        "title": "Grey's Anatomy",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music62/v4/48/65/02/48650265-b140-db64-dbf9-da496663768d/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "41min",
+        "yearStart": 2005,
+        "yearEnd": 0,
+        "description": "A drama centered on the personal and professional lives of five surgical interns and their supervisors.",
+        "genres": [
+            "Drama",
+            "Romance"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "A Hard Day's Night", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyODUyOTU4Ml5BMl5BanBnXkFtZTgwMDE3MTgzMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "The First Cut Is the Deepest", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA4MDIzNTE3MTleQTJeQWpwZ15BbWU4MDQxMzA4MzIx._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Jane the Virgin": {
+        "title": "Jane the Virgin",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music71/v4/b3/5e/de/b35edee9-0229-4e39-5c32-78ec7dd0ec7a/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-PG",
+        "length": "1h",
+        "yearStart": 2014,
+        "yearEnd": 0,
+        "description": "A young, devout Catholic woman discovers that she was accidentally artificially inseminated.",
+        "genres": [
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Chapter One", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxODg4ODc1Nl5BMl5BanBnXkFtZTgwMzU3NTIwMzE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Chapter Two", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMjg4ODM5NV5BMl5BanBnXkFtZTgwMTE5NTIxMzE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Sherlock": {
+        "title": "Sherlock",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music122/v4/3f/37/95/3f379509-11c5-5d1e-2cc4-2225c71919cb/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "1h 28min",
+        "yearStart": 2010,
+        "yearEnd": 0,
+        "description": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "A Study in Pink", "img": "http://i.onionstatic.com/avclub/3514/80/16x9/1200.jpg"},
+                "E02": {"title": "The Blind Banker", "img": "http://i.onionstatic.com/avclub/3519/82/16x9/1200.jpg"},
+                "E03": {"title": "The Great Game", "img": "http://i.onionstatic.com/avclub/3524/61/16x9/1200.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Scandal": {
+        "title": "Scandal",
+        "cover": "http://is1.mzstatic.com/image/thumb/Music71/v4/78/58/2d/78582d41-2f78-38ef-2109-31959c2c60b0/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "43min",
+        "yearStart": 2012,
+        "yearEnd": 0,
+        "description": "A former White House Communications Director starts her own crisis management firm only to realize her clients are not the only ones with secrets.",
+        "genres": [
+            "Drama",
+            "Thriller"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Sweet Baby", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3NDkzMDM1NF5BMl5BanBnXkFtZTcwMjM0MTM2Nw@@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Dirty Little Secrets", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY5NjIyMTcyOV5BMl5BanBnXkFtZTcwNDA1MzY2Nw@@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Friends": {
+        "title": "Friends",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music6/v4/11/d5/e5/11d5e548-d998-c61f-060c-2e1d1038d5a9/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "22min",
+        "yearStart": 1994,
+        "yearEnd": 2004,
+        "description": "Follows the personal and professional lives of six 20 to 30-something-year-old friends living in Manhattan.",
+        "genres": [
+            "Comedy",
+            "Romance"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "The One Where Monica Gets a Roommate", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMzUwMjk5N15BMl5BanBnXkFtZTgwNzAyODM0MDE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "The One with the Sonogram at the End", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY1NzMzMTU0NF5BMl5BanBnXkFtZTgwMDEyODM0MDE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Smallville": {
+        "title": "Smallville",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music6/v4/01/87/ed/0187ede6-7a1b-d9dc-a289-78ebe8f27927/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-PG",
+        "length": "1h",
+        "yearStart": 2001,
+        "yearEnd": 2011,
+        "description": "A young Clark Kent struggles to find his place in the world as he learns to harness his alien powers for good and deals with the typical troubles of teenage life in Smallville, Kansas.",
+        "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2NDQ4MjkwMF5BMl5BanBnXkFtZTgwNTkxMTIyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Metamorphosis", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMzA3OTcwMl5BMl5BanBnXkFtZTgwODMyNzIyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "How I Met Your Mother": {
+        "title": "How I Met Your Mother",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music69/v4/13/65/6f/13656f40-4c9b-fc27-c8f9-5ec159a17821/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "22min",
+        "yearStart": 2005,
+        "yearEnd": 2014,
+        "description": "A father recounts to his children, through a series of flashbacks, the journey he and his four best friends took leading up to him meeting their mother.",
+        "genres": [
+            "Comedy",
+            "Romance"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2ODE3NzcyMV5BMl5BanBnXkFtZTgwMTU4MDMyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Purple Giraffe", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NzQ4Njk2MF5BMl5BanBnXkFtZTgwNTY3MDMyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Danny Phantom": {
+        "title": "Danny Phantom",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music71/v4/7c/ac/d3/7cacd358-a466-ab78-8408-0c260a968765/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-Y7",
+        "length": "30min",
+        "yearStart": 2004,
+        "yearEnd": 2007,
+        "description": "A 14-year-old receives ghost powers and uses them to save the world.",
+        "genres": [
+            "Animation",
+            "Action",
+            "Adventure"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Mystery Meat", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3MDA3MjczMl5BMl5BanBnXkFtZTgwODA3Mzg0MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Parental Bonding", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDQ0NTQ4NTYxN15BMl5BanBnXkFtZTgwNDU2Mzg0MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Whose Line Is It Anyway?": {
+        "title": "Whose Line Is It Anyway?",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music60/v4/4a/5c/41/4a5c4106-3f6e-fc76-9c78-0597608f11a1/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-PG",
+        "length": "30min",
+        "yearStart": 1998,
+        "yearEnd": 0,
+        "description": "Improvisational comedy competition show in which four members of the regular cast as comedians and often with guest appearances with other comedians and celebrities and members of the audience perform various comic games and sketches.",
+        "genres": [
+            "Comedy",
+            "Game Show"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Show No. 103", "img": "http://cimg.tvgcdn.net/i/r/2013/03/01/69238301-274f-4cfd-9829-39da5604f134/thumbnail/640x440/322a0eb13360794c3d1d49af5a86a91b/130301whose-line1.jpg"},
+                "E02": {"title": "Show No. 104", "img": "http://media.hollywood.com/images/638x425/1774708.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "24": {
+        "title": "24",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music6/v4/0b/a8/04/0ba8048d-d4d5-ae3f-e725-9410f3ab4de1/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "44min",
+        "yearStart": 2001,
+        "yearEnd": 2010,
+        "description": "Jack Bauer, Director of Field Ops for the Counter-Terrorist Unit of Los Angeles, races against the clock to subvert terrorist plots and save his nation from ultimate disaster.",
+        "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "12:00 a.m.-1:00 a.m.", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5NTc5MDE5OV5BMl5BanBnXkFtZTgwNTkwMDYyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "1:00 a.m.-2:00 a.m.", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4NzQ4MzE4NV5BMl5BanBnXkFtZTgwNjkwMDYyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "The Office": {
+        "title": "The Office",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music6/v4/14/eb/e9/14ebe93b-4163-e4c8-b8f0-7feb02ca7227/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-PG",
+        "length": "22min",
+        "yearStart": 2005,
+        "yearEnd": 2013,
+        "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium. Based on the hit BBC series.",
+        "genres": [
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4MzM0NjU0NF5BMl5BanBnXkFtZTgwMTA5MjU1MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Diversity Day", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3OTE0MDE3MF5BMl5BanBnXkFtZTgwOTk4MjU1MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "It's Always Sunny in Philadelphia": {
+        "title": "It's Always Sunny in Philadelphia",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music122/v4/61/2c/23/612c237f-302d-dfe4-e727-834b2f65fde8/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "22min",
+        "yearStart": 2005,
+        "yearEnd": 0,
+        "description": "Five friends with big egos and slightly arrogant attitudes are the proprietors of an Irish bar in Philadelphia.",
+        "genres": [
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "The Gang Gets Racist", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3Mzc5Mjg0OF5BMl5BanBnXkFtZTgwMjU2MzM0MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Charlie Wants an Abortion", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzQzODY2NTU3MF5BMl5BanBnXkFtZTgwODc3MzM0MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "New Girl": {
+        "title": "New Girl",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music62/v4/38/b1/16/38b11693-bd9c-b161-57a4-a21d0b17c66b/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "1h",
+        "yearStart": 2011,
+        "yearEnd": 0,
+        "description": "After a bad break-up, Jess, an offbeat young woman, moves into an apartment loft with three single men. Although they find her behavior very unusual, the men support her - most of the time.",
+        "genres": [
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NzM4Nzk3OV5BMl5BanBnXkFtZTgwMzAyNjIyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Kryptonite", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE4NDMxMzI3M15BMl5BanBnXkFtZTgwMDU1NTEyMjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Game of Thrones": {
+        "title": "Game of Thrones",
+        "cover": "http://is1.mzstatic.com/image/thumb/Music49/v4/b4/41/58/b44158f7-c943-6f04-89d3-be9532a2ecfd/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "56min",
+        "yearStart": 2011,
+        "yearEnd": 0,
+        "description": "Nine noble families fight for control over the mythical lands of Westeros; A forgotten race returns after being dormant for thousands of years.",
+        "genres": [
+            "Adventure",
+            "Drama",
+            "Fantasy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Winter is Coming", "img": "http://i.lv3.hbo.com/assets/images/series/game-of-thrones/episodes/1/1/winter-is-coming-300.jpg"},
+                "E02": {"title": "The Kingsroad", "img": "http://i.lv3.hbo.com/assets/images/series/game-of-thrones/episodes/1/2/the-kingsroad-300.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "The Leftovers": {
+        "title": "The Leftovers",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music2/v4/9a/b8/44/9ab84471-5e35-0f24-7433-17e0bfacec78/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "1h",
+        "yearStart": 2014,
+        "yearEnd": 0,
+        "description": "Three years after the disappearance of 2% of the global population, a group of people from New York struggle to continue their lives, while they cope with the tragedy of the unexplained nature of the event.",
+        "genres": [
+            "Drama",
+            "Fantasy",
+            "Mystery"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/1/episode-01-300.jpg"},
+                "E02": {"title": "Penguin One, Us Zero", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/2/episode-02-300.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Stranger Things": {
+        "title": "Stranger Things",
+        "cover": "http://pitchfork-cdn.s3.amazonaws.com/content/ST-Vinyl-Vol-1-Front-Cover_3000.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "55min",
+        "yearStart": 2016,
+        "yearEnd": 0,
+        "description": "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back.",
+        "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Chapter One: The Vanishing of Will Byers", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNzkwMzY5NV5BMl5BanBnXkFtZTgwMTg0ODE0OTE@._V1_UY112_CR12,0,200,112_AL_.jpg"},
+                "E02": {"title": "Chapter Two: The Weirdo on Maple Street", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4NzA5NDMzNF5BMl5BanBnXkFtZTgwNjY0ODE0OTE@._V1_UY112_CR12,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Last Week Tonight with John Oliver": {
+        "title": "Last Week Tonight with John Oliver",
+        "cover": "http://benhauck.com/wp-content/uploads/2016/02/last-week-tonight-season-3-featured.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "30min",
+        "yearStart": 2014,
+        "yearEnd": 0,
+        "description": "Former Daily Show host and correspondent John Oliver brings his persona to this new weekly news satire program.",
+        "genres": [
+            "Comedy",
+            "News",
+            "Talk Show"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "POM Wonderful v. Coca-Cola", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzMzMmNiNjItMjA3ZC00NGYzLTlhMDgtZTg5MzllNjU3ZDc4XkEyXkFqcGdeQXVyMzk0NzgwMTE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Capital Punishment", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjFmODlkMTctYTFlMC00MjQ4LTkwZGQtZWJjYmUwMDc2MGNmXkEyXkFqcGdeQXVyMzk0NzgwMTE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Gotham": {
+        "title": "Gotham",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music71/v4/6a/41/a2/6a41a269-0ffc-6782-0d14-fafe3ca165ce/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "42min",
+        "yearStart": 2014,
+        "yearEnd": 0,
+        "description": "The story behind Detective James Gordon's rise to prominence in Gotham City in the years before Batman's arrival.",
+        "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "http://i.onionstatic.com/avclub/5224/40/16x9/1200.jpg"},
+                "E02": {"title": "Selina Kyle", "img": "http://i.onionstatic.com/avclub/5230/55/16x9/1200.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "The Flash": {
+        "title": "The Flash",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music71/v4/f7/90/0b/f7900ba6-c694-229c-72b7-a688d58f6a9b/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-PG",
+        "length": "43min",
+        "yearStart": 2014,
+        "yearEnd": 0,
+        "description": "After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the Flash, fighting crime in Central City.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMTkyOTQ3NF5BMl5BanBnXkFtZTgwNDQ2NzM4MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Fastest Man Alive", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3ODE1NDk0MF5BMl5BanBnXkFtZTgwMzk2NjM5MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Atlanta": {
+        "title": "Atlanta",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music22/v4/95/b8/a6/95b8a696-963a-ec33-bb99-004cde56be5d/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "30min",
+        "yearStart": 2016,
+        "yearEnd": 0,
+        "description": "Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; \"Earnest 'Earn' Marks,\" an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.",
+        "genres": [
+            "Comedy",
+            "Drama"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "The Big Bang", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwMTk5ODIxMF5BMl5BanBnXkFtZTgwNjc5MDg2OTE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Streets on Lock", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1MzcyMzYxNl5BMl5BanBnXkFtZTgwODg5MDg2OTE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "The Walking Dead": {
+        "title": "The Walking Dead",
+        "cover": "http://is2.mzstatic.com/image/thumb/Music122/v4/c8/8f/44/c88f444e-01ca-299d-c1c9-17da14d287d1/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "44min",
+        "yearStart": 2010,
+        "yearEnd": 0,
+        "description": "Sheriff Deputy Rick Grimes wakes up from a coma, to learn the world is in ruins, and must lead a group of survivors to stay alive.",
+        "genres": [
+            "Drama",
+            "Horror",
+            "Thriller"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Days Gone Bye", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwMzIwODM3NF5BMl5BanBnXkFtZTcwNjE3MDQwNA@@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Guts", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNDQzNjQ2NV5BMl5BanBnXkFtZTcwODg2MDQwNA@@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Crashing": {
+        "title": "Crashing",
+        "cover": "http://is3.mzstatic.com/image/thumb/Music91/v4/c8/27/00/c8270046-7f9f-95ae-eae7-ae74f739aa46/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "30min",
+        "yearStart": 2017,
+        "yearEnd": 0,
+        "description": "A New York comic is forced to make a new start for himself after his wife leaves him.",
+        "genres": [
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Artie Lange", "img": "http://i.lv3.hbo.com/assets/images/series/crashing/episodes/s1/01/episode-01-300.jpg"},
+                "E02": {"title": "The Road", "img": "http://i.lv3.hbo.com/assets/images/series/crashing/episodes/s1/02/episode-02-300.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Mr. Robot": {
+        "title": "Mr. Robot",
+        "cover": "http://is5.mzstatic.com/image/thumb/Music20/v4/f5/0b/07/f50b07f6-3d66-82c1-4a69-b21fd397ea23/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-MA",
+        "length": "49min",
+        "yearStart": 2015,
+        "yearEnd": 0,
+        "description": "Follows Elliot, a young programmer working as a cyber-security engineer by day, and a vigilante hacker by night.",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "eps1.0_hellofriend.mov", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY4MDgwMzEwMl5BMl5BanBnXkFtZTgwMzgzMzk5NTE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "eps1.1_ones-and-zeroes.mpeg", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0NTkwMTc1NF5BMl5BanBnXkFtZTgwNzY3MzgxNjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Nathan for You": {
+        "title": "Nathan for You",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music6/v4/1d/39/95/1d399595-fe44-75f3-8eed-84672f446545/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "30min",
+        "yearStart": 2013,
+        "yearEnd": 0,
+        "description": "Nathan Fielder uses his business degree and life experiences to help real small businesses turn a profit. But because of his unorthodox approach, Nathan's genuine efforts to do good often draw real people into an experience far beyond what they signed up for.",
+        "genres": [
+            "Documentary",
+            "Comedy"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Yogurt Shop/Pizzeria", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NjQ4NzEwN15BMl5BanBnXkFtZTgwOTM2ODQ2MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Santa/Petting Zoo", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTczMjUwOTQxMl5BMl5BanBnXkFtZTgwODQ2NjQ2MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
+        "cast": []
+    },
+    "Chuck": {
+        "title": "Chuck",
+        "cover": "http://is4.mzstatic.com/image/thumb/Music/v4/3f/ac/a3/3faca3bf-0bd2-63c4-ed8f-4f69dac1db8a/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "TV-14",
+        "length": "43min",
+        "yearStart": 2007,
+        "yearEnd": 2012,
+        "description": "When a twenty-something computer geek inadvertently downloads critical government secrets into his brain, CIA and NSA assign two agents to protect him and exploit such knowledge, turning his life upside down.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Drama"
+        ],
+        "services": [],
+        "seasons": {
+            "S01": {
+                "E01": {"title": "Pilot", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BODM4MDY4MDI3Ml5BMl5BanBnXkFtZTgwNjM5MzcyOTE@._V1_UX200_CR0,0,200,112_AL_.jpg"},
+                "E02": {"title": "Chuck Versus the Helicopter", "img": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI5Njk5MDQyN15BMl5BanBnXkFtZTgwMzAxNTI0MjE@._V1_UX200_CR0,0,200,112_AL_.jpg"}
+            }
+        },
+        "creators": [],
         "cast": []
     }
 }

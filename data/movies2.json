@@ -1,0 +1,537 @@
+{
+    "Moana": {
+        "title": "Moana",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video122/v4/62/a6/fc/62a6fcc6-fbda-4bf4-f6b4-8d5047e0caa4/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 47min",
+        "yearReleased": "2016",
+        "description": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the Demigod to set things right.",
+        "genres": [
+            "Animation",
+            "Adventure",
+            "Comedy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Rogue One: A Star Wars Story": {
+        "title": "Rogue One: A Star Wars Story",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video111/v4/f0/22/b2/f022b2e1-43ff-1cc5-3bcc-c31996458a45/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 13min",
+        "yearReleased": "2016",
+        "description": "The Rebel Alliance makes a risky move to steal the plans for the Death Star, setting up the epic saga to follow.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Psycho": {
+        "title": "Psycho",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video/v4/67/08/93/670893b9-394b-54d0-358f-f216f7ff828d/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "Approved",
+        "length": "1h 49min",
+        "yearReleased": "1960",
+        "description": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+        "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Guardians of the Galaxy": {
+        "title": "Guardians of the Galaxy",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video1/v4/8b/40/42/8b404260-fbae-06ce-9e13-e78ed4ff0f88/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 1min",
+        "yearReleased": "2014",
+        "description": "A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Kung Fu Hustle": {
+        "title": "Kung Fu Hustle",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video/v4/8c/fd/76/8cfd76f3-8232-6659-2953-0b96e982d225/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 39min",
+        "yearReleased": "2004",
+        "description": "In Shanghai, China in the 1940s, a wannabe gangster aspires to join the notorious \"Axe Gang\" while residents of a housing complex exhibit extraordinary powers in defending their turf.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Crime"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "The Truman Show": {
+        "title": "The Truman Show",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video3/v4/b3/90/c8/b390c867-ec20-9206-e5b3-fcc0011f0399/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 43min",
+        "yearReleased": "1998",
+        "description": "An insurance salesman/adjuster discovers his entire life is actually a television show.",
+        "genres": [
+            "Comedy",
+            "Drama",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Lilo & Stitch": {
+        "title": "Lilo & Stitch",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video122/v4/85/23/d3/8523d300-3c33-1333-1293-68834fd6ffaa/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 25min",
+        "yearReleased": "2002",
+        "description": "A Hawaiian girl adopts an unusual pet who is actually a notorious extra-terrestrial fugitive from the law.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "La La Land": {
+        "title": "La La Land",
+        "cover": "http://is3.mzstatic.com/image/thumb/Video111/v4/0f/18/46/0f18463c-5474-b785-5652-e2335c8daed8/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 8min",
+        "yearReleased": "2016",
+        "description": "A jazz pianist falls for an aspiring actress in Los Angeles.",
+        "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "The Adjustment Bureau": {
+        "title": "The Adjustment Bureau",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video/v4/b3/ea/1d/b3ea1d24-9bc5-5953-03cc-f48a422df2e1/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "1h 46min",
+        "yearReleased": "2011",
+        "description": "The affair between a politician and a contemporary dancer is affected by mysterious forces keeping the lovers apart.",
+        "genres": [
+            "Romance",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Inception": {
+        "title": "Inception",
+        "cover": "http://is2.mzstatic.com/image/thumb/Video7/v4/5f/51/75/5f5175bf-5f14-39e7-9e37-30548c2d3044/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 28min",
+        "yearReleased": "2010",
+        "description": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Harry Potter and the Prisoner of Azkaban": {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video41/v4/04/ef/f5/04eff591-ea48-3ffc-a661-6c2a5ee2de3c/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "2h 22min",
+        "yearReleased": "2004",
+        "description": "It's Harry's third year at Hogwarts; not only does he have a new \"Defense Against the Dark Arts\" teacher, but there is also trouble brewing. Convicted murderer Sirius Black has escaped the Wizards' Prison and is coming after Harry.",
+        "genres": [
+            "Adventure",
+            "Fantasy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Shutter Island": {
+        "title": "Shutter Island",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video2/v4/7b/15/61/7b1561b4-73be-8dff-8d97-b70ff2bcafba/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "2h 18min",
+        "yearReleased": "2010",
+        "description": "In 1954, a U.S. marshal investigates the disappearance of a murderess who escaped from a hospital for the criminally insane.",
+        "genres": [
+            "Mystery",
+            "Thriller"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Forrest Gump": {
+        "title": "Forrest Gump",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video2/v4/9e/be/cd/9ebecd7b-3e70-be67-5028-951773725e14/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 22min",
+        "yearReleased": "1994",
+        "description": "While not intelligent, Forrest Gump has accidentally been present at many historic moments, but his true love, Jenny Curran, eludes him.",
+        "genres": [
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Pride & Prejudice": {
+        "title": "Pride & Prejudice",
+        "cover": "http://is2.mzstatic.com/image/thumb/Video/v4/0d/3b/ea/0d3bea6e-ea14-ef19-a7a4-3a06d6017c9f/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "2h 9min",
+        "yearReleased": "2005",
+        "description": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?",
+        "genres": [
+            "Drama",
+            "Romance"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Clue": {
+        "title": "Clue",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video49/v4/8e/a7/ba/8ea7ba18-a9c0-b841-2362-6efd3ee08f2c/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 34min",
+        "yearReleased": "1985",
+        "description": "Six guests are invited to a strange house and must cooperate with the staff to solve a murder mystery.",
+        "genres": [
+            "Comedy",
+            "Crime",
+            "Mystery"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Get Out": {
+        "title": "Get Out",
+        "cover": "http://is2.mzstatic.com/image/thumb/Video111/v4/71/9b/20/719b20de-139c-c6b8-1b4c-08b3bcad1ba4/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 44min",
+        "yearReleased": "2017",
+        "description": "A young African-American man visits his Caucasian girlfriend's mysterious family estate.",
+        "genres": [
+            "Horror",
+            "Mystery"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Beetlejuice": {
+        "title": "Beetlejuice",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video3/v4/9f/ec/3f/9fec3f28-654d-00e0-c2e5-c1e0e02c74ea/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 32min",
+        "yearReleased": "1988",
+        "description": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
+        "genres": [
+            "Comedy",
+            "Fantasy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Star Wars: The Empire Strikes Back": {
+        "title": "Star Wars: The Empire Strikes Back",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video49/v4/b0/cc/7c/b0cc7c2e-13c9-74ba-76c6-e82d31d85bd7/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "2h 4min",
+        "yearReleased": "1980",
+        "description": "After the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Beauty and the Beast": {
+        "title": "Beauty and the Beast",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video52/v4/b4/a4/1a/b4a41a23-462d-d366-498a-7cd674893be2/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "2h 9min",
+        "yearReleased": "2017",
+        "description": "An adaptation of the fairy tale about a monstrous-looking prince and a young woman who fall in love.",
+        "genres": [
+            "Fantasy",
+            "Musical"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Captain America: The Winter Solider": {
+        "title": "Captain America: The Winter Soldier",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video5/v4/b2/a9/e7/b2a9e727-f6ff-0e5a-6249-f73f5aeb7475/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 16min",
+        "yearReleased": "2014",
+        "description": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Big Fish": {
+        "title": "Big Fish",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video49/v4/ed/ea/e1/edeae1c6-3da5-7ea2-a7f8-c585ab7dd8a1/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "2h 5min",
+        "yearReleased": "2003",
+        "description": "A frustrated son tries to determine the fact from fiction in his dying father's life.",
+        "genres": [
+            "Adventure",
+            "Drama",
+            "Fantasy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Scooby-Doo 2: Monsters Unleashed": {
+        "title": "Scooby-Doo 2: Monsters Unleashed",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video62/v4/93/02/78/93027830-5830-d4c7-9888-94550ba202fe/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG",
+        "length": "1h 33min",
+        "yearReleased": "2004",
+        "description": "Mystery Inc. must save Coolsville from an attack of past unmasked monsters brought to life by an evil masked figure trying to \"unmask\" the gang.",
+        "genres": [
+            "Adventure",
+            "Comedy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Zodiac": {
+        "title": "Zodiac",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video/v4/7e/2b/35/7e2b3568-332f-e60b-c57f-a4a0b76ac399/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "2h 37min",
+        "yearReleased": "2007",
+        "description": "In the late 1960s/early 1970s, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.",
+        "genres": [
+            "Crime",
+            "Drama",
+            "History"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "10 Cloverfield Lane": {
+        "title": "10 Cloverfield Lane",
+        "cover": "http://is2.mzstatic.com/image/thumb/Video18/v4/79/d5/4e/79d54e3b-176a-fe83-fd63-35ea951b9501/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "1h 44min",
+        "yearReleased": "2016",
+        "description": "After getting in a car accident, a woman is held in a shelter with two men, who claim the outside world is affected by a widespread chemical attack.",
+        "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "What We Do in the Shadows": {
+        "title": "What We Do in the Shadows",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video1/v4/b8/df/06/b8df06c0-043d-0590-7360-eaa858b4e1a3/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 26min",
+        "yearReleased": "2014",
+        "description": "A documentary team films the lives of a group of vampires for a few months. The vampires share a house in Wellington, New Zealand. Turns out vampires have their own domestic problems too.",
+        "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Scott Pilgrim vs. the World": {
+        "title": "Scott Pilgrim vs. the World",
+        "cover": "http://is4.mzstatic.com/image/thumb/Video/v4/d3/61/29/d3612909-71bd-bbb6-3d92-b9a8b4b85f2b/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "1h 52min",
+        "yearReleased": "2010",
+        "description": "Scott Pilgrim must defeat his new girlfriend's seven evil exes in order to win her heart.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Fantasy"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "The World's End": {
+        "title": "The World's End",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video/v4/8f/70/0c/8f700c90-a396-9a8f-325c-14617a7a07b8/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 49min",
+        "yearReleased": "2013",
+        "description": "Five friends who reunite in an attempt to top their epic pub crawl from twenty years earlier unwittingly become humanity's only hope for survival.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Hot Fuzz": {
+        "title": "Hot Fuzz",
+        "cover": "http://is5.mzstatic.com/image/thumb/Video/v4/28/cc/37/28cc37c7-3a5d-c705-fa26-5c22848095b6/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "2h 1min",
+        "yearReleased": "2007",
+        "description": "Exceptional London cop Nicholas Angel is involuntarily transferred to a quaint English village and paired with a witless new partner. While on the beat, Nicholas suspects a sinister conspiracy is afoot with the residents.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Mystery"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Shaun of the Dead": {
+        "title": "Shaun of the Dead",
+        "cover": "http://is2.mzstatic.com/image/thumb/Video/v4/b3/4a/7c/b34a7cb3-6d85-594c-6d5d-0dfcf9df7734/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 39min",
+        "yearReleased": "2004",
+        "description": "A man decides to turn his moribund life around by winning back his ex-girlfriend, reconciling his relationship with his mother, and dealing with an entire community that has returned from the dead to eat the living.",
+        "genres": [
+            "Comedy",
+            "Horror"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Hunt for the Wilderpeople": {
+        "title": "Hunt for the Wilderpeople",
+        "cover": "http://is3.mzstatic.com/image/thumb/Video18/v4/5b/ee/4e/5bee4ef4-3a2b-3df9-b0f0-4269eb47873a/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "PG-13",
+        "length": "1h 41min",
+        "yearReleased": "2016",
+        "description": "A national manhunt is ordered for a rebellious kid and his foster uncle who go missing in the wild New Zealand bush.",
+        "genres": [
+            "Adventure",
+            "Comedy",
+            "Drama"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Charlie Bartlett": {
+        "title": "Charlie Bartlett",
+        "cover": "http://is3.mzstatic.com/image/thumb/Video/v4/1f/b7/01/1fb70116-6969-678b-9e41-9f66539ebd22/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 37min",
+        "yearReleased": "2007",
+        "description": "A rich kid becomes the self-appointed psychiatrist to the student body of his new high school.",
+        "genres": [
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    },
+    "Bad Words": {
+        "title": "Bad Words",
+        "cover": "http://is1.mzstatic.com/image/thumb/Video2/v4/3b/f3/f1/3bf3f10e-59e2-2b7a-c0fc-9a7d390374e2/source/600x600bb.jpg",
+        "hero": "",
+        "rating": "R",
+        "length": "1h 29min",
+        "yearReleased": "2013",
+        "description": "A spelling bee loser sets out to exact revenge by finding a loophole and attempting to win as an adult.",
+        "genres": [
+            "Comedy",
+            "Drama"
+        ],
+        "services": [],
+        "directors": [],
+        "cast": []
+    }
+}
