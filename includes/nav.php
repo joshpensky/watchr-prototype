@@ -242,15 +242,15 @@
                 <!-- NOTIFCATIONS ACTIONS BAR - END -->
                 <!-- SEARCH ACTIONS BAR - START -->
                 <div id="actions-bar--search" class="action--hidden nav-container">
-                    <form id="searchform">
+                    <form id="searchform" onsubmit="searchResults(this); return false;">
                         <div class="search-top">
-                            <input id="searchbar" type="search" name="search" placeholder="Search..." autocomplete="off" oninput="searchBar();">
+                            <input id="searchbar" type="search" name="search" placeholder="Search..." autocomplete="off" oninput="searchBar();" autocorrect="off" autocapitalize="off" spellcheck="false">
                             <div class="submit-button">
                                 <svg class="submitIcon" width="25" height="25" viewBox="0 0 100 100">
                                     <circle cx="45" cy="45" r="34.43"/>
                                     <line x1="69.35" y1="69.35" x2="89.4" y2="89.4"/>
                                 </svg>
-                                <input id="search-submit" type="submit" value="Submit">
+                                <input id="search-submit" type="submit" value="Submit" onsubmit="searchResults(this); return false;">
                             </div>
                         </div>
                         <ul class="search-bottom search-bottom--no-search">

@@ -159,3 +159,9 @@ function buildSearchItems(query) {
     <li class="search-item search-item--searchall">See all results for <span>Hello</span></li>
     */
 }
+
+function searchResults(which) {
+    var query = which.querySelector("#searchbar").value;
+    window.location.href = "/search.php?id=" + query;
+    return false;
+}

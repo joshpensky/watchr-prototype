@@ -1201,7 +1201,7 @@
     "The Leftovers": {
         "title": "The Leftovers",
         "cover": "http://is5.mzstatic.com/image/thumb/Music2/v4/9a/b8/44/9ab84471-5e35-0f24-7433-17e0bfacec78/source/600x600bb.jpg",
-        "hero": "",
+        "hero": "https://fsmedia.imgix.net/09/c3/ac/0b/3ba0/494a/9624/acfbeeb97d41/justin-theroux-in-the-leftovers-season-3-premiere-the-book-of-kevin.jpeg?rect=0,0,2042,1021&auto=format,compress&q=70",
         "rating": "TV-MA",
         "length": "1h",
         "yearStart": 2014,
@@ -1212,15 +1212,62 @@
             "Fantasy",
             "Mystery"
         ],
-        "services": [],
+        "services": [
+            "HBO GO",
+            "HBO NOW"
+        ],
         "seasons": {
             "S01": {
                 "E01": {"title": "Pilot", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/1/episode-01-300.jpg"},
-                "E02": {"title": "Penguin One, Us Zero", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/2/episode-02-300.jpg"}
+                "E02": {"title": "Penguin One, Us Zero", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/2/episode-02-300.jpg"},
+                "E03": {"title": "Two Boats and a Helicopter", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/3/episode-03-512.jpg"},
+                "E04": {"title": "B.J. and the A.C.", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/4/episode-04-512.jpg"},
+                "E05": {"title": "Gladys", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/5/episode-05-512.jpg"},
+                "E06": {"title": "Guest", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/6/episode-06-512.jpg"},
+                "E07": {"title": "Solace for Tired Feet", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/7/episode-07-512.jpg"},
+                "E08": {"title": "Cairo", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/8/episode-08-512.jpg"},
+                "E09": {"title": "The Garveys At Their Best", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/9/episode-09-512.jpg"},
+                "E10": {"title": "The Prodigal Son Returns", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s1/10/episode-10-512.jpg"}
+            },
+            "S02": {
+                "E01": {"title": "Axis Mundi", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/01/the-leftovers-ep-201-default-512.jpg"},
+                "E02": {"title": "A Matter of Geography", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/02/the-leftovers-ep-202-default-512.jpg"},
+                "E03": {"title": "Off Ramp", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/03/episode-3-512.jpg"},
+                "E04": {"title": "Orange Sticker", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/04/episode-204-512.jpg"},
+                "E05": {"title": "No Room at the Inn", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/05/episode-205-512.jpg"},
+                "E06": {"title": "Lens", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/06/episode-206-512.jpg"},
+                "E07": {"title": "A Most Powerful Adversary", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/07/episode-207-512.jpg"},
+                "E08": {"title": "International Assassin", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/08/episode-208-512.jpg"},
+                "E09": {"title": "Ten Thirteen", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s2/09/episode-209-512.jpg"},
+                "E10": {"title": "I Live Here Now", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/homepage/2015/november/151130-ep19-tom-512.jpg"}
+            },
+            "S03": {
+                "E01": {"title": "The Book of Kevin", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s3/01/episode-301-512.jpg"},
+                "E02": {"title": "Don't Be Rediculous", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s3/02/episode-302-512.jpg"},
+                "E03": {"title": "Crazy Whitefella Thinking", "img": "http://i.lv3.hbo.com/assets/images/series/the-leftovers/episodes/s3/03/episode-303-512.jpg"}
             }
         },
-        "creators": [],
-        "cast": []
+        "creators": [
+            {"name": "Damon Lindelof", "picture": "http://cdn3.thr.com/sites/default/files/imagecache/NFE_portrait/2013/05/Star_trek_into_darkness_L_premiere_damon_lindelof.jpg"},
+            {"name": "Tom Perrotta", "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Tom_perrotta_2007.jpg/220px-Tom_perrotta_2007.jpg"}
+        ],
+        "cast": [
+            {"name": "Justin Theroux", "role": "Kevin Garvey", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MDAxNTc5Nl5BMl5BanBnXkFtZTgwNTYyNzE4MTE@._V1_.jpg"},
+            {"name": "Amy Brenneman", "role": "Laurie Garvey", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BODQ3MjkzNTkzNF5BMl5BanBnXkFtZTcwNTQ4MjgxNQ@@._V1_UY317_CR1,0,214,317_AL_.jpg"},
+            {"name": "Christopher Eccleston", "role": "Matt Jamison", "picture":"http://assets.nydailynews.com/polopoly_fs/1.1847400!/img/httpImage/image.jpg_gen/derivatives/article_970/ny-season-premiere-hbo-leftovers.jpg"},
+            {"name": "Chris Zylka", "role": "Tom Garvey", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NTk3MTIxMV5BMl5BanBnXkFtZTgwMDYyMjQ1OTE@._V1_.jpg"},
+            {"name": "Carrie Coon", "role": "Nora Durst", "picture":"https://s-media-cache-ak0.pinimg.com/originals/1f/e6/b0/1fe6b085a61cc33a8b9ed7a1d6feb3a8.jpg"},
+            {"name": "Liv Tyler", "role": "Meg Abbott", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTY4NjQxMjc5MF5BMl5BanBnXkFtZTcwMzg5Mzg4Ng@@._V1_SY1000_CR0,0,666,1000_AL_.jpg"},
+            {"name": "Margaret Qualley", "role": "Jill Garvey", "picture":"http://celebmafia.com/wp-content/uploads/2014/06/margaret-qualley-the-leftovers-premiere-in-new-york-city_1.jpg"},
+            {"name": "Janel Maloney", "role": "Mary Jamison", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5NDAzOTE4Ml5BMl5BanBnXkFtZTgwMTcxNDcwMjE@._V1_UX214_CR0,0,214,317_AL_.jpg"},
+            {"name": "Ann Dowd", "role": "Patti Levin", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMTc0NzA0OV5BMl5BanBnXkFtZTcwMDIwMjk4OA@@._V1_UY317_CR13,0,214,317_AL_.jpg"},
+            {"name": "Kevin Carroll", "role": "John Murphy", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkyNDgyMjg1OF5BMl5BanBnXkFtZTgwNTc2Nzc0NTE@._V1_UY317_CR20,0,214,317_AL_.jpg"},
+            {"name": "Jovan Adepo", "role": "Michael Murphy", "picture":"https://images.bwwstatic.com/upload11/1504066/tn-500_fenceswm20203212962101.jpg"},
+            {"name": "Regina King", "role": "Erika Murphy", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc4MTU4MDc5NF5BMl5BanBnXkFtZTcwNDk5NTE2MQ@@._V1_UY317_CR16,0,214,317_AL_.jpg"},
+            {"name": "Scott Glenn", "role": "Kevin Garvey, Sr.", "picture":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NzAwMzE1OF5BMl5BanBnXkFtZTYwMjkzOTY0._V1_UY317_CR13,0,214,317_AL_.jpg"},
+            {"name": "Michael Gaston", "role": "Dean", "picture":"http://vignette4.wikia.nocookie.net/lawandorder/images/0/0c/MichaelGaston.jpg/revision/latest?cb=20110408202515"},
+            {"name": "Jasmin Savoy Brown", "role": "Evangeline Murphy", "picture":"http://celebmafia.com/wp-content/uploads/2015/12/jasmin-savoy-2015-children-s-miracle-network-hospitals-winter-wonderland-ball-in-hollywood_4.jpg"}
+        ]
     },
     "Stranger Things": {
         "title": "Stranger Things",

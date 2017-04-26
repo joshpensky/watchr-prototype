@@ -588,6 +588,7 @@ h4 {
 }
 
 .featured-wrapper .featured-text .featured-cta {
+  display: block;
   position: relative;
   clear: right;
   max-width: 800px;
