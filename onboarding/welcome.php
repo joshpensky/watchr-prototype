@@ -59,7 +59,7 @@
             <div class="section section--hidden" id="shows">
                 <div class="header-section">
                     <h1>Shows</h1>
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Show me the money!</h3>
                     <h6>We've picked some shows you might have watched based on your favorite genres.<br />Choose at least three shows you've seen.<br />These can be changed later.</h6>
                     <div class="instruct instruct--watch">Tap once to mark as watched</div>
                 </div>
@@ -81,7 +81,7 @@
             <div class="section section--hidden" id="movies">
                 <div class="header-section">
                     <h1>Movies</h1>
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Movie to the beat!</h3>
                     <h6>We've also picked some movies you might have watched based on your favorite genres.<br />Choose at least three movies you've seen.<br />These can be changed later.</h6>
                     <div class="instruct instruct--watch">Tap once to mark as watched</div>
                 </div>
